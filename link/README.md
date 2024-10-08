@@ -9,3 +9,7 @@ https://youtube.com/live/nMzMM2vltBw
 
 https://youtube.com/live/H1fJcnQVgEY
 
+### 2024_10_08_上午
+
+https://youtube.com/live/Ja9Gt4DTtm4
+
