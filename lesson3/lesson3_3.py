@@ -12,3 +12,13 @@ print(s1.math)
 print(s1.chinese)
 print(s1.total)
 print(s1.average())
+
+print("================")
+p2 = tools.get_person("張xx",24)
+print(p2)
+
+print("================")
+s2 = tools.get_student(name='王xx',age=28)
+print(s2)
+print(s2.total)
+print(s2.average())

@@ -54,4 +54,8 @@ class Student(Person): #繼承Person
     def average(self) -> float:
         return round(self.total / 3,ndigits=2)
 
-                    
+def get_person(name:str, age:int) -> Person:
+    return Person(name=name,age=age)
+
+def get_student(name:str,age:int,chinese=60,english=60,math=60)->Student:
+    return Student(name=name,age=age,chinese=chinese,english=english,math=math)                
