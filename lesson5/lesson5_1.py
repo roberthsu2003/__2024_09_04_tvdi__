@@ -33,7 +33,7 @@ class Window(ThemedTk):
 
         self.password = tk.StringVar()
         ttk.Entry(bottomFrame,textvariable=self.password,show='*').grid(column=1, row=1,pady=10,padx=10)
-        
+
         
 
         cancel_btn = ttk.Button(bottomFrame,text='取消',command=self.cancel_click)
@@ -53,13 +53,6 @@ class Window(ThemedTk):
         password = self.password.get()
         showinfo(title="使用者輸入",message=f'使用者名稱:{username}\n使用者密碼:{password}')
         
-
-        
-
-
-        
-
-
 
 def main():
     window = Window(theme="arc")
