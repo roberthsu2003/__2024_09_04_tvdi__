@@ -14,8 +14,8 @@ class Window(ThemedTk):
         style.configure('Main4.TButton',font=("Arial",15,"overstrike"),foreground="black")
         #================================start topframe====================================
         topFrame = ttk.Frame(self,borderwidth=1,relief='groove')
-        btn1 = ttk.Button(topFrame,text="加入購物車",style='Main.TButton',command=self.user_click1)
-        btn1.pack(side='left',expand=True,fill='both',padx=10)
+        self.btn1 = ttk.Button(topFrame,text="加入購物車",style='Main.TButton',command=self.user_click1)
+        self.btn1.pack(side='left',expand=True,fill='both',padx=10)
         btn2 = ttk.Button(topFrame,text="我的最愛",style='Main.TButton',command=self.user_click2)
         btn2.pack(side='left',expand=True,fill='both')
         btn3 = ttk.Button(topFrame,text="個人資料",style='Main.TButton',command=self.user_click3)
@@ -62,6 +62,7 @@ class Window(ThemedTk):
         #================================end bottomframe==================================
 
     def user_click1(self):
+        self.btn1.configure(text="被按了")
         print("Hello!button1")
 
     def user_click2(self):
