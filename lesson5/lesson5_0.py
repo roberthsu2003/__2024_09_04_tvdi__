@@ -28,12 +28,15 @@ class Window(ThemedTk):
       
         #================================start leftframe================================
         leftFrame =ttk.Frame(bottomFrame,width=100,height=300,borderwidth=2,relief='groove')
-        btn1 = ttk.Button(leftFrame,text="Home",style='Main1.TButton')
-        btn1.pack(expand=True,fill='x',padx=10,pady=5,ipady=50)
-        btn2 = ttk.Button(leftFrame,text="Cancel",style='Main2.TButton')
-        btn2.pack(expand=True,fill='x',padx=10,pady=5,ipady=25)
-        btn3 = ttk.Button(leftFrame,text="Chat",style='Main1.TButton')
-        btn3.pack(expand=True,fill='x',padx=10,pady=5,ipady=25)
+        btn4 = ttk.Button(leftFrame,text="Home",style='Main1.TButton')
+        btn4.bind('<ButtonRelease>',self.left_button_click)
+        btn4.pack(expand=True,fill='x',padx=10,pady=5,ipady=50)
+        btn5 = ttk.Button(leftFrame,text="Cancel",style='Main2.TButton')
+        btn5.bind('<ButtonRelease>',self.left_button_click)
+        btn5.pack(expand=True,fill='x',padx=10,pady=5,ipady=25)
+        btn6 = ttk.Button(leftFrame,text="Chat",style='Main1.TButton')
+        btn6.bind('<ButtonRelease>',self.left_button_click)
+        btn6.pack(expand=True,fill='x',padx=10,pady=5,ipady=25)
         leftFrame.pack(padx=10,pady=10,side="left",expand=True,fill='both')
         #================================end leftframe================================
 
@@ -70,6 +73,13 @@ class Window(ThemedTk):
 
     def user_click3(self):
         print("Hello1 button3")
+
+    def left_button_click(self,event):
+        print(type(event))
+        print(event.x)
+        print(event.y)
+        print(event.width)
+        print(event.widget.configure(text="被按了"))
 
 def main():
     window = Window(theme="arc")
