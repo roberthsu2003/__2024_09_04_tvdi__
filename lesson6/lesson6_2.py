@@ -26,11 +26,11 @@ class Window(ThemedTk):
         bottomFrame = ttk.Frame(self)
         sitenames = datasource.get_sitename()
         sitenames.insert(0,'請選擇站點')
-        selected_month = tk.StringVar()
-        sitenames_cb = ttk.Combobox(bottomFrame, textvariable=selected_month)
-        sitenames_cb.configure(values=sitenames,state='readonly')
+        selected_site = tk.StringVar()
+        sitenames_cb = ttk.Combobox(bottomFrame, textvariable=selected_site,values=sitenames)
+        selected_site.set('請選擇站點')
         sitenames_cb.pack()
-        sitenames_cb.current(0)
+        
         
 
         
