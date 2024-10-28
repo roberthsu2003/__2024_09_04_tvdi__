@@ -49,5 +49,14 @@ https://youtube.com/live/eYZ5wkJx2Eg
 
 ---
 
+### 2024_10_28_上午
+
+https://youtube.com/live/DCBZMUecqSg
+
+### 2024_10_28_下午
+
+https://youtube.com/live/CqUp0kTQm_M
+---
+
 
 
