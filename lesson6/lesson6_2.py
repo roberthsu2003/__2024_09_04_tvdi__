@@ -28,7 +28,9 @@ class Window(ThemedTk):
         self.selected_site = tk.StringVar()
         sitenames_cb = ttk.Combobox(bottomFrame, textvariable=self.selected_site,values=sitenames,state='readonly')
         self.selected_site.set('請選擇站點')
+        sitenames_cb.bind('<<ComboboxSelected>>', self.sitename_selected)
         sitenames_cb.pack(side='left',expand=True,anchor='n')        
+        
         
 
         # define columns
@@ -55,13 +57,8 @@ class Window(ThemedTk):
 
             #==============end bottomFrame===============
         
-        def agreement_changed(self):
-            showinfo(
-                title='Agreement',
-                message= self.agreement.get()
-
-            )
-    
+    def sitename_selected(self,event):
+        print(self.selected_site.get()) 
     
         
 
