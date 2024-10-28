@@ -28,16 +28,39 @@ class Window(ThemedTk):
         self.selected_site = tk.StringVar()
         sitenames_cb = ttk.Combobox(bottomFrame, textvariable=self.selected_site,values=sitenames,state='readonly')
         self.selected_site.set('請選擇站點')
-        sitenames_cb.pack()        
-        bottomFrame.pack(expand=True,fill='x',padx=20,pady=(0,20),ipadx=10,ipady=10)
-        #==============end bottomFrame===============
-    
-    def agreement_changed(self):
-        showinfo(
-            title='Agreement',
-            message= self.agreement.get()
+        sitenames_cb.pack(side='left',expand=True,anchor='n')        
+        
 
-        )
+        # define columns
+        columns = ('first_name', 'last_name', 'email')
+
+        tree = ttk.Treeview(bottomFrame, columns=columns, show='headings')
+
+        # define headings
+        tree.heading('first_name', text='First Name')
+        tree.heading('last_name', text='Last Name')
+        tree.heading('email', text='Email')
+
+        # generate sample data
+        contacts = []
+        for n in range(1, 100):
+            contacts.append((f'first {n}', f'last {n}', f'email{n}@example.com'))
+
+        # add data to the treeview
+        for contact in contacts:
+            tree.insert('', tk.END, values=contact)
+        
+        tree.pack(side='right')
+        bottomFrame.pack(expand=True,fill='x',padx=20,pady=(0,20),ipadx=10,ipady=10)
+
+            #==============end bottomFrame===============
+        
+        def agreement_changed(self):
+            showinfo(
+                title='Agreement',
+                message= self.agreement.get()
+
+            )
     
     
         
