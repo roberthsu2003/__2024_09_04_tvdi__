@@ -25,15 +25,10 @@ class Window(ThemedTk):
         #==============bottomFrame===============
         bottomFrame = ttk.Frame(self)
         sitenames = datasource.get_sitename()
-        sitenames.insert(0,'請選擇站點')
-        selected_site = tk.StringVar()
-        sitenames_cb = ttk.Combobox(bottomFrame, textvariable=selected_site,values=sitenames)
-        selected_site.set('請選擇站點')
-        sitenames_cb.pack()
-        
-        
-
-        
+        self.selected_site = tk.StringVar()
+        sitenames_cb = ttk.Combobox(bottomFrame, textvariable=self.selected_site,values=sitenames,state='readonly')
+        self.selected_site.set('請選擇站點')
+        sitenames_cb.pack()        
         bottomFrame.pack(expand=True,fill='x',padx=20,pady=(0,20),ipadx=10,ipady=10)
         #==============end bottomFrame===============
     
