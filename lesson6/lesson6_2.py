@@ -71,9 +71,10 @@ class Window(ThemedTk):
         
     def sitename_selected(self,event):
         selected = self.selected_site.get()
-        selected_data = datasource.get_selected_data(selected)
-        for record in selected_data:
-            self.tree.insert("", "end", values=record)
+        print(selected)
+        #selected_data = datasource.get_selected_data(selected)
+        #for record in selected_data:
+            #self.tree.insert("", "end", values=record)
 
     
         
