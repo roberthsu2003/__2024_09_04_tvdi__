@@ -34,7 +34,21 @@ class Window(ThemedTk):
         sitenames_cb = ttk.Combobox(selectedFrame, textvariable=self.selected_county,values=counties,state='readonly')
         self.selected_county.set('請選擇城市')
         sitenames_cb.bind('<<ComboboxSelected>>', self.county_selected)
-        sitenames_cb.pack(expand=True,anchor='n') 
+        sitenames_cb.pack(anchor='n',pady=10)
+
+        #listbox選擇站點
+        langs = ('Java', 'C#', 'C', 'C++', 'Python',
+        'Go', 'JavaScript', 'PHP', 'Swift')
+        var = tk.Variable(value=langs)
+        listbox = tk.Listbox(
+                    selectedFrame,
+                    listvariable=var,
+                    height=6,
+                    selectmode=tk.EXTENDED
+                )
+        listbox.pack()
+        listbox.destroy()
+
 
 
         selectedFrame.pack(side='left',expand=True,fill='y',padx=(20,0))
