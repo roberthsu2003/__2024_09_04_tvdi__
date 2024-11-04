@@ -70,11 +70,10 @@ class Window(ThemedTk):
             #==============end bottomFrame===============
         
     def sitename_selected(self,event):
-        selected = self.selected_site.get()
-        print(selected)
-        #selected_data = datasource.get_selected_data(selected)
-        #for record in selected_data:
-            #self.tree.insert("", "end", values=record)
+        selected = self.selected_site.get()        
+        selected_data = datasource.get_selected_data(selected)
+        for record in selected_data:
+            self.tree.insert("", "end", values=record)
 
     
         
