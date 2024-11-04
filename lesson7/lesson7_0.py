@@ -9,6 +9,7 @@ class Window(ThemedTk):
     def __init__(self,*args, **kwargs):
         super().__init__(*args, **kwargs)
         self.title('登入')
+        self.resizable(False, False)
         #==============style===============
         style = ttk.Style(self)
         style.configure('TopFrame.TLabel',font=('Helvetica',20))
@@ -70,6 +71,8 @@ class Window(ThemedTk):
             #==============end bottomFrame===============
         
     def sitename_selected(self,event):
+        for children in self.tree.get_children():
+            self.tree.delete(children)
         selected = self.selected_site.get()        
         selected_data = datasource.get_selected_data(selected)
         for record in selected_data:
