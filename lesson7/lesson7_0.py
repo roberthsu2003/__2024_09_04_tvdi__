@@ -78,8 +78,11 @@ class Window(ThemedTk):
 
     
         
+def download_data():
+    pass
 
 def main():
+    download_data()
     window = Window(theme="arc")
     window.mainloop()
 
