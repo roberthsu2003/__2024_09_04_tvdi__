@@ -1,19 +1,37 @@
 import requests
 import sqlite3
 def get_sitename()->list[str]:
+    '''
+    docString
+    parameter:
+    return:
+        傳出所有的站點名稱
+    '''
     conn = sqlite3.connect("AQI.db")
     with conn:
+        # Create a cursor object to execute SQL commands
         cursor = conn.cursor()
+        # SQL query to select unique sitenames from records table
         sql = '''
         SELECT DISTINCT sitename
         FROM records
         '''
+        # Execute the SQL query
         cursor.execute(sql)
+        # Get all results and extract first item from each row into a list
         sitenames = [items[0] for items in cursor.fetchall()]
     
+    # Return the list of unique sitenames
     return sitenames
     
 def get_selected_data(sitename:str)->list[list]:
+    '''
+    使用者選擇了sitename,並將sitename傳入
+    Parameter:
+        sitename: 站點的名稱
+    Return:
+        所有關於此站點的相關資料
+    '''
     url = 'https://data.moenv.gov.tw/api/v2/aqx_p_488?api_key=e8dd42e6-9b8b-43f8-991e-b3dee723a52d&limit=1000&sort=datacreationdate%20desc&format=JSON'
     try:
         response = requests.get(url)
