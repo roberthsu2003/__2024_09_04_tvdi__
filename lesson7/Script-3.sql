@@ -7,3 +7,6 @@ FROM records
 WHERE sitename='富貴角'
 ORDER BY date DESC;
 
+SELECT DISTINCT county
+FROM records
+

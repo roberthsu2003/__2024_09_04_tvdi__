@@ -23,6 +23,30 @@ def get_sitename()->list[str]:
     
     # Return the list of unique sitenames
     return sitenames
+
+def get_county()->list[str]:
+    '''
+    docString
+    parameter:
+    return:
+        傳出所有的城市名稱
+    '''
+    conn = sqlite3.connect("AQI.db")
+    with conn:
+        # Create a cursor object to execute SQL commands
+        cursor = conn.cursor()
+        # SQL query to select unique sitenames from records table
+        sql = '''
+        SELECT DISTINCT county
+        FROM records
+        '''
+        # Execute the SQL query
+        cursor.execute(sql)
+        # Get all results and extract first item from each row into a list
+        counties = [items[0] for items in cursor.fetchall()]
+    
+    # Return the list of unique sitenames
+    return counties
     
 def get_selected_data(sitename:str)->list[list]:
     '''
