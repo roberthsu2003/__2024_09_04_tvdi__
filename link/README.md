@@ -58,5 +58,15 @@ https://youtube.com/live/DCBZMUecqSg
 https://youtube.com/live/CqUp0kTQm_M
 ---
 
+### 2024_11_04_上午
+
+https://youtube.com/live/d4ExC5WNYlU
+
+### 2024_11_04_下午
+
+https://youtube.com/live/qRrqh-QuWXM
+
+---
+
 
 
