@@ -10,3 +10,7 @@ ORDER BY date DESC;
 SELECT DISTINCT county
 FROM records
 
+SELECT DISTINCT sitename
+FROM records
+WHERE county = '新北市'
+
