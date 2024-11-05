@@ -63,7 +63,7 @@ def get_selected_data(sitename:str)->list[list]:
     with conn:
         cursor = conn.cursor()        
         sql = '''
-        SELECT date,county,aqi,pm25,status,lat,lon
+        SELECT date,county,sitename,aqi,pm25,status,lat,lon
         FROM records
         WHERE sitename=?
         ORDER BY date DESC;

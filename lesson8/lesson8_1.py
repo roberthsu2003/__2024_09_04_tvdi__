@@ -49,13 +49,14 @@ class Window(ThemedTk):
         
 
         # define columns
-        columns = ('date', 'county', 'aqi', 'pm25','status','lat','lon')
+        columns = ('date', 'county', 'sitename','aqi', 'pm25','status','lat','lon')
 
         self.tree = ttk.Treeview(bottomFrame, columns=columns, show='headings')
 
         # define headings
         self.tree.heading('date', text='日期')
         self.tree.heading('county', text='縣市')
+        self.tree.heading('sitename', text='站點')
         self.tree.heading('aqi', text='AQI')
         self.tree.heading('pm25', text='PM25')
         self.tree.heading('status',text='狀態')
@@ -64,6 +65,7 @@ class Window(ThemedTk):
 
         self.tree.column('date', width=150,anchor="center")
         self.tree.column('county', width=80,anchor="center")
+        self.tree.column('sitename', width=80,anchor="center")
         self.tree.column('aqi', width=50,anchor="center")
         self.tree.column('pm25', width=50,anchor="center")
         self.tree.column('status', width=50,anchor="center")
