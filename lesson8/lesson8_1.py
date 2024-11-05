@@ -86,13 +86,13 @@ class Window(ThemedTk):
         
     def county_selected(self,event):
         selected = self.selected_county.get()
-        counties = datasource.get_sitename(county=selected)
+        sitenames = datasource.get_sitename(county=selected)
         #listbox選擇站點
         if self.listbox:
             self.listbox.destroy()
             self.sitenameFrame.destroy()
 
-        var = tk.Variable(value=counties)
+        var = tk.Variable(value=sitenames)
         self.listbox = tk.Listbox(
                     self.selectedFrame,
                     listvariable=var,
@@ -100,7 +100,7 @@ class Window(ThemedTk):
                     selectmode=tk.EXTENDED
                 )
         self.listbox.pack()
-        self.sitenameFrame = view.SitenameFrame(self.selectedFrame)
+        self.sitenameFrame = view.SitenameFrame(master=self.selectedFrame,sitenames=sitenames)
         self.sitenameFrame.pack()
 
 
