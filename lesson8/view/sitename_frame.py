@@ -12,10 +12,17 @@ class SitenameFrame(ttk.Frame):
         #欄寬度的權重
         self.columnconfigure(0,weight=1)
         self.columnconfigure(1,weight=1)
-        selected_radio = tk.StringVar() #負責取得使用者選取的資料
+3W        self.selected_radio = tk.StringVar() #負責取得使用者選取的資料
         for idx,value in enumerate(sitenames):
             column = idx % 2
             index = int(idx / 2)
             print(idx,value)
-            ttk.Radiobutton(self, text=value, value=value, variable=selected_radio).grid(column=column,row=index,sticky='w')
-            print("================")
+            ttk.Radiobutton(self,
+                            text=value,
+                            value=value,
+                            variable=self.selected_radio,
+                            command=self.radio_button_selected).grid(column=column,row=index,sticky='w')
+           
+    
+    def radio_button_selected(self):
+        print(self.selected_radio.get())
