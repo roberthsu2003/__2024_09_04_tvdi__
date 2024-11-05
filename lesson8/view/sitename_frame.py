@@ -11,4 +11,10 @@ class SitenameFrame(ttk.Frame):
         #欄寬度的權重
         self.columnconfigure(0,weight=1)
         self.columnconfigure(1,weight=1)
-        print(sitenames)
+        for idx,value in enumerate(sitenames):
+            column = idx % 2
+            index = int(idx / 2)
+            print(idx,value)
+            print(f'column:{column}')
+            print(f'index:{index}')
+            print("================")
