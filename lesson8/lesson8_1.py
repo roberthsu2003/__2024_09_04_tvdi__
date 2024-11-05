@@ -91,15 +91,21 @@ class Window(ThemedTk):
         if self.sitenameFrame:            
             self.sitenameFrame.destroy()
         
-        self.sitenameFrame = view.SitenameFrame(master=self.selectedFrame,sitenames=sitenames)
+        self.sitenameFrame = view.SitenameFrame(master=self.selectedFrame,sitenames=sitenames,radio_controller=self.radio_button_click)
         self.sitenameFrame.pack()
 
 
-    def sitename_selected(self,event):
+    
+    def radio_button_click(self,selected_sitename:str):
+        '''
+        - 此method是傳遞給SitenameFrame實體
+        - 當sitenameFrame內的radiobutton被選取時,會連動執行此method
+        Parameter:
+            selected_sitename:str -> 這是被選取的站點名稱
+        '''
         for children in self.tree.get_children():
-            self.tree.delete(children)
-        selected = self.selected_site.get()        
-        selected_data = datasource.get_selected_data(selected)
+            self.tree.delete(children)        
+        selected_data = datasource.get_selected_data(selected_sitename)
         for record in selected_data:
             self.tree.insert("", "end", values=record)
 
