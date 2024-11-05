@@ -25,7 +25,7 @@ class Window(ThemedTk):
         #==============end topFrame===============
 
         #==============bottomFrame===============
-        bottomFrame = ttk.Frame(self)
+        bottomFrame = ttk.Frame(self,padding=[10,10,10,10])
             #==============SelectedFrame===============        
         self.selectedFrame= ttk.Frame(self,padding=[10,10,10,10])
         #增加refresh button        
@@ -48,11 +48,11 @@ class Window(ThemedTk):
 
 
 
-        self.selectedFrame.pack(side='left',expand=True,fill='y',padx=(20,0))
+        self.selectedFrame.pack(side='left',fill='y')
             #==============End SelectedFrame=============== 
     
             #==============RightFrame======================
-        rightFrame = ttk.LabelFrame(bottomFrame,text="這是labelFrame")
+        rightFrame = ttk.LabelFrame(bottomFrame,text="站點資訊",padding=[10,10,10,10])
         #建立treeView
         # define columns
         columns = ('date', 'county', 'sitename','aqi', 'pm25','status','lat','lon')
@@ -84,9 +84,9 @@ class Window(ThemedTk):
             #==============End RightFRame==================        
 
 
-        bottomFrame.pack(expand=True,fill='x',padx=20,pady=(0,20),ipadx=10,ipady=10)
+        bottomFrame.pack()
 
-            #==============end bottomFrame===============
+        #==============end bottomFrame===============
         
     def county_selected(self,event):
         selected = self.selected_county.get()
