@@ -20,8 +20,11 @@ class Window(ThemedTk):
         topFrame.pack(padx=20,pady=20)
         
         #==============end topFrame===============
-
+        
+# 臺北市今日使用道路集會路段
 # https://tpnco.blob.core.windows.net/blobfs/Rally/TodayRallyCase.json
+# 臺北市今日臨時使用道路路段
+# https://tpnco.blob.core.windows.net/blobfs/Rally/TodayUrgentCase.json
     
         
  
