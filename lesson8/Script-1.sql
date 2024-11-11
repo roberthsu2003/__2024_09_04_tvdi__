@@ -8,5 +8,6 @@ CREATE TABLE records (
 	date TEXT,
 	lat NUMERIC,
 	lon NUMERIC,
-	UNIQUE (date, sitename)
+	UNIQUE
+(date, sitename)
 );
