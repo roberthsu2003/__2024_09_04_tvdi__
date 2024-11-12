@@ -1,0 +1,21 @@
+Sales ID,Sales Name,Customer,Yield Rate
+Sales A,John,Customer 7,99.64
+Sales A,John,Customer 14,99.78
+Sales A,John,Customer 10,97.07
+Sales A,John,Customer 12,97.9
+Sales B,Alice,Customer 20,99.51
+Sales B,Alice,Customer 1,97.24
+Sales B,Alice,Customer 19,98.21
+Sales B,Alice,Customer 4,98.9
+Sales C,Bob,Customer 8,99.21
+Sales C,Bob,Customer 6,99.64
+Sales C,Bob,Customer 17,96.47
+Sales C,Bob,Customer 5,99.3
+Sales D,Eve,Customer 9,96.4
+Sales D,Eve,Customer 13,96.69
+Sales D,Eve,Customer 16,99.32
+Sales D,Eve,Customer 11,98.61
+Sales E,Charlie,Customer 3,99.54
+Sales E,Charlie,Customer 18,98.16
+Sales E,Charlie,Customer 2,99.15
+Sales E,Charlie,Customer 15,97.22
