@@ -10,9 +10,11 @@ class Window(tk.Tk):
         message=ttk.Label(self,text="專題名稱")
         message.pack()
 
+
 def main():
     window=Window()
     window.mainloop()
+
 
 if __name__ == '__main__':
     main()
