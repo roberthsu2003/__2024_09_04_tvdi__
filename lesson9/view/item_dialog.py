@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 from tkinter.simpledialog import Dialog
 
 class MyCustomDialog(Dialog):
@@ -15,7 +16,9 @@ class MyCustomDialog(Dialog):
 
     def body(self, master):
         # 創建對話框主體。返回應具有初始焦點的控件。
-        pass
+        main_frame = ttk.Frame(master,borderwidth=1,relief='groove')
+        ttk.Label(main_frame,text=self.status).pack()
+        main_frame.pack(expand=True,fill='x')
 
     def apply(self):
         # 當用戶按下確定時處理數據
