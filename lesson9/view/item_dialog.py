@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter.simpledialog import Dialog
 from PIL import Image, ImageTk
+import tkintermapview as tkmap
 
 class MyCustomDialog(Dialog):
     def __init__(self,parent,record:list,title=None):
@@ -56,6 +57,15 @@ class MyCustomDialog(Dialog):
         canvas_right.create_text(100, 160, text=f'PM2.5:{self.pm25}',font=("Helvetica",24,"bold"),fill='#9E7A7A')
         canvas_right.pack(side='right')
         main_frame.pack(expand=True,fill='x')
+
+        map_frame = ttk.Frame(master)
+        map_widget = tkmap.TkinterMapView(map_frame,
+                                         width=400,
+                                         height=400,
+                                         corner_radius=0
+                                         )
+        map_widget.pack()
+        map_frame.pack(padx=10,pady=10)
 
     def apply(self):
         # 當用戶按下確定時處理數據
