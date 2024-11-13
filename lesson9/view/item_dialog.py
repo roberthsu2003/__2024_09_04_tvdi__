@@ -36,8 +36,20 @@ class MyCustomDialog(Dialog):
         canvas_left.pack(side='left')
 
         canvas_right = tk.Canvas(main_frame,width=200,height=200)
-        canvas_right.create_oval(10, 10, 80, 80, outline="#f11",fill="#1f1", width=2)
-        canvas_right.create_text(200, 150, text=self.status,font=("Helvetica",24,"bold"),fill='#9E7A7A')
+        if self.pm25 <= 15.4:
+            path = './images/green.png'
+            self.pm25_status = '良好'
+        elif self.pm25 <= 35.4:
+            path = './images/yellow.png'
+            self.pm25_status = '普通'
+        else:
+            self.pm25_status = '危險'
+            path = './images/red.png' 
+        canvas_right.create_rectangle(10,10,190,190,outline="#9E7A7A",width=2)
+        canvas_right.create_text(100, 40, text=f'PM2.5:{self.pm25_status}',font=("Helvetica",24,"bold"),fill='#9E7A7A')
+        self.img1 = Image.open(path)
+        self.green1 = ImageTk.PhotoImage(self.img1)
+        canvas_right.create_image(100, 100, anchor='center', image=self.green1)      
         canvas_right.pack(side='right')
         main_frame.pack(expand=True,fill='x')
 
