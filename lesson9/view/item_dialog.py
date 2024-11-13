@@ -2,7 +2,8 @@ import tkinter as tk
 from tkinter.simpledialog import Dialog
 
 class MyCustomDialog(Dialog):
-    def __init__(self,parent,title=None):
+    def __init__(self,parent,record:list,title=None):
+        print(f'傳過來的資料:{record}')
         super().__init__(parent=parent,title=title)
 
     def body(self, master):
