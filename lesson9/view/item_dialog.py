@@ -19,11 +19,18 @@ class MyCustomDialog(Dialog):
         # 創建對話框主體。返回應具有初始焦點的控件。
         main_frame = ttk.Frame(master,borderwidth=1,relief='groove')
         canvas_left = tk.Canvas(main_frame,width=200,height=200)
+        if self.aqi <= 50:
+            path = './images/green.png'
+            self.status = '良好'
+        elif self.aqi <= 100:
+            path = './images/yellow.png'
+            self.status = '普通'
+        else:
+            self.status = '危險'
+            path = './images/red.png' 
         canvas_left.create_rectangle(10,10,190,190,outline="#9E7A7A",width=2)
         canvas_left.create_text(100, 40, text=f'AQI:{self.status}',font=("Helvetica",24,"bold"),fill='#9E7A7A')
-        #canvas_left.create_oval(70, 70, 130, 130, outline="#f11",fill="#1f1", width=2)
-        self.img = Image.open("./images/green.png")
-        #self.resize_image = img.resize((60,60))
+        self.img = Image.open(path)
         self.green = ImageTk.PhotoImage(self.img)
         canvas_left.create_image(100, 100, anchor='center', image=self.green)      
         canvas_left.pack(side='left')
