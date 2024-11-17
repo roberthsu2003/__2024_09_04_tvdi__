@@ -75,15 +75,16 @@ def save_to_csv(data, filename='sales_orders.csv'):
     print(f"CSV file '{filename}' has been created successfully.")
     return df
 
-# Function to save data to SQLite database
-def save_to_sqlite(df, db_filename='salesorders.db'):
+# Function to save data to SQLite database one by one
+def save_to_sqlite(df, db_filename='sales_order1.db'):
+    print("Saving data to SQLite database record by record...")
     conn = sqlite3.connect(db_filename)
-    table_name = 'sales_orders'
-    
-    # Create the table
-    conn.execute(f"DROP TABLE IF EXISTS {table_name}")
+    table_name = 'sales_orders1'
+
+    # Create the table with an auto-incrementing 'id' field
     create_table_query = f'''
-    CREATE TABLE {table_name} (
+    CREATE TABLE IF NOT EXISTS {table_name} (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
         "Sales ID" TEXT,
         "Sales Name" TEXT,
         "Customer ID" TEXT,
@@ -95,42 +96,88 @@ def save_to_sqlite(df, db_filename='salesorders.db'):
         "Factory" TEXT
     )
     '''
-    conn.execute(create_table_query)
     
-    # Insert data into SQLite
-    df.to_sql(table_name, conn, if_exists='append', index=False)
+    conn.execute(create_table_query)
+
+    # Insert data into SQLite record by record
+    cursor = conn.cursor()
+    item = 1  # Initialize item counter
+    
+    for _, row in df.iterrows():
+        sales_id = row['Sales ID']
+        sales_name = row['Sales Name']
+        customer_id = row['Customer ID']
+        order_id = row['Order ID']
+        yield_rate = float(row['Yield Rate']) if row['Yield Rate'] != '' else 0.0
+        thru_put = float(row['Thru_put']) if row['Thru_put'] != '' else 0.0
+        order_date = row['Order Date']
+        delivery_date = row['Delivery Date']
+        factory = row['Factory']
+
+        # Insert each record one by one
+        sql = f'''
+        INSERT INTO {table_name} 
+        ("Sales ID", "Sales Name", "Customer ID", "Order ID", "Yield Rate", "Thru_put", "Order Date", "Delivery Date", "Factory")
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        '''
+        
+        cursor.execute(sql, (sales_id, sales_name, customer_id, order_id, yield_rate, thru_put, order_date, delivery_date, factory))
+        print(f"Inserted item {item}: {sales_id}, {sales_name}, {customer_id}, {order_id}")
+        item += 1
+    
     conn.commit()
     conn.close()
     print(f"Data has been successfully imported into '{db_filename}' database, table '{table_name}'.")
 
 # Function to load data from SQLite database
-def load_from_sqlite(db_filename='salesorders.db', table_name='sales_orders'):
+def load_from_sqlite(db_filename='sales_orders1.db', table_name='sales_orders1'):
     conn = sqlite3.connect(db_filename)
     query = f"SELECT * FROM {table_name}"
     df = pd.read_sql(query, conn)
     conn.close()
+    print(f"Data has been successfully loaded from '{db_filename}' database, table '{table_name}'.")
     return df
 
-def get_sales()->list[str]:
+
+# get all sales names
+def get_sales() -> list[str]:
     '''
     docString
     parameter:
     return:
-        傳出所有的城市名稱
+        傳出所有業務的名字
     '''
-    conn = sqlite3.connect("salesorders.db")
-    with conn:
-        # Create a cursor object to execute SQL commands
-        cursor = conn.cursor()
-        # SQL query to select unique sitenames from records table
-        sql = '''
-        SELECT DISTINCT sales_names
-        FROM sales_orders
-        '''
-        # Execute the SQL query
-        cursor.execute(sql)
-        # Get all results and extract first item from each row into a list
-        sales_names = [items[0] for items in cursor.fetchall()]
-    
-    # Return the list of unique sitenames
-    return sales_names
+    try:
+        conn = sqlite3.connect("sales_order1.db")
+        with conn:
+            # Create a cursor object to execute SQL commands
+            cursor = conn.cursor()
+            
+            # SQL query to select unique sales from sales_orders1 table
+            sql = '''
+            SELECT DISTINCT "Sales Name"
+            FROM sales_orders1
+            '''
+            
+            # Execute the SQL query
+            cursor.execute(sql)
+            
+            # Get all results and extract the first item from each row into a list
+            sales = [items[0] for items in cursor.fetchall()]
+            
+            # Print out the fetched sales names to confirm
+            if sales:
+                print("Sales Names:", sales)
+            else:
+                print("No sales names found in the database.")
+                
+        # Return the list of unique sales
+        return sales
+
+    except Exception as e:
+        print("Error occurred:", e)
+        return []
+
+# Test the function
+sales_list = get_sales()
+print("Returned Sales List:", sales_list)
