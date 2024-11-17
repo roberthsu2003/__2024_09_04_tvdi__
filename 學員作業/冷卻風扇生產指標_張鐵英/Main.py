@@ -71,7 +71,7 @@ def main():
     print("\nLoaded Data from SQLite:")
     print(loaded_df.head())
     
-    sales = datasource.get_sales()
+    sales = get_sales()
     
     window = Window(theme="arc")
     window.mainloop()
