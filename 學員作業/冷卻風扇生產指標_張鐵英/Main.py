@@ -1,5 +1,6 @@
 from ttkthemes import ThemedTk
-from datasource import generate_orders, generate_sales_orders, save_to_csv, save_to_sqlite, load_from_sqlite
+import datasource
+import tkinter as tk
 from tkinter import ttk
 import view
 
@@ -29,17 +30,19 @@ class Window(ThemedTk):
                                        command=lambda:datasource.load_from_sqlite())
         icon_button.pack()
         #combobox選擇城市     
-        print("Hello Tkinter and Python 1") 
-        sales = datasource.get_sales()
+        
+        sales_list = datasource.get_sales()
         #self.selected_site = tk.StringVar()
         print("Hello Tkinter and Python 2") 
-        self.selected_county = tk.StringVar()
-        sitenames_cb = ttk.Combobox(self.selectedFrame, textvariable=self.selected_county,values=counties,state='readonly')
-        self.selected_county.set('請選擇城市')
-        sitenames_cb.bind('<<ComboboxSelected>>', self.county_selected)
+        
+        self.selected_sales = tk.StringVar()
+        sitenames_cb = ttk.Combobox(self.selectedFrame, textvariable=self.selected_sales,values=sales_list,state='readonly')
+        self.selected_sales.set('請選擇業務')
+        sitenames_cb.bind('<<ComboboxSelected>>', self.selected_sales)
         sitenames_cb.pack(anchor='n',pady=10)
         self.sitenameFrame = None 
         self.selectedFrame.pack(side='left',fill='y')
+        print("Hello Tkinter and Python 1") 
             #==============End SelectedFrame=============== 
             
         bottomFrame.pack()
@@ -47,32 +50,13 @@ class Window(ThemedTk):
     
     pass
 
-    def county_selected(self,event):
+    def selected_sales(self,event):
         pass
 
 
 
 
 def main():
-   # Step 1: Generate orders
-    orders = generate_orders()
-
-    # Step 2: Generate sales orders data
-    sales_data = generate_sales_orders(orders)
-
-    # Step 3: Save sales data to CSV
-    df = save_to_csv(sales_data)
-
-    # Step 4: Save sales data to SQLite database
-    save_to_sqlite(df)
-
-    # Step 5: Load data back from SQLite database for verification
-    loaded_df = load_from_sqlite()
-    print("\nLoaded Data from SQLite:")
-    print(loaded_df.head())
-    
-    sales = get_sales()
-    
     window = Window(theme="arc")
     window.mainloop()
 
