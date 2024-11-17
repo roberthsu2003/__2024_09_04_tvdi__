@@ -30,7 +30,7 @@ class Window(ThemedTk):
         icon_button.pack()
         #combobox選擇城市     
         print("Hello Tkinter and Python 1") 
-        counties = datasource.get_sales()
+        sales = datasource.get_sales()
         #self.selected_site = tk.StringVar()
         print("Hello Tkinter and Python 2") 
         self.selected_county = tk.StringVar()
@@ -70,6 +70,8 @@ def main():
     loaded_df = load_from_sqlite()
     print("\nLoaded Data from SQLite:")
     print(loaded_df.head())
+    
+    sales = datasource.get_sales()
     
     window = Window(theme="arc")
     window.mainloop()

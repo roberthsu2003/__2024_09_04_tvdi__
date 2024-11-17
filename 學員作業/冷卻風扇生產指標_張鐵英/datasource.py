@@ -76,7 +76,7 @@ def save_to_csv(data, filename='sales_orders.csv'):
     return df
 
 # Function to save data to SQLite database one by one
-def save_to_sqlite(df, db_filename='sales_order1.db'):
+def save_to_sqlite(df, db_filename='sales_orders1.db'):
     print("Saving data to SQLite database record by record...")
     conn = sqlite3.connect(db_filename)
     table_name = 'sales_orders1'
