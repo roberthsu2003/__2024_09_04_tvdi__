@@ -35,7 +35,7 @@ class Window(ThemedTk):
         #self.selected_site = tk.StringVar()
         self.selected_sales = tk.StringVar()
         customer_cb = ttk.Combobox(self.selectedFrame, textvariable=self.selected_sales,values=sales_list,state='readonly')
-        self.selected_sales.set('請選擇業務')
+        self.selected_sales.set('請選擇業務名稱')
         customer_cb.bind('<<ComboboxSelected>>', self.selected_sales)
         customer_cb.pack(anchor='n',pady=10)
         self.customerFrame = None 
