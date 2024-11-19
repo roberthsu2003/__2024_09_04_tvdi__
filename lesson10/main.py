@@ -4,6 +4,7 @@ import tkinter as tk
 from ttkthemes import ThemedTk
 from tkinter.messagebox import showinfo
 import view
+from pandas import DataFrame
 
 class Window(ThemedTk):
     def __init__(self,*args, **kwargs):
@@ -88,8 +89,14 @@ class Window(ThemedTk):
         for children in self.tree.get_children():
             self.tree.delete(children)        
         selected_data = datasource.get_selected_data(selected_sitename)
+        
         for record in selected_data:
             self.tree.insert("", "end", values=record)
+        
+        #currentEdit
+        dataframe:DataFrame = datasource.get_plot_data(sitename=selected_sitename)
+        print(dataframe)
+
     
     def item_selected(self,event):
         for selected_item in self.tree.selection():
