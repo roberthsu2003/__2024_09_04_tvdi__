@@ -5,7 +5,6 @@ from ttkthemes import ThemedTk
 from tkinter.messagebox import showinfo
 import view
 
-
 class Window(ThemedTk):
     def __init__(self,*args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -15,15 +14,11 @@ class Window(ThemedTk):
         style = ttk.Style(self)
         style.configure('TopFrame.TLabel',font=('Helvetica',20))
         #============end style===============
-        
         #==============top Frame===============
-
         topFrame = ttk.Frame(self)
         ttk.Label(topFrame,text='空氣品質指標(AQI)(歷史資料)',style='TopFrame.TLabel').pack()
         topFrame.pack(padx=20,pady=20)
-        
         #==============end topFrame===============
-
         #==============bottomFrame===============
         bottomFrame = ttk.Frame(self,padding=[10,10,10,10])
             #==============SelectedFrame===============        
@@ -32,7 +27,6 @@ class Window(ThemedTk):
         icon_button = view.ImageButton(self.selectedFrame,
                                        command=lambda:datasource.download_data())
         icon_button.pack()
-
         #combobox選擇城市      
         counties = datasource.get_county()
         #self.selected_site = tk.StringVar()
@@ -41,13 +35,7 @@ class Window(ThemedTk):
         self.selected_county.set('請選擇城市')
         sitenames_cb.bind('<<ComboboxSelected>>', self.county_selected)
         sitenames_cb.pack(anchor='n',pady=10)
-
         self.sitenameFrame = None 
-        
-        
-
-
-
         self.selectedFrame.pack(side='left',fill='y')
             #==============End SelectedFrame=============== 
     
@@ -56,9 +44,8 @@ class Window(ThemedTk):
         #建立treeView
         # define columns
         columns = ('date', 'county', 'sitename','aqi', 'pm25','status','lat','lon')
-
         self.tree = ttk.Treeview(rightFrame, columns=columns, show='headings')
-
+        self.tree.bind('<<TreeviewSelect>>', self.item_selected)
         # define headings
         self.tree.heading('date', text='日期')
         self.tree.heading('county', text='縣市')
@@ -68,7 +55,6 @@ class Window(ThemedTk):
         self.tree.heading('status',text='狀態')
         self.tree.heading('lat', text='緯度')
         self.tree.heading('lon', text='經度')
-
         self.tree.column('date', width=150,anchor="center")
         self.tree.column('county', width=80,anchor="center")
         self.tree.column('sitename', width=80,anchor="center")
@@ -77,15 +63,10 @@ class Window(ThemedTk):
         self.tree.column('status', width=50,anchor="center")
         self.tree.column('lat', width=100,anchor="center")
         self.tree.column('lon', width=100,anchor="center")
-        
         self.tree.pack(side='right')
-
         rightFrame.pack(side='right')
             #==============End RightFRame==================        
-
-
         bottomFrame.pack()
-
         #==============end bottomFrame===============
         
     def county_selected(self,event):
@@ -94,11 +75,8 @@ class Window(ThemedTk):
         #listbox選擇站點
         if self.sitenameFrame:            
             self.sitenameFrame.destroy()
-        
         self.sitenameFrame = view.SitenameFrame(master=self.selectedFrame,sitenames=sitenames,radio_controller=self.radio_button_click)
         self.sitenameFrame.pack()
-
-
     
     def radio_button_click(self,selected_sitename:str):
         '''
@@ -112,10 +90,11 @@ class Window(ThemedTk):
         selected_data = datasource.get_selected_data(selected_sitename)
         for record in selected_data:
             self.tree.insert("", "end", values=record)
-
     
-        
- 
+    def item_selected(self,event):
+        for selected_item in self.tree.selection():
+            record = self.tree.item(selected_item)
+            dialog = view.MyCustomDialog(parent=self, title=f'{record["values"][1]}-{record["values"][2]}',record=record['values'])
 
 def main():
     datasource.download_data() #下載至資料庫
