@@ -5,12 +5,13 @@ from ttkthemes import ThemedTk
 from tkinter.messagebox import showinfo
 import view
 from pandas import DataFrame
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 class Window(ThemedTk):
     def __init__(self,*args, **kwargs):
         super().__init__(*args, **kwargs)
         self.title('登入')
-        self.resizable(False, False)
+        #self.resizable(False, False)
         #==============style===============
         style = ttk.Style(self)
         style.configure('TopFrame.TLabel',font=('Helvetica',20))
@@ -64,7 +65,14 @@ class Window(ThemedTk):
         self.tree.column('status', width=50,anchor="center")
         self.tree.column('lat', width=100,anchor="center")
         self.tree.column('lon', width=100,anchor="center")
-        self.tree.pack(side='right')
+        self.tree.pack(side='top')
+            #==============End Treview============#
+            #==============plotFrame==============#
+        self.plotFrame = ttk.Frame(rightFrame)
+        self.canvas = None #畫圖表的元件,一開始為None
+        self.plotFrame.pack(side='top')
+
+            #==============endPlotFrame===========# 
         rightFrame.pack(side='right')
             #==============End RightFRame==================        
         bottomFrame.pack()
@@ -95,7 +103,13 @@ class Window(ThemedTk):
         
         #currentEdit
         dataframe:DataFrame = datasource.get_plot_data(sitename=selected_sitename)
-        print(dataframe)
+        axes = dataframe.plot()
+        figure = axes.get_figure()
+        if self.canvas:
+            self.canvas.get_tk_widget().destroy()        
+        self.canvas = FigureCanvasTkAgg(figure, master=self.plotFrame)
+        self.canvas.draw()
+        self.canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=True,pady=(20,10))
 
     
     def item_selected(self,event):
