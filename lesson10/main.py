@@ -84,16 +84,16 @@ class Window(ThemedTk):
         #listbox選擇站點
         if self.sitenameFrame:            
             self.sitenameFrame.destroy()
-        self.sitenameFrame = view.SitenameFrame(master=self.selectedFrame,sitenames=sitenames,radio_controller=self.radio_button_click)
+        self.sitenameFrame = view.SitenameFrame(master=self.selectedFrame,sitenames=sitenames)
+        self.bind("<<Radio_Button_Selected>>",self.radio_button_click)
         self.sitenameFrame.pack()
     
-    def radio_button_click(self,selected_sitename:str):
+    def radio_button_click(self,event):
         '''
-        - 此method是傳遞給SitenameFrame實體
-        - 當sitenameFrame內的radiobutton被選取時,會連動執行此method
-        Parameter:
-            selected_sitename:str -> 這是被選取的站點名稱
+        radio button 被按時會執行這個事件
+        透過event.widget.selected_sitename,取得radioButton選取的值
         '''
+        selected_sitename = event.widget.selected_sitename
         for children in self.tree.get_children():
             self.tree.delete(children)        
         selected_data = datasource.get_selected_data(selected_sitename)
@@ -101,7 +101,6 @@ class Window(ThemedTk):
         for record in selected_data:
             self.tree.insert("", "end", values=record)
         
-        #currentEdit
         dataframe:DataFrame = datasource.get_plot_data(sitename=selected_sitename)
         axes = dataframe.plot()
         figure = axes.get_figure()
