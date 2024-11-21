@@ -90,7 +90,14 @@ https://youtube.com/live/WpzNpUEuVpw
 ### 2024_11_13_下午
 https://youtube.com/live/6WG2XmzcxnI
 
+---
 
+### 2024_11_19_上午
+https://youtube.com/live/3Q3YjC7w-vQ
+
+### 2024_11_19_下午
+
+https://youtube.com/live/11reQDv21QM
 
 
 
