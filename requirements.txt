@@ -2,3 +2,6 @@ requests
 ttkthemes
 Pillow
 tkintermapview
+python-dotenv
+pandas
+matplotlib
