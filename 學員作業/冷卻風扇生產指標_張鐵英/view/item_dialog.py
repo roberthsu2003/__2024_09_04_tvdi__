@@ -5,15 +5,16 @@ from PIL import Image, ImageTk
 import tkintermapview as tkmap
 
 class MyCustomDialog(Dialog):
-    def __init__(self,parent,record:list,title=None):
-        self.date = record[0]
-        self.county = record[1]
-        self.sitename = record[2]
-        self.aqi=record[3]
-        self.pm25 = record[4]
-        self.status = record[5]
-        self.lat = float(record[6])
-        self.lon = float(record[7])
+    def __init__(self,parent,sales_orders1:list,title=None):
+        self.sales_id = sales_orders1[0]
+        self.sales_name = sales_orders1[1]
+        self.customer_id = sales_orders1[2]
+        self.order_id=sales_orders1[3]
+        self.yield_rate = sales_orders1[4]
+        self.thru_put = sales_orders1[5]
+        self.order_date = float(sales_orders1[6])
+        self.deliver_date = float(sales_orders1[7])
+        self.factory = sales_orders1[8]
         super().__init__(parent=parent,title=title)
 
     def body(self, master):
