@@ -10,3 +10,12 @@ def hello_world():
             <li>產品</li>
         </ul>
     '''
+    
+@app.route("/name")
+def hello_world1():
+    return '''
+        <ul>
+            <li>主題1</li>
+            <li>產品1</li>
+        </ul>
+    '''
