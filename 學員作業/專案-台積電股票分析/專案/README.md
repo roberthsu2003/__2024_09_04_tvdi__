@@ -9,3 +9,9 @@ datasource.py
 
 outsources
 功能: 插入圖片
+
+## 進度
+main.py 插入圖片 
+
+datasource.py
+功能 : 線性回歸 ，SMA，RSI
