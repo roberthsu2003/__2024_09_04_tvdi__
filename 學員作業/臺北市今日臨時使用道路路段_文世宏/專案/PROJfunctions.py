@@ -1,20 +1,19 @@
 from pyproj import Transformer
 from geopy.geocoders import Nominatim
+import requests
+from requests import Response
 import sqlite3
+import time
 
 
 def xytransform(twx1:float,twy1:float):
-    """
-    把台灣座標x1y1轉換成世界座標
-    """
+    """把台灣座標x1y1轉換成世界座標"""
     # 創建轉換器
     transformer = Transformer.from_crs("epsg:3826", "epsg:4326")
     twd97_x = twx1
     twd97_y = twy1
     # 轉換 TWD97 到 WGS84
     latitude,longitude = transformer.transform(twd97_x, twd97_y)
-
-    print(f'2.TWD97轉WGS84: Latitude: {latitude:.7}, Longitude: {longitude:.7}')
     return latitude, longitude
 
 
@@ -33,10 +32,9 @@ def reverseaddress(location,alllist:list = None):
     list = alllist
     list_address = [item.strip() for item in location.split(",")]
     list_address.reverse()
-    print(f'3.單次轉換結果{list_address}')
+    print(f'單次轉換結果{list_address}')
     list.append(list_address)
-    print(f'4.總清單:{list}')
-    return list_address
+    print(f'總清單:{list}')
 
 
 
@@ -51,13 +49,10 @@ def latlonturn(mode,list:list = None,x = None,y = None) -> str:
         raise ValueError(f"無效的模式：{mode}。可接受的模式有：{', '.join(valid_modes)}")
 
     if mode == "reverse":
-        print("1.執行反轉操作")
         latitude, longitude = xytransform(x,y)
         location = get_address_from_coordinates(latitude, longitude)
         address = reverseaddress(location,list)
         return address
-    elif mode == "observe":
-        print("執行順序操作 沒有這個部分")
 
 
 def get_district()->list[str]:
@@ -110,27 +105,3 @@ def get_rodename(district:str)->list[str]:
     
     # Return the list of unique sitenames
     return full_address
-
-def get_selected_data(district:str)->list[list]:
-    '''
-    使用者選擇了disritct,並將district傳入
-    Parameter:
-        district: 站點的名稱
-    Return:
-        所有關於此站點的相關資料
-    '''
-    conn = sqlite3.connect("TPEroad.db")
-    with conn:
-        cursor = conn.cursor()        
-        sql = '''
-        SELECT 日期,
-        新地址,
-	    PRINTF("%.4f", ROUND(lat, 4)) AS Lat ,
-        PRINTF("%.4f", ROUND(lon, 4)) as Lon 
-        FROM records
-        WHERE 行政區=?
-        ORDER BY RCVdate DESC;
-        '''
-        cursor.execute(sql,(district,))
-        address_list = [list(item) for item in cursor.fetchall()]
-        return address_list
