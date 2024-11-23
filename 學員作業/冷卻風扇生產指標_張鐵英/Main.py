@@ -79,31 +79,11 @@ class Window(ThemedTk):
 
     def on_sales_selected(self, event):
         selected_sales = self.sales_selected.get()
-        # customers = datasource.get_customers_by_sales_id(selected_sales)
-        customers = datasource.get_customerid(selected_sales)
+        print(f"Selected Sales Name: {selected_sales}")  # Debugging
+        customers = datasource.get_customer(selected_sales)
         print(f"Hello Tkinter and Python 1: {customers}")  # Debugging
-        # if self.customerFrame:
-        #     self.customerFrame.destroy()
-        self.customerFrame = view.CustomerFrame(master=self.selectedFrame, customers=customers)
-        
-        self.bind("<<Radio_Button_Selected>>", self.radio_button_click)
-        self.customerFrame.pack()
-        
-     def radio_button_click(self, event):
-        selected_customer = event.widget.selected_customer
-        for children in self.tree.get_children():
-            self.tree.delete(children)
-        selected_data = datasource.get_selected_data(selected_customer)
-        for record in selected_data:
-            self.tree.insert("", "end", values=record)
-        dataframe = datasource.get_plot_data(customer_id=selected_customer)
-        axes = dataframe.plot()
-        figure = axes.get_figure()
-        if self.canvas:
-            self.canvas.get_tk_widget().destroy()
-        self.canvas = FigureCanvasTkAgg(figure, master=self.plotFrame)
-        self.canvas.draw()
-        self.canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=True, pady=(20, 10))
+       
+        pass
 
 
 def main():

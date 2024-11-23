@@ -54,6 +54,7 @@ def generate_sales_orders(orders):
                 order_details = next((order for order in orders if order['Order ID'] == order_id), None)
                 
                 if order_details:
+                    print(f"Debug: Adding sales_name '{sales_name}' with customer_id '{customer}'")
                     data.append([
                         sales_id, 
                         sales_name, 
@@ -88,7 +89,7 @@ def save_to_sqlite(df, db_filename='sales_orders1.db'):
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         "Sales ID" TEXT,
         "Sales Name" TEXT,
-        "Customer ID" TEXT,
+        "Customer ID" varchar(50),
         "Order ID" TEXT,
         "Yield Rate" REAL,
         "Thru_put" REAL,

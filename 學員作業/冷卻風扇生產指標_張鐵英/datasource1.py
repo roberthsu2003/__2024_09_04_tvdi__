@@ -187,7 +187,7 @@ print("Returned Sales List:", sales_list)
 
 
 # Get the customer id-------------------
-def get_customer(sales:str)->list[str]:
+def get_customerid(sales:str)->list[str]:
     '''
     docString
     parameter:
@@ -202,25 +202,23 @@ def get_customer(sales:str)->list[str]:
         cursor = conn.cursor()
         # SQL query to select unique sitenames from records table
         sql = '''
-        SELECT DISTINCT customer
+        SELECT DISTINCT customer_id
         FROM sales_orders1
         WHERE sales_name = ?
          '''
         # Execute the SQL query
         cursor.execute(sql, (sales, ))
-        customer = [items[0] for items in cursor.fetchall()]
-        
-    # Debug print to confirm correct output
-    print(f"Debug: Retrieved customer IDs for sales name '{sales}': {customer}")
+        customerid = [items[0] for items in cursor.fetchall()]
+
 
     # Return the list of unique sitenames
-    return customer
+    return customerid
 
 
-# def get_customers_by_sales_id(sales_id: str) -> list[str]:
-#     conn = sqlite3.connect("sales_orders1.db")
-#     with conn:
-#         cursor = conn.cursor()
-#         cursor.execute("SELECT DISTINCT customer_id FROM sales_orders1 WHERE sales_id = ?", (sales_id,))
-#         customers = [row[0] for row in cursor.fetchall()]
-#     return customers
+def get_customers_by_sales_id(sales_id: str) -> list[str]:
+    conn = sqlite3.connect("sales_orders1.db")
+    with conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT DISTINCT customer_id FROM sales_orders1 WHERE sales_id = ?", (sales_id,))
+        customers = [row[0] for row in cursor.fetchall()]
+    return customers
