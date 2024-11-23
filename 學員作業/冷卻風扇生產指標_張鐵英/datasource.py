@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 import sqlite3
 
+#==================Input Simulation portion=================================
 # Function to get the start date of a specific week in a given year
 def get_week_start(year, week):
     return datetime.strptime(f'{year}-W{str(week).zfill(2)}-1', "%Y-W%W-%w")
@@ -138,8 +139,10 @@ def load_from_sqlite(db_filename='sales_orders1.db', table_name='sales_orders1')
     print(f"Data has been successfully loaded from '{db_filename}' database, table '{table_name}'.")
     return df
 
+print(f'end of database created and import to sqlite')
+#==================End of Input Simulation portion=================================
 
-# get all sales names
+# get all sales names from database
 def get_sales() -> list[str]:
     '''
     docString
@@ -148,7 +151,7 @@ def get_sales() -> list[str]:
         傳出所有業務的名字
     '''
     try:
-        conn = sqlite3.connect("sales_order1.db")
+        conn = sqlite3.connect("sales_orders1.db")
         with conn:
             # Create a cursor object to execute SQL commands
             cursor = conn.cursor()
@@ -181,3 +184,41 @@ def get_sales() -> list[str]:
 # Test the function
 sales_list = get_sales()
 print("Returned Sales List:", sales_list)
+
+
+# Get the customer id-------------------
+def get_customerid(sales:str)->list[str]:
+    '''
+    docString
+    parameter:
+        sales:業務名稱
+
+    return:
+        傳出所有的客戶id
+    '''
+    conn = sqlite3.connect("sales_orders1.db")
+    with conn:
+        # Create a cursor object to execute SQL commands
+        cursor = conn.cursor()
+        # SQL query to select unique sitenames from records table
+        sql = '''
+        SELECT DISTINCT customer_id
+        FROM sales_orders1
+        WHERE sales_name = ?
+         '''
+        # Execute the SQL query
+        cursor.execute(sql, (sales, ))
+        customerid = [items[0] for items in cursor.fetchall()]
+
+
+    # Return the list of unique sitenames
+    return customerid
+
+
+def get_customers_by_sales_id(sales_id: str) -> list[str]:
+    conn = sqlite3.connect("sales_orders1.db")
+    with conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT DISTINCT customer_id FROM sales_orders1 WHERE sales_id = ?", (sales_id,))
+        customers = [row[0] for row in cursor.fetchall()]
+    return customers
