@@ -3,6 +3,7 @@ import datasource
 import tkinter as tk
 from tkinter import ttk
 import view
+import simulate_input
 
 
 class Window(ThemedTk):
@@ -80,7 +81,7 @@ class Window(ThemedTk):
     def on_sales_selected(self, event):
         selected_sales = self.sales_selected.get()
         print(f"Selected Sales Name: {selected_sales}")  # Debugging
-        customers = datasource.get_customer(selected_sales)
+        customers = datasource.get_customer_id(selected_sales)
         print(f"Hello Tkinter and Python 1: {customers}")  # Debugging
        
         pass
@@ -92,4 +93,15 @@ def main():
 
 
 if __name__ == '__main__':
+    # Generate the simulated data
+    csv_file = 'sales_orders.csv'
+    db_file = 'sales_orders.db'
+    table_name = 'sales_orders'
+
+    # Call the function from the package
+    data_frame = simulate_input.generate_sales_data(csv_filename=csv_file, db_filename=db_file, table_name=table_name)
+
+    # Display the first few rows of the data
+    print(data_frame.head())
+    
     main()
