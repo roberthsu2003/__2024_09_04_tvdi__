@@ -74,7 +74,7 @@ def generate_sales_data(csv_filename='sales_orders.csv', db_filename='sales_orde
 
     # Save the DataFrame to a CSV file
     df.to_csv(csv_filename, index=False)
-    print(f"CSV file '{csv_filename}' has been created successfully.")
+    # print(f"CSV file '{csv_filename}' has been created successfully.")
 
     # Step 4: Import CSV into SQLite Database
     conn = sqlite3.connect(db_filename)
@@ -106,5 +106,5 @@ def generate_sales_data(csv_filename='sales_orders.csv', db_filename='sales_orde
     conn.commit()
     conn.close()
 
-    print(f"Data from '{csv_filename}' has been successfully imported into '{db_filename}' database, table '{table_name}'.")
+    # print(f"Data from '{csv_filename}' has been successfully imported into '{db_filename}' database, table '{table_name}'.")
     return df

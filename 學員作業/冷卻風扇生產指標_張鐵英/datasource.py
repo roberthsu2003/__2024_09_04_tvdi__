@@ -5,6 +5,7 @@ import random
 from datetime import datetime, timedelta
 import pandas as pd
 import sqlite3
+from pandas import DataFrame
 
 # get all sales names from database
 def get_sales() -> list[str]:
@@ -33,10 +34,10 @@ def get_sales() -> list[str]:
             sales = [items[0] for items in cursor.fetchall()]
             
             # Print out the fetched sales names to confirm
-            if sales:
-                print("Sales Names:", sales)
-            else:
-                print("No sales names found in the database.")
+            # if sales:
+            #     print("Sales Names:", sales)
+            # else:
+            #     print("No sales names found in the database.")
                 
         # Return the list of unique sales
         return sales
@@ -47,7 +48,7 @@ def get_sales() -> list[str]:
 
 # Test the function
 sales_list = get_sales()
-print("Returned Sales List:", sales_list)
+# print("Returned Sales List:", sales_list)
 
 
 # Get the customer id-------------------
@@ -80,11 +81,39 @@ def get_customer_id(sales:str)->list[str]:
     # Return the list of unique sitenames
     return customer_id
 
+def get_selected_data(customer_id: str) -> list[list]:
+    conn = sqlite3.connect("sales_orders.db")
+    with conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT order_date, deliver_date, customer_id, order_id, yield_rate, thru_put, factory
+            FROM sales_orders WHERE customer_id = ?
+            ORDER BY order_date DESC
+        """, (customer_id,))
+        return [list(row) for row in cursor.fetchall()]
+    
+def get_plot_data(customer_id: str) -> DataFrame:
+    conn = sqlite3.connect("sales_orders.db")
+    with conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT order_date, yield_rate, thru_put FROM sales_orders WHERE customer_id = ?
+        """, (customer_id,))
+        rows = cursor.fetchall()
 
-# def get_customers_by_sales_id(sales_id: str) -> list[str]:
-#     conn = sqlite3.connect("sales_orders.db")
-#     with conn:
-#         cursor = conn.cursor()
-#         cursor.execute("SELECT DISTINCT customer_id FROM sales_orders WHERE sales_id = ?", (sales_id,))
-#         customers = [row[0] for row in cursor.fetchall()]
-#     return customers
+    # Check if rows are returned
+    if not rows:
+        raise ValueError(f"No data found for customer_id: {customer_id}")
+
+    # Convert rows to DataFrame
+    data = [{'order_date': row[0], 'yield_rate': row[1], 'thru_put': row[2]} for row in rows]
+    df = pd.DataFrame(data)
+
+    # Ensure the DataFrame has the expected structure
+    if 'order_date' not in df.columns:
+        raise KeyError("The 'order_date' column is missing in the DataFrame.")
+
+    # Convert order_date to datetime
+    df['order_date'] = pd.to_datetime(df['order_date'])
+    return df.set_index('order_date')  # Set order_date as the index
+
