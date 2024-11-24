@@ -1,4 +1,4 @@
-CREATE TABLE sales_order1(
+CREATE TABLE sales_orders(
 	id INTEGER NOT NULL PRIMARY KEY IDENTITY(1,1),
 	sales_id TEXT,
 	sales_name TEXT,
