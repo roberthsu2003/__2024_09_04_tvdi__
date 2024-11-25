@@ -57,7 +57,7 @@
  * 利用 *AnalysisView* 顯示數據分析內容
 
 6. **src.data.data_source**   
-利用 *src.data.data_source* 匯入資料管理器，處理寵物登記與絕育相關的數據。
+ * 利用 *src.data.data_source* 匯入資料管理器，處理寵物登記與絕育相關的數據。
 
 
 ## 七、完成示意圖 
