@@ -23,7 +23,7 @@ class AnalysisView(ttk.Frame):
         self._update_lock = threading.Lock()
         
         # 設定matplotlib中文字型
-        plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei']
+        plt.rcParams['font.sans-serif'] = ['PingFang TC', 'Microsoft JhengHei', 'Arial Unicode MS']
         plt.rcParams['axes.unicode_minus'] = False
         
         # 初始化圖表

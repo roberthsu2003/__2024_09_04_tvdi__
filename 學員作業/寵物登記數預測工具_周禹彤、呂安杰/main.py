@@ -13,7 +13,7 @@ class MainWindow(ThemedTk):
         self.geometry('1300x720')  # 設定視窗大小
         
         # 禁止視窗調整大小
-        self.resizable(False, False)
+        #self.resizable(False, False)
         
         # 初始化資料管理器,用於處理寵物相關資料
         self.data_manager = PetDataManager()
