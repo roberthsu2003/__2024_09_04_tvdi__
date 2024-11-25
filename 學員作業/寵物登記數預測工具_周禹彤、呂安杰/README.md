@@ -50,7 +50,7 @@
  * 利用 *FigureCanvasTkAgg* 將 Matplotlib 圖表嵌入到 Tkinter 的 GUI 應用程式中
 
 4. **numpy**  
-利用 *np.divide* 計算絕育數與登記數的比率
+ * 利用 *np.divide* 計算絕育數與登記數的比率
 
 5. **src.ui.analysis_view**  
  * 利用 *src.ui.analysis_view* 匯入分析視圖模組
