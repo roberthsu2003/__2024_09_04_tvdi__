@@ -9,7 +9,7 @@ class LoginDialog(Dialog):
         super().__init__(parent=parent, title=title)
 
     def body(self, master):
-        self.title('登入你的可愛')
+        self.title('誰想看電影?')
         
         # ====Style===      
         style = ttk.Style(self)
@@ -58,7 +58,7 @@ class LoginDialog(Dialog):
         """驗證登入資訊"""
         # 這裡添加您的驗證邏輯
         # 示例：假設用戶名為 "admin"，密碼為 "password"
-        return username == "admin" and password == "password"
+        return username == "1234" and password == "5678"
 
     def buttonbox(self):
         """自定義按鈕框"""
