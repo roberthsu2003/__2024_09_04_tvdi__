@@ -9,3 +9,13 @@ datasource.py
 
 outsources
 功能: 插入圖片
+
+## 進度
+main.py 插入圖片 
+
+datasource.py
+功能 : 線性回歸 ，SMA，RSI
+
+## 進度
+datasource.py
+功能 : MACD， 擷取未來一天預測的價格，使用treeview 秀出資料
