@@ -27,7 +27,7 @@ class Window(ThemedTk):
 
         # 廠區選擇
         self.Factory_county = tk.StringVar()
-        Factory_LB = tk.Label(midFrame, text="廠區:", font=font1)
+        Factory_LB = tk.Label(midFrame, text="製造ID:", font=font1)
         Factory_LB.grid(row=0, column=0, padx=10, pady=10)
         Factory_cobox = ttk.Combobox(
             midFrame, textvariable=self.Factory_county, values=f.plant_list, state="readonly", width=10
