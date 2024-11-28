@@ -1,6 +1,5 @@
 # 電影推薦系統
 * 組員:曾德容、邱育霖
-------------------
 
 ## 專案目的
 * 建立個人化的媒體內容推薦系統
@@ -45,4 +44,5 @@
             ![Click The Poster](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame_3.png?token=GHSAT0AAAAAACX6TDCYQWUYZPMZHQTMXYL4Z2I5YLA)
 
 ## 操作影片
+    [電影推薦系統操作影片](<http://>)
 
