@@ -41,7 +41,7 @@
         ◦ 使用者可點擊「猜你喜歡」區域中的電影海報，將影片加入「待播清單」。 
             ![Click The Poster](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame_2.png?token=GHSAT0AAAAAACX6TDCYXUD7PMKPYM3YB462Z2I6LLA)
         ◦ 若點擊的電影已位於「待播清單」中，將跳出警示視窗。 
-            ![Click The Poster Twice](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame_3.png?token=GHSAT0AAAAAACX6TDCZXHGEVMIT3PPTSLOEZ2I6LYQ)
+            ![Click The Poster Twice](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame_3.png?token=GHSAT0AAAAAACX6TDCY6GI2DCMHUAYJSGRMZ2I6U2Q)
 
 ## 操作影片
     [操作影片](https://github.com/DeJungTseng/Salt_Eagle_Project/raw/refs/heads/main/Movie_recommandation_system_demo.mkv)
