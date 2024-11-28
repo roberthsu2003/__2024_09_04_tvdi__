@@ -44,5 +44,6 @@
             ![Click The Poster Twice](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame_3.png?token=GHSAT0AAAAAACX6TDCZXHGEVMIT3PPTSLOEZ2I6LYQ)
 
 ## 操作影片
-    [電影推薦系統操作影片](<https://github.com/DeJungTseng/Salt_Eagle_Project/raw/refs/heads/main/Movie_recommandation_system_demo.mkv>)
+    [電影推薦系統操作影片](https://github.com/DeJungTseng/Salt_Eagle_Project/raw/refs/heads/main/Movie_recommandation_system_demo.mkv)
+
 
