@@ -1,26 +1,28 @@
-from  tkinter import ttk
+from tkinter import ttk
 import tkinter as tk
 from ttkthemes import ThemedTk
 import view
-
+from tkinter import messagebox
 
 class Window(ThemedTk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.title('Watch new movie now!')
-        # ====Geomerty====
+        
+        # ====Geometry====
         # 設定視窗大小並置中
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
-        window_width = 800
-        window_height = 450
+        window_width = 1200
+        window_height = 675
         position_x = (screen_width - window_width) // 2
         position_y = (screen_height - window_height) // 2
         self.geometry(f"{window_width}x{window_height}+{position_x}+{position_y}")
-
+        
         # 禁止改變大小
         self.resizable(False, False)
         # =====End Geometry=====
+        
         # 創建所有視窗元件
         self.create_widgets()
         
@@ -34,60 +36,76 @@ class Window(ThemedTk):
             return
 
     def create_widgets(self):
-        # 將所有視窗元件的創建移到這個方法中
+        # 設定樣式
         style = ttk.Style(self)
         style.configure('TopFrame.TLabel', font=('Arial', 20))
         
-        # =====Main Frame=====
-        self.main_frame = ttk.Frame(self.master, padding="10")
-        self.main_frame.pack()
-        # =====End Main Frame====
-
-
-        # =====Top Frame====
-        self.top_frame = ttk.LabelFrame(self.main_frame, text="Top Frame", padding="10")
-        self.top_frame.grid(row=0, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.N, tk.S), pady=(0, 10))
+        # 創建主容器
+        main_container = ttk.Frame(self, padding=10)
+        main_container.pack(fill=tk.BOTH, expand=True)
         
-        # 頂部框架的標籤
-        self.top_label = ttk.Label(self.top_frame, text="Label")
-        self.top_label.grid(row=0, column=0, sticky=tk.W)
+        # =====Top Frame=====
+        self.top_frame = ttk.LabelFrame(main_container, text="你可能會喜歡", padding=10)
+        self.top_frame.pack(fill=tk.BOTH, expand=True, padx=5, pady=(0, 5))
+
+        # ====Top Canvas=====
+        self.image_paths = ["Images/AI_and_ai.jpg", "Images/lawyerhell.jpg", "Images/library.jpg","Images/gandam.jpg","Images/goose.jpg"]
+        self.image_names = ["AI與小愛", "地獄律師", "圖書館裡的妖精","鋼彈吊單槓","以鵝傳鵝"]
+
+        self.canvas = view.TopCanvas(self.top_frame, self.image_paths, self.image_names, self.add_to_watchlist,height=400,bg='white' )
+        self.canvas.pack(fill="both", expand=True)
+        # ====End Top Canvas=====
+
+        # =====End Top Frame=
+        
+        # =====Bottom Container=====
+        bottom_container = ttk.Frame(main_container)
+        bottom_container.pack(fill=tk.BOTH, expand=True, pady=(5, 0))
+        
+        # =====Bottom Frame Left=====
+        self.bottom_frame_left = ttk.LabelFrame(bottom_container, text="待播清單", padding=10)
+
+        # ====Watch List Treeview====
+        self.watch_list = view.TreeViewWidget(self.bottom_frame_left)
+        self.watch_list.pack(fill="both", expand=True)
+        print(type(self.watch_list))
+        # =====End =Watch List Treeview====
+        self.bottom_frame_left.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 5))
+        # =====End Bottom Frame Left=====
+
 
         
-        # ====End Top Frame===
+        # =====Bottom Frame Right=====
+        self.bottom_frame_right = ttk.LabelFrame(bottom_container, text="觀看紀錄", padding=10)
+   
 
-        # =====Bottom Frame====
-        self.bottom_frame_left = ttk.LabelFrame(self.main_frame, text="Bottom Frame Left", padding="10")
-        self.bottom_frame_left.grid(row=1, column=0, sticky=(tk.W, tk.E, tk.N, tk.S), padx=(0, 5))
-        
-        # 底部左框架的標籤
-        self.bottom_left_label = ttk.Label(self.bottom_frame_left, text="Label")
-        self.bottom_left_label.grid(row=0, column=0, sticky=tk.W)
-        
-        # 底部右框架
-        self.bottom_frame_right = ttk.LabelFrame(self.main_frame, text="Bottom Frame Right", padding="10")
-        self.bottom_frame_right.grid(row=1, column=1, sticky=(tk.W, tk.E, tk.N, tk.S), padx=(5, 0))
-        
-        # 底部右框架的標籤
-        self.bottom_right_label = ttk.Label(self.bottom_frame_right, text="Label")
-        self.bottom_right_label.grid(row=0, column=0, sticky=tk.W)
+        # =====Played List Treeview====
+        self.played_list = view.TreeViewWidget(self.bottom_frame_right)
+        self.played_list.add_item("在小A的世界裡迷路")
+        self.played_list.add_item("三生三世三十場考試")
+        self.played_list.add_item("我的模型還活著嗎")
+        self.played_list.add_item("南港展覽館官方網站綻放萬丈光芒")
+        self.played_list.add_item("紅鯉魚與綠鯉魚與驢")
+        self.played_list.pack(fill="both", expand=True)
+        # =====End Played List Treeview====
+
+        self.bottom_frame_right.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(5, 0))
+        # =====End Bottom Frame Right=====
+    
+    def add_to_watchlist(self, image_name):
+        """
+        Callback function for handling image click events.
+        Adds the clicked image's name to the TreeView.
+        """
+        self.watch_list.add_item(image_name)
+
+        # 添加到 Treeview 中
+        self.watch_list.insert("", "end", values=(image_name,))
 
 
-
-
-
-
-        # =====End Bottom Frame====
-        #end laypot here
-
-    #define instance function below
-    def instancefunction():
-        pass
-
-# create function of the document
 def main():
-    # create an instance in class Window, named "window"
-    #give a theme style to this window
-    window=Window(theme="breeze")
+    window = Window(theme="breeze")
     window.mainloop()
-if __name__=='__main__':
+
+if __name__ == '__main__':
     main()

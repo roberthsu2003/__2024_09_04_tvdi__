@@ -1,30 +1,76 @@
-import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, messagebox
 
-'''老師的tree'''
-# =====Treeview =====
-                #define columns
-columns = ('date', 'county','sitename', 'aqi', 'pm25','status','lat','lon')
+class TreeViewWidget(ttk.Frame):
+    """
+    A reusable widget containing a Treeview to manage a list of items.
+    """
+    def __init__(self, parent, *args, **kwargs):
+        super().__init__(parent, *args, **kwargs)
+        
 
-self.tree = ttk.Treeview(rightFrame, columns=columns, show='headings')
-self.tree.bind('<<TreeviewSelect>>', self.item_selected)
-# define headings
-self.tree.heading('date', text='日期')
-self.tree.heading('county', text='縣市')
-self.tree.heading('sitename', text='站點')
-self.tree.heading('aqi', text='AQI')
-self.tree.heading('pm25', text='PM25')
-self.tree.heading('status',text='狀態')
-self.tree.heading('lat', text='緯度')
-self.tree.heading('lon', text='經度')
+        # Define the Treeview
+        self.tree = ttk.Treeview(self, columns=("Title",), show="headings")
+        self.tree.heading("Title", text="片名")
+        self.tree.column("Title", width=200, anchor="center")
+        self.tree.pack(fill="both", expand=True)
 
-self.tree.column('date', width=150,anchor="center")
-self.tree.column('county', width=80,anchor="center")
-self.tree.column('sitename', width=80,anchor="center")
-self.tree.column('aqi', width=50,anchor="center")
-self.tree.column('pm25', width=50,anchor="center")
-self.tree.column('status', width=50,anchor="center")
-self.tree.column('lat', width=100,anchor="center")
-self.tree.column('lon', width=100,anchor="center")
+        # Add scrollbar
+        self.scrollbar = ttk.Scrollbar(self, orient="vertical", command=self.tree.yview)
+        self.scrollbar.pack(side="right", fill="y")
+        
+        # Configure the Treeview to use scrollbar
+        self.tree.configure(yscrollcommand=self.scrollbar.set)
 
-self.tree.pack(side='top')
+    def get_children(self):
+        """
+        Returns the list of all children items in the Treeview.
+        """
+        return self.tree.get_children()
+
+    def add_item(self, item_name):
+        """
+        Adds an item to the TreeView if it doesn't already exist.
+        """
+        # Prevent duplicate items
+        for child in self.tree.get_children():
+            if self.tree.item(child, 'values')[0] == item_name:
+                messagebox.showinfo("提示", f"'{item_name}' 已經存在於列表中!")
+                return
+        # Add the new item
+        self.tree.insert("", "end", values=(item_name,))
+
+    def remove_selected_item(self):
+        """
+        Removes the currently selected item from the Treeview.
+        """
+        selected_items = self.tree.selection()
+        if not selected_items:
+            messagebox.showinfo("提示", "請先選擇要刪除的項目!")
+            return
+        
+        for item in selected_items:
+            self.tree.delete(item)
+
+    def get_selected_item(self):
+        """
+        Returns the currently selected item's value.
+        Returns None if no item is selected.
+        """
+        selected_items = self.tree.selection()
+        if not selected_items:
+            return None
+        return self.tree.item(selected_items[0], 'values')[0]
+
+    def clear_all(self):
+        """
+        Removes all items from the Treeview.
+        """
+        for item in self.tree.get_children():
+            self.tree.delete(item)
+
+    def get_all_items(self):
+        """
+        Returns a list of all items' values in the Treeview.
+        """
+        return [self.tree.item(child, 'values')[0] 
+                for child in self.tree.get_children()]
