@@ -30,7 +30,7 @@
 * 系統操作流程：
     1. 登入與驗證：
         ◦ 使用者輸入帳號與密碼。
-            <img src="https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_login_frame.png?token=GHSAT0AAAAAACX6TDCZGIAUB2VI5KZ2AVXOZ2I5UJA" width=200></img>
+            <p><img src="https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_login_frame.png?token=GHSAT0AAAAAACX6TDCZGIAUB2VI5KZ2AVXOZ2I5UJA" width=200></img></p>
         ◦ 系統對比使用者資料庫驗證後進入主視窗。 
             ![The main frame](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame.png?token=GHSAT0AAAAAACX6TDCZFPNVUKI77E3A3C7UZ2I5S2Q)
 
@@ -42,7 +42,7 @@
         ◦ 使用者可點擊「猜你喜歡」區域中的電影海報，將影片加入「待播清單」。 
             ![Click The Poster](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame.png?token=GHSAT0AAAAAACX6TDCZFPNVUKI77E3A3C7UZ2I5S2Q)
         ◦ 若點擊的電影已位於「待播清單」中，將跳出警示視窗。 
-            ![Click The Poster](https://github.com/DeJungTseng/Salt_Eagle_Project/blob/main/Diagrams/1128_main_frame_3.png?raw=true)
+            ![Click The Poster](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame_3.png?token=GHSAT0AAAAAACX6TDCYQWUYZPMZHQTMXYL4Z2I5YLA)
 
 ## 操作影片
 
