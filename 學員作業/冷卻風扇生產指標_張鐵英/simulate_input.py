@@ -6,10 +6,39 @@ import sqlite3
 def generate_sales_data(csv_filename='sales_orders.csv', db_filename='sales_orders.db', table_name='sales_orders'):
     # Step 1: Generate Orders and Sales Data
 
-    # Sales and customer data
-    sales_ids = ['Sales A', 'Sales B', 'Sales C', 'Sales D', 'Sales E']
+    import random
+
+    # Updated sales IDs and names
+    sales_ids = ['Sales_A', 'Sales_B', 'Sales_C', 'Sales_D', 'Sales_E']
     sales_names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve']
-    customer_ids = [f'Customer {i}' for i in range(1, 21)]
+    
+
+    # Updated customer names from the cooling fan industry
+    customer_ids = [
+        'Foxconn', 'Delta_Electronics', 'Nidec', 'SanAce', 'Cooler_Master',
+        'Be_Quiet', 'Noctua', 'Corsair', 'NZXT', 'Arctic',
+        'Phanteks', 'Thermaltake', 'Fractal_Design', 'Lian_Li', 'DeepCool',
+        'AeroCool', 'SilverStone', 'Cougar', 'Scythe', 'Antec'
+    ]
+
+    # Randomly assign each sales representative between 2 to 6 customers
+    assigned_customers = {}
+    available_customers = customer_ids[:]  # Copy of customer IDs to avoid duplicates
+
+    for sales_id in sales_ids:
+        # Determine how many customers this sales rep will handle
+        num_customers = random.randint(2, 6)
+        # Assign customers, ensuring no duplicates
+        customers = random.sample(available_customers, k=num_customers)
+        for customer in customers:
+            available_customers.remove(customer)
+        assigned_customers[sales_id] = customers
+
+    # Print the assigned customers for each sales representative
+    for sales_id, customers in assigned_customers.items():
+        print(f"{sales_id} ({sales_names[sales_ids.index(sales_id)]}): {customers}")
+
+    # customer_ids = [f'Customer {i}' for i in range(1, 21)]
     order_ids = [f'2024-{str(i).zfill(2)}' for i in range(1, 51)]
 
     # Function to get the start date of a specific week in a given year
