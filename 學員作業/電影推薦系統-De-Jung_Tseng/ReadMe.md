@@ -39,7 +39,7 @@
         ◦ 根據偏好推薦符合條件的新片，顯示於「猜你喜歡」區域。 
     3. 互動操作：
         ◦ 使用者可點擊「猜你喜歡」區域中的電影海報，將影片加入「待播清單」。 
-            ![Click The Poster](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame.png?token=GHSAT0AAAAAACX6TDCZFPNVUKI77E3A3C7UZ2I5S2Q)
+            ![Click The Poster](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame_2.png?token=GHSAT0AAAAAACX6TDCZNEGABFVJ3GJL2M2SZ2I54FA)
         ◦ 若點擊的電影已位於「待播清單」中，將跳出警示視窗。 
             ![Click The Poster](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame_3.png?token=GHSAT0AAAAAACX6TDCYQWUYZPMZHQTMXYL4Z2I5YLA)
 
