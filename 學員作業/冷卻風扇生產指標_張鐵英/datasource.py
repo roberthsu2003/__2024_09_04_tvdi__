@@ -33,20 +33,12 @@ def get_sales() -> list[str]:
             # Get all results and extract the first item from each row into a list
             sales = [items[0] for items in cursor.fetchall()]
             
-            # Print out the fetched sales names to confirm
-            # if sales:
-            #     print("Sales Names:", sales)
-            # else:
-            #     print("No sales names found in the database.")
-                
-        # Return the list of unique sales
         return sales
 
     except Exception as e:
         print("Error occurred:", e)
         return []
 
-# Test the function
 sales_list = get_sales()
 # print("Returned Sales List:", sales_list)
 
@@ -81,16 +73,70 @@ def get_customer_id(sales:str)->list[str]:
     # Return the list of unique sitenames
     return customer_id
 
-def get_selected_data(customer_id: str) -> list[list]:
+
+# def get_selected_data(customer_id: str) -> list[list]:
+#     # Debugging: Print the input customer_id
+#     print(f"get_selected_data called with customer_id: {customer_id}")
+
+#     conn = sqlite3.connect("sales_orders.db")
+#     with conn:
+#         cursor = conn.cursor()
+#         sql = """
+#             SELECT sales_id, sales_name, customer_id, order_id, yield_rate, thru_put, order_date, deliver_date, factory
+#             FROM sales_orders WHERE customer_id = ?
+#             ORDER BY order_date DESC
+#         """
+#         try:
+#             cursor.execute(sql, (customer_id,))
+#             customer_list = [list(row) for row in cursor.fetchall()]
+#             # Debugging: Print the fetched customer list
+#             print(f"Fetched customer_list: {customer_list}")
+#             return customer_list
+#         except sqlite3.ProgrammingError as e:
+#             # Debugging: Print detailed error information
+#             print(f"SQLite ProgrammingError: {e}")
+#             raise
+
+#------------------------------------------------------------
+def get_selected_data(customer_id: str, sales_id: str) -> list[list]:
+    # Normalize inputs (trim whitespace and normalize case)
+    customer_id = customer_id.strip()
+    sales_id = sales_id.strip()
+
+    print(f"#1 -- get_selected_data called with customer_id: {customer_id}, sales_id: {sales_id}")  # Debugging
+
     conn = sqlite3.connect("sales_orders.db")
     with conn:
         cursor = conn.cursor()
-        cursor.execute("""
-            SELECT order_date, deliver_date, customer_id, order_id, yield_rate, thru_put, factory
-            FROM sales_orders WHERE customer_id = ?
+        sql = """
+            SELECT sales_id, sales_name, customer_id, order_id, yield_rate, thru_put, order_date, deliver_date, factory
+            FROM sales_orders
+            WHERE customer_id = ? AND sales_id = ?
             ORDER BY order_date DESC
-        """, (customer_id,))
-        return [list(row) for row in cursor.fetchall()]
+        """
+        try:
+            cursor.execute(sql, (customer_id, sales_id))  # Pass both parameters
+            customer_list = [list(row) for row in cursor.fetchall()]
+            print(f"#2 -- Fetched data for customer_id {customer_id} under sales_id {sales_id}: {customer_list}")  # Debugging
+            return customer_list
+        except sqlite3.ProgrammingError as e:
+            print(f"SQLite ProgrammingError: {e}")
+            raise
+        except Exception as e:
+            print(f"Unexpected error in get_selected_data: {e}")
+            raise
+
+
+def debug_sales_customer_pairs():
+    conn = sqlite3.connect("sales_orders.db")
+    with conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT DISTINCT sales_id, customer_id FROM sales_orders")
+        pairs = cursor.fetchall()
+        print("# Debugging -- Sales-Customer Pairs in Database:")
+        for pair in pairs:
+            print(pair)
+#------------------------------------------------------------------------
     
 def get_plot_data(customer_id: str) -> DataFrame:
     conn = sqlite3.connect("sales_orders.db")

@@ -7,7 +7,7 @@
 [寵物登記數預測工具 Git Hub 連結](https://github.com/roberthsu2003/__2024_09_04_tvdi__/tree/main/%E5%AD%B8%E5%93%A1%E4%BD%9C%E6%A5%AD/%E5%AF%B5%E7%89%A9%E7%99%BB%E8%A8%98%E6%95%B8%E9%A0%90%E6%B8%AC%E5%B7%A5%E5%85%B7_%E5%91%A8%E7%A6%B9%E5%BD%A4%E3%80%81%E5%91%82%E5%AE%89%E6%9D%B0)
 
 ## 四、專案目的  
-預測未來幾年犬隻登記數量的變化，分析登記數量的增長或下降趨勢，以了解寵物登記率的變動。
+分析過往寵物登記數量的增長或下降趨勢、去預測未來登記數量的變化，以了解寵物登記率的變動。
 
 ## 五、資料來源  
 [寵物登記管理資訊網](https://www.pet.gov.tw/Web/O302.aspx)  
@@ -28,8 +28,9 @@
 3. **pandas**  
 * 利用 *pandas* 處理表格數據，將列表資料轉換成表格DataFrame，最後導出 CSV 文件。
 
-### GUI介面設計  
-允許使用者選擇地區，選擇地區後，模型會自動填入該地區2009至2013的登記數量、絕育數量、除戶數量和絕育率之等數據。  
+### GUI介面設計
+允許使用者選擇地區，選擇地區後，模型會自動填入該地區2009至2023的登記數量、絕育數量、除戶數量和絕育率之等數據。  
+  
 地區登記及絕育趨勢圖：顯示過去幾年該地區的寵物登記數趨勢圖，幫助使用者了解該地區的長期變化。  
 
 1. **tkinter** 和 **ttk**  
@@ -50,14 +51,14 @@
  * 利用 *FigureCanvasTkAgg* 將 Matplotlib 圖表嵌入到 Tkinter 的 GUI 應用程式中
 
 4. **numpy**  
- * 利用 *np.divide* 計算絕育數與登記數的比率
+利用 *np.divide* 計算絕育數與登記數的比率
 
 5. **src.ui.analysis_view**  
  * 利用 *src.ui.analysis_view* 匯入分析視圖模組
  * 利用 *AnalysisView* 顯示數據分析內容
 
 6. **src.data.data_source**   
- * 利用 *src.data.data_source* 匯入資料管理器，處理寵物登記與絕育相關的數據。
+利用 *src.data.data_source* 匯入資料管理器，處理寵物登記與絕育相關的數據。
 
 
 ## 七、完成示意圖 
@@ -70,3 +71,6 @@
 **花蓮市**往年的登記數據
 ![觀看**花蓮市**往年的登記數據](https://github.com/joy273609/python_windows/blob/main/%E5%B0%88%E6%A1%88/README_img/%E6%88%AA%E5%9C%96%202024-11-25%20%E4%B8%8B%E5%8D%889.07.10.png?raw=true)  
 
+
+## 八、Vedio Demo
+[寵物登記數預測工具 on YouTube](https://youtu.be/6lvEv9bwV5U)
