@@ -4,12 +4,9 @@ class TreeViewWidget(ttk.Frame):
     """
     A reusable widget containing a Treeview to manage a list of items.
     """
-    def __init__(self, parent, title, *args, **kwargs):
+    def __init__(self, parent, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
         
-        # Add a Label above the Treeview
-        self.label = ttk.Label(self, text=title, font=('Arial', 14))
-        self.label.pack(pady=5)
 
         # Define the Treeview
         self.tree = ttk.Treeview(self, columns=("Title",), show="headings")
