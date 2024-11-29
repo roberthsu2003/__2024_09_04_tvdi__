@@ -11,30 +11,25 @@ class Window(ThemedTk):
         super().__init__(*args, **kwargs)
         self.title('Cooling Fan Indicators')
         # self.resizable(False, False)
-
         # ============== Style ===============
         style = ttk.Style(self)
         style.configure('TopFrame.TLabel', font=('標楷體', 20))
-
         # =========== Top Frame =============
         topFrame = ttk.Frame(self)
         ttk.Label(topFrame, text='冷卻風扇生產指標', style='TopFrame.TLabel').pack()
         topFrame.pack(padx=20, pady=20)
-
         # =========== Bottom Frame ==========
         bottomFrame = ttk.Frame(self, padding=[10, 10, 10, 10])
-
         # =========== Selected Frame ==========
         self.selectedFrame = ttk.Frame(self, padding=[10, 10, 10, 10])
-
         # Refresh button
         icon_button = view.ImageButton(self.selectedFrame, command=lambda: datasource.load_from_sqlite())
         icon_button.pack()
-
         # Combobox to select sales
         sales_list = datasource.get_sales()
         print("Returned Sales List:", sales_list)  # Debugging
         self.sales_selected = tk.StringVar()  
+        # self.sales_selected Is a StringVar which can't be called by event handler with the same name
         customer_cb = ttk.Combobox(
             self.selectedFrame, textvariable=self.sales_selected, values=sales_list, state='readonly'
         )
@@ -42,14 +37,12 @@ class Window(ThemedTk):
 
         # Correctly bind the event handler
         customer_cb.bind('<<ComboboxSelected>>', self.on_sales_selected)
-        customer_cb.pack(anchor='n', pady=10)
 
+        customer_cb.pack(anchor='n', pady=10)
         self.customerFrame = None
         self.selectedFrame.pack(side='left', fill='y')
-
         # =========== Right Frame ==========
         rightFrame = ttk.LabelFrame(bottomFrame, text="產品生產指標", padding=[10, 10, 10, 10])
-        
         # TreeView columns
         columns = (
             'sales_id', 'sales_name', 'customer_id', 'order_id', 'yield_rate',
@@ -76,64 +69,47 @@ class Window(ThemedTk):
         self.tree.column('order_date', width=100,anchor="center")
         self.tree.column('deliver_date', width=100,anchor="center")
         self.tree.column('factory', width=80, anchor="center")
-        
         self.tree.pack(side='right')
         rightFrame.pack(side='right')
+            #==============End RightFRame==================      
+        
+        
+        
         bottomFrame.pack()
+        #==============end bottomFrame===============
 
-    # def on_sales_selected(self, event):
-    #     selected_sales = self.sales_selected.get()
-    #     print(f"Selected sales: {selected_sales}")  # Debugging
-    #     customers = datasource.get_customer_id(selected_sales)
-
-    #     if self.customerFrame:
-    #         self.customerFrame.destroy()
-
-    #     self.customerFrame = view.CustomerFrame(master=self.selectedFrame, customers=customers)
-    #     self.customerFrame.bind("<<Radio_Button_Selected>>", lambda e: self.radio_button_click())
-    #     self.customerFrame.pack()
-    
     def on_sales_selected(self, event):
         selected_sales = self.sales_selected.get()
-        print(f"Selected sales: {selected_sales}")  # Debugging
-
         customers = datasource.get_customer_id(selected_sales)
-        print(f"Retrieved customers for sales ({selected_sales}): {customers}")  # Debugging
-
         if self.customerFrame:
             self.customerFrame.destroy()
-
-        # Create a new CustomerFrame and bind the custom event
         self.customerFrame = view.CustomerFrame(master=self.selectedFrame, customers=customers)
-        self.customerFrame.bind("<<Radio_Button_Selected>>", lambda e: self.radio_button_click())
+        self.customerFrame.selected_customer = tk.StringVar() 
+        self.bind("<<Radio_Button_Selected>>", self.radio_button_click)
         self.customerFrame.pack()
-
-
-    # def radio_button_click(self, event=None):
-    #     selected_customer = self.customerFrame.selected_radio.get()
-    #     if not selected_customer:
-    #         print("Error: No customer selected. Exiting method.")
-    #         return
-    #     # Clear TreeView
+        
+    # def radio_button_click(self,selected_customer:str):
     #     for children in self.tree.get_children():
     #         self.tree.delete(children)
-
-    #     # Fetch and display data for the selected customer
+    #     print(f"Cleared TreeView rows")  # Debugging----------------
     #     selected_data = datasource.get_selected_data(selected_customer)
-
+    #     print(f"Fetched data for selected customer: {selected_data}")  # Debugging
     #     for record in selected_data:
-    #         print(f"Inserting record into TreeView: {record}")  # Debugging
+    #         print(f"Hello Tkinter and Python 3: ")  # Debugging
     #         self.tree.insert("", "end", values=record)
+    
+    def radio_button_click(self, selected_customer=None):
+        # Debugging: Print the type and value of selected_customer
+        print(f"radio_button_click called with: {selected_customer} (type: {type(selected_customer)})")
 
-    #--------------------------------------------------------------
-    def radio_button_click(self, event=None):
-        # Retrieve the selected customer and sales ID
-        selected_customer = self.customerFrame.selected_radio.get()
-        selected_sales = self.sales_selected.get()
-        print(f"radio_button_click called with selected_customer: {selected_customer}, selected_sales: {selected_sales}")  # Debugging
-
-        if not selected_customer or selected_sales == '請選擇業務名稱':
-            print("Error: No customer or sales selected. Exiting method.")
+        # If selected_customer is an event, extract the actual value (if applicable)
+        if isinstance(selected_customer, str):
+            customer_id = selected_customer
+        elif hasattr(selected_customer, "widget"):  # Check if it's an event
+            customer_id = selected_customer.widget.get()  # Assumes the widget has a `get` method
+            print(f"Extracted customer_id from widget: {customer_id}")
+        else:
+            print("Error: Unable to determine customer_id. Exiting method.")
             return
 
         # Clear TreeView
@@ -141,22 +117,20 @@ class Window(ThemedTk):
             self.tree.delete(children)
         print("Cleared TreeView rows.")  # Debugging
 
-        # Fetch and display data for the selected customer under the correct sales
-        try:
-            selected_data = datasource.get_selected_data(selected_customer, selected_sales)
-            print(f"#3--Fetched data for selected customer ({selected_customer}) under sales ({selected_sales}): {selected_data}")  # Debugging
+        # Fetch and display data for the selected customer
+        selected_data = datasource.get_selected_data(customer_id)
+        print(f"Fetched data for selected customer ({customer_id}): {selected_data}")  # Debugging
 
-            for record in selected_data:
-                # Insert all fields into TreeView
-                self.tree.insert("", "end", values=record)
-                print(f"Inserting record into TreeView: {record}")  # Debugging
-        except Exception as e:
-            print(f"Error fetching data for customer: {selected_customer}, sales: {selected_sales}. Exception: {e}")
+        for record in selected_data:
+            print(f"Inserting record into TreeView: {record}")  # Debugging
+            self.tree.insert("", "end", values=record)
 
-
+        
 
     def item_selected(self, event):
+        print(f"Hello Tkinter and Python 3: ")  # Debugging
         for selected_item in self.tree.selection():
+            print(f"Hello Tkinter and Python 4: ")  # Debugging
             record = self.tree.item(selected_item)
             dialog = view.MyCustomDialog(parent=self, title=f'Order Details - {record["values"][2]}', record=record['values'])
             values = record.get('values', [])
@@ -181,10 +155,3 @@ if __name__ == '__main__':
     print(data_frame.head())
     
     main()
-
-
-
-#------------version changes-----------------------------------------------------
-# main2.py  2024/11/28 13:35    show the treeview list on window 
-#                               bug: same customer has different sales
-                                

@@ -13,8 +13,8 @@ class Window(ThemedTk):
         # 設定視窗大小並置中
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
-        window_width = 800
-        window_height = 450
+        window_width = 1200
+        window_height = 675
         position_x = (screen_width - window_width) // 2
         position_y = (screen_height - window_height) // 2
         self.geometry(f"{window_width}x{window_height}+{position_x}+{position_y}")
@@ -49,23 +49,14 @@ class Window(ThemedTk):
         self.top_frame.pack(fill=tk.BOTH, expand=True, padx=5, pady=(0, 5))
 
         # ====Top Canvas=====
+        self.image_paths = ["Images/AI_and_ai.jpg", "Images/lawyerhell.jpg", "Images/library.jpg","Images/gandam.jpg","Images/goose.jpg"]
+        self.image_names = ["AI與小愛", "地獄律師", "圖書館裡的妖精","鋼彈吊單槓","以鵝傳鵝"]
 
-        self.canvas = view.TopCanvas(
-            self.top_frame, 
-            image_name= "我想當瑪奇瑪小姐的狗",
-            image_path= "C:/Users/USER/Documents/GitHub/Salt_Eagle_Project/Images/puppy.png",
-            on_image_click=self.add_to_watch_list,
-            width=200,
-            height=150,
-            bg="gray",
-        )
+        self.canvas = view.TopCanvas(self.top_frame, self.image_paths, self.image_names, self.add_to_watchlist,height=400,bg='white' )
         self.canvas.pack(fill="both", expand=True)
         # ====End Top Canvas=====
-        
-        # Top frame label
-        self.top_label = ttk.Label(self.top_frame, text="推薦影片區")
-        self.top_label.pack(anchor=tk.W)
-        # =====End Top Frame=====
+
+        # =====End Top Frame=
         
         # =====Bottom Container=====
         bottom_container = ttk.Frame(main_container)
@@ -73,14 +64,9 @@ class Window(ThemedTk):
         
         # =====Bottom Frame Left=====
         self.bottom_frame_left = ttk.LabelFrame(bottom_container, text="待播清單", padding=10)
-        
-        
-        # Bottom left frame label
-        self.bottom_left_label = ttk.Label(self.bottom_frame_left, text="待播影片")
-        self.bottom_left_label.pack(anchor=tk.W)
 
         # ====Watch List Treeview====
-        self.watch_list = view.TreeViewWidget(self.bottom_frame_left, "待播清單")
+        self.watch_list = view.TreeViewWidget(self.bottom_frame_left)
         self.watch_list.pack(fill="both", expand=True)
         print(type(self.watch_list))
         # =====End =Watch List Treeview====
@@ -90,36 +76,31 @@ class Window(ThemedTk):
 
         
         # =====Bottom Frame Right=====
-        self.bottom_frame_right = ttk.LabelFrame(bottom_container, text="觀看清單", padding=10)
-        
-        
-        # Bottom right frame label
-        self.bottom_right_label = ttk.Label(self.bottom_frame_right, text="已觀看影片")
-        self.bottom_right_label.pack(anchor=tk.W)
+        self.bottom_frame_right = ttk.LabelFrame(bottom_container, text="觀看紀錄", padding=10)
+   
 
         # =====Played List Treeview====
-        self.played_list = view.TreeViewWidget(self.bottom_frame_right, "觀看清單")
+        self.played_list = view.TreeViewWidget(self.bottom_frame_right)
+        self.played_list.add_item("在小A的世界裡迷路")
+        self.played_list.add_item("三生三世三十場考試")
+        self.played_list.add_item("我的模型還活著嗎")
+        self.played_list.add_item("南港展覽館官方網站綻放萬丈光芒")
+        self.played_list.add_item("紅鯉魚與綠鯉魚與驢")
         self.played_list.pack(fill="both", expand=True)
         # =====End Played List Treeview====
 
         self.bottom_frame_right.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(5, 0))
         # =====End Bottom Frame Right=====
     
-    def add_to_watch_list(self, movie_name):
+    def add_to_watchlist(self, image_name):
         """
-        Callback function to add the movie name to the watch list.
+        Callback function for handling image click events.
+        Adds the clicked image's name to the TreeView.
         """
-        # 確保 watch_list 是正確的 Treeview
-        assert hasattr(self.watch_list, "get_children"), "watch_list 必須是 ttk.Treeview 或有 get_children 方法"
-
-        # 防止重複加入
-        for child in self.watch_list.get_children():
-            if self.watch_list.item(child, "values")[0] == movie_name:
-                messagebox.showinfo("提示", f"'{movie_name}' 已經存在於列表中!")
-                return
+        self.watch_list.add_item(image_name)
 
         # 添加到 Treeview 中
-        self.watch_list.insert("", "end", values=(movie_name,))
+        self.watch_list.insert("", "end", values=(image_name,))
 
 
 def main():

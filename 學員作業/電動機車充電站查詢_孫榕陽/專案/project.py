@@ -56,8 +56,8 @@ class Window(ThemedTk):
         self.tree.heading('dist', text='鄉鎮區')
         self.tree.heading('sitename', text='站點名稱')
         self.tree.heading('address', text='地址')
-        self.tree.heading('lat', text='經度')
-        self.tree.heading('lon', text='緯度')
+        self.tree.heading('lat', text='緯度')
+        self.tree.heading('lon', text='經度')
 
 
         self.tree.column('city', width=80, anchor="center")
