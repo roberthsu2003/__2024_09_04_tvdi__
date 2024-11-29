@@ -29,9 +29,9 @@
 * 系統操作流程：
     1. 登入與驗證：
         ◦ 使用者輸入帳號與密碼。
-            <p><img src="https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_login_frame.png?token=GHSAT0AAAAAACX6TDCYZLW3MEPH6F4K4C2YZ2I6JRA" width=200></img></p>
+            <p><img src="https://github.com/roberthsu2003/__2024_09_04_tvdi__/blob/main/%E5%AD%B8%E5%93%A1%E4%BD%9C%E6%A5%AD/%E9%9B%BB%E5%BD%B1%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1-De-Jung_Tseng/Project_Watch_Movie/Diagrams/Diagrams/1128_login_frame.png?raw=true" width=200></img></p>
         ◦ 系統對比使用者資料庫驗證後進入主視窗。 
-            ![The main frame](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame.png?token=GHSAT0AAAAAACX6TDCZZ6GGCG3MIDBPOBOKZ2I6KAA)
+            ![The main frame](https://github.com/roberthsu2003/__2024_09_04_tvdi__/blob/main/%E5%AD%B8%E5%93%A1%E4%BD%9C%E6%A5%AD/%E9%9B%BB%E5%BD%B1%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1-De-Jung_Tseng/Project_Watch_Movie/Diagrams/Diagrams/1128_main_frame.png?raw=true)
 
     2. 資料處理與推薦：
         ◦ 從資料庫中讀取該使用者的觀看紀錄，計算其偏好類型。 
@@ -39,12 +39,12 @@
         ◦ 根據偏好推薦符合條件的新片，顯示於「猜你喜歡」區域。 
     3. 互動操作：
         ◦ 使用者可點擊「猜你喜歡」區域中的電影海報，將影片加入「待播清單」。 
-            ![Click The Poster](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame_2.png?token=GHSAT0AAAAAACX6TDCYXUD7PMKPYM3YB462Z2I6LLA)
+            ![Click The Poster](https://github.com/roberthsu2003/__2024_09_04_tvdi__/blob/main/%E5%AD%B8%E5%93%A1%E4%BD%9C%E6%A5%AD/%E9%9B%BB%E5%BD%B1%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1-De-Jung_Tseng/Project_Watch_Movie/Diagrams/Diagrams/1128_main_frame_2.png?raw=true)
         ◦ 若點擊的電影已位於「待播清單」中，將跳出警示視窗。 
-            ![Click The Poster Twice](https://raw.githubusercontent.com/DeJungTseng/Salt_Eagle_Project/refs/heads/main/Diagrams/1128_main_frame_3.png?token=GHSAT0AAAAAACX6TDCZXHGEVMIT3PPTSLOEZ2I6LYQ)
+            ![Click The Poster Twice](https://github.com/roberthsu2003/__2024_09_04_tvdi__/blob/main/%E5%AD%B8%E5%93%A1%E4%BD%9C%E6%A5%AD/%E9%9B%BB%E5%BD%B1%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1-De-Jung_Tseng/Project_Watch_Movie/Diagrams/Diagrams/1128_main_frame_3.png?raw=true)
 
 ## 操作影片
-    [操作影片](https://github.com/DeJungTseng/Salt_Eagle_Project/raw/refs/heads/main/Movie_recommandation_system_demo.mkv)
+    影片:11209python職能發展學院/專題_電影推薦系統_曾德容_邱育霖.mkv
 
 
 
