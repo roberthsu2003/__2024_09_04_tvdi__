@@ -4,5 +4,5 @@
 {% block head %} {{super()}} {% endblock%}
 
 {% block main %}
-<h1>main</h1>
+<h1>{{request.path}}</h1>
 {% endblock %}
