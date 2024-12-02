@@ -13,3 +13,11 @@ def product():
 @app.route("/pricing")
 def pricing():
     return render_template('pricing.j2')
+
+@app.route("/faqs")
+def faqs():
+    return render_template('faqs.j2')
+
+@app.route("/about")
+def about():
+    return render_template('about.j2')
