@@ -9,3 +9,7 @@ def index():
 @app.route("/product")
 def product():
     return render_template('product.j2')
+
+@app.route("/pricing")
+def pricing():
+    return render_template('pricing.j2')
