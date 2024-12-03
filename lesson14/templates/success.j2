@@ -1,0 +1,12 @@
+{% extends '_base.j2' %}
+{% block title %}登入成功畫面{% endblock %}
+
+{% block head %} {{super()}} {% endblock%}
+
+{% block main %}
+<div class="container">
+    <div class="alert alert-success" role="alert">    
+    <center>{{name}}您好</center>
+    </div>
+</div>
+{% endblock %}

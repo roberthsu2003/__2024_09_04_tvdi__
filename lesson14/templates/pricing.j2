@@ -4,5 +4,15 @@
 {% block head %} {{super()}} {% endblock%}
 
 {% block main %}
-<h1>{{request.path}}</h1>
+<form method="POST" action="" class="container">
+    {{form.csrf_token}}
+    {{form.name.label(class="form-label")}} {{form.name(size=20,class="form-control")}}
+    <input type="submit" value="Go" class="btn btn-primary mt-3">
+</form>
+{%if form.name.error %}
+    <ul class="error">
+    {% for error in form.name.errors %}
+        <li>{{ error }}</li>
+    {% endfor %}
+{% endif %}
 {% endblock %}
