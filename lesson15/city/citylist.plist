@@ -1,0 +1,1536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+<dict>
+		<key>City</key>
+		<string>秋葉原</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Akihabara.jpg</string>
+		<key>Local</key>
+		<string>秋葉原（日語：秋葉原／あきはばら Akihabara */?）是位於日本東京的商圈，以秋葉原車站為中心，因聚集大量電器與3C賣場、電玩與動漫等電子娛樂商家、以及資訊產業企業而聞名。地理區劃上大致涵蓋東京都千代田區外神田、神田佐久間町、神田花岡町與台東區的秋葉原[1]。在動漫產業進駐前，區內的商店大都是以銷售家電、電腦與相關周邊衍生產品為主，因而與大阪市的日本橋、名古屋市的大須一起被併稱為「日本三大電器街」。由於原始地名較長，當地人常將其簡稱為秋葉（秋葉、アキバ）或Akiba。</string>
+		<key>lat</key>
+		<real>35.69836</real>
+		<key>long</key>
+		<real>139.77313</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/秋葉原</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>奧克蘭</string>
+		<key>Continent</key>
+		<string>Oceania</string>
+		<key>Country</key>
+		<string>New Zealand</string>
+		<key>Image</key>
+		<string>Auckland.jpg</string>
+		<key>Local</key>
+		<string>奧克蘭（英語：Auckland；毛利語：Tāmaki Makaurau 或 Ākarana），老華語僑胞譯作屋崙，是紐西蘭的一個都會區，位於南太平洋南緯37度，為北島最大的城市。人口約150萬，聚居了全國約32％的人口，[1]也是世界上玻里尼西亞人最多的城市。[2]奧卡蘭被稱為「帆之都」，同時也是紐西蘭工業和商業中心。</string>
+		<key>lat</key>
+		<real>-36.85</real>
+		<key>long</key>
+		<real>174.7833</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/奧克蘭_(紐西蘭)</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>巴塞隆納</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>Spain</string>
+		<key>Image</key>
+		<string>Barcelona.jpg</string>
+		<key>Local</key>
+		<string>巴塞隆納（加泰隆尼亞語：Barcelona，西班牙語：Barcelona）是西班牙加泰隆尼亞首府和巴塞隆納省省會，位於伊比利半島的東北面，瀕臨地中海，全市人口約160萬，都會區人口則約500萬，為加泰隆尼亞第一大城。加泰隆尼亞的議會、行政機構、高等法院等政府中樞機構，以及最高首長均駐設於此。1999年，巴塞隆納由美國《國家地理雜誌》評選為50個人生必遊景點之一。</string>
+		<key>lat</key>
+		<real>41.3825</real>
+		<key>long</key>
+		<real>2.1769</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/巴塞罗那</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>北京市</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>China</string>
+		<key>Image</key>
+		<string>Beijing.jpg</string>
+		<key>Local</key>
+		<string>北京市，通稱北京（漢語拼音：běi jīng；英語：Beijing；郵政式拼音：Peking），簡稱「京」，是中華人民共和國首都、直轄市、中國國家中心城市和京津冀城市群的重要組成部分，是中國的政治、文化、科技創新和國際交往中心，是世界第三大人口最多的城市和人口最多的首都，具有重要的國際影響力。</string>
+		<key>lat</key>
+		<real>39.9041999</real>
+		<key>long</key>
+		<real>116.4073963</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/北京市</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>柏林</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>Germany</string>
+		<key>Image</key>
+		<string>Berlin.jpg</string>
+		<key>Local</key>
+		<string>柏林（德語：Berlin，德語發音：[bɛɐ̯ˈliːn]（Speaker Icon.svg 發音））是德國首都，也是德國最大的城市，現有居民約340萬人。柏林位於德國東北部，四面被布蘭登堡邦環繞，施普雷河和哈弗爾河流經該市。柏林也是德國十六個邦之一，和漢堡、不萊梅同為德國僅有的三個城邦份。</string>
+		<key>lat</key>
+		<real>52.52</real>
+		<key>long</key>
+		<real>13.38</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/柏林</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>伯明罕</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>United Kingdom</string>
+		<key>Image</key>
+		<string>Birmingham.jpg</string>
+		<key>Local</key>
+		<string>伯明罕（英語：Birmingham 聆聽i/ˈbɜːrmɪŋəm/，本地發音：/ˈbɜːrmɪŋɡəm/）是英國英格蘭西米德蘭茲區域西米德蘭茲郡的大型工業城市，據2013年統計數字，該城人口有1,092,330人，是英國除倫敦外最大的城市[2]。其所在的西米德蘭茲組合都市在2011年有2,440,986人，是英國第三大建成區[3]，其都會區在2012年有3,701,107人，是英國第二大都會區。</string>
+		<key>lat</key>
+		<real>52.48</real>
+		<key>long</key>
+		<real>-1.9</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/伯明翰</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>波士頓</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Image</key>
+		<string>Boston.jpg</string>
+		<key>Local</key>
+		<string>波士頓（英語：Boston）是美國馬薩諸塞州的首府和最大城市，也是新英格蘭地區的最大城市，其人口規模全美大都市排名第21[3]。該市位於美國東北部大西洋沿岸，創建於1630年，是美國最古老、最具有歷史文化價值的城市之一。波士頓是歐洲清教徒移民最早登陸美洲所建立的城市，在美國革命期間是許多重要事件的發源地，曾經是一個重要的航運港口和製造業中心。</string>
+		<key>lat</key>
+		<real>42.3578</real>
+		<key>long</key>
+		<real>-71.0617</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/波士顿</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>布宜諾斯艾利斯</string>
+		<key>Continent</key>
+		<string>South America</string>
+		<key>Country</key>
+		<string>Argentina</string>
+		<key>Image</key>
+		<string>BuenosAires.jpg</string>
+		<key>Local</key>
+		<string>布宜諾斯艾利斯（西班牙語：Buenos Aires，意為「好空氣」），當地華人常略稱為布宜諾市或布市。是阿根廷的首都和最大城市，位於拉普拉塔河（直譯：銀之河）南岸、南美洲東南岸、對岸為烏拉圭（東方）；2014年，在大布宜諾斯艾利斯地區（Gran Buenos Aires）有常住人口17,180,000[4]，是拉丁美洲第二大都會區，僅次於大聖保羅地區（2012年19,956,590人）。</string>
+		<key>lat</key>
+		<real>-34.5997</real>
+		<key>long</key>
+		<real>-58.3819</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/布宜諾斯艾利斯</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>坎培拉</string>
+		<key>Continent</key>
+		<string>Oceania</string>
+		<key>Country</key>
+		<string>Australia</string>
+		<key>Image</key>
+		<string>Canberra.jpg</string>
+		<key>Local</key>
+		<string>坎培拉（英語：Canberra），或譯堪培拉，是澳大利亞聯邦首都。它是澳洲最大的內陸城市，人口超過36.7萬人，在澳洲所有城市裡排名第八。它座落於澳大利亞首都領地北端，距離澳洲東岸兩大都會城市雪梨和墨爾本分別為280公里和660公里。</string>
+		<key>lat</key>
+		<real>-35.3075</real>
+		<key>long</key>
+		<real>149.124417</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/堪培拉</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>千葉市</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Chiba.jpg</string>
+		<key>Local</key>
+		<string>千葉市（日語：千葉市／ちばし Chiba shi */?）是日本千葉縣的縣廳所在地，也是政令指定都市、業務核都市。本市位於東京東南邊靠東京灣，並且有三條交通線路接往東京。
+千葉市是關東地方的主要海港之一。本市大部分為住戶，然而在沿海一帶有很多工廠和倉庫。
+本市建於1921年1月1日，並於1992年4月1日成為政令指定都市。</string>
+		<key>lat</key>
+		<real>35.6</real>
+		<key>long</key>
+		<real>140.1</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/千葉市</string>
+	</dict>
+
+
+<dict>
+		<key>City</key>
+		<string>芝加哥</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Image</key>
+		<string>Chicago.jpg</string>
+		<key>Local</key>
+		<string>芝加哥（英語：Chicago）位於美國中西部，屬伊利諾州，為庫克郡郡治，東臨密西根湖，轄區內人口約290萬。芝加哥及其郊區組成的大芝加哥地區，人口超過900萬，是美國僅次於紐約、洛杉磯的第三大都會區。芝加哥的奧黑爾國際機場也是美國第二繁忙的機場</string>
+		<key>lat</key>
+		<real>41.8336479</real>
+		<key>long</key>
+		<real>-87.8720464</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/芝加哥</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>重慶市</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>China</string>
+		<key>Image</key>
+		<string>Chongqing.jpg</string>
+		<key>Local</key>
+		<string>重慶市，簡稱巴、渝，別稱山城、渝都、霧都、橋都，中華人民共和國直轄市、首批國家中心城市、超大城市。重慶是長江上游地區經濟中心，國家重要的現代製造業基地[1]，西南地區國際性綜合交通樞紐、國際航空樞紐、長江中上游航運中心[2]，國家統籌城鄉綜合配套改革試驗區，是西部大開發的重要戰略支點、「一帶一路」和長江經濟帶的聯結點[1] 、內陸開放高地，是國家歷史文化名城、世界溫泉之都，中國著名三大火爐城市之一</string>
+		<key>lat</key>
+		<real>29.5546186</real>
+		<key>long</key>
+		<real>106.2683637</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/重庆市</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>科隆</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>Germany</string>
+		<key>Image</key>
+		<string>Cologne.jpg</string>
+		<key>Local</key>
+		<string>科隆（德語：Köln，[kœln] 關於這個音頻文件 listen 說明·資訊；1919年前德語也拼寫為Cöln），是德國第四大城市，是北威州最大的城市，亦是德國內陸最重要的港口之一，萊茵地區的經濟文化和歷史中心。它已有2000多年的歷史，是德國最古老的城市之一。中世紀科隆已經成為一個重要的教會中心和藝術知識中心。科隆在二戰期間遭到嚴重破壞。今天它以其文化和建築遺產以及許多重要的國際性活動而聞名</string>
+		<key>lat</key>
+		<real>50.9576191</real>
+		<key>long</key>
+		<real>6.827241</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/科隆</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>庫帕提諾</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Image</key>
+		<string>Cupertino.jpg</string>
+		<key>Local</key>
+		<string>庫帕提諾（Cupertino; 寬式IPA：/kupɝɹtino/）是一座位於美國加利福尼亞州舊金山灣區南部，聖塔克拉拉郡西部的城市。庫帕提諾與郡府聖荷西相鄰，部份市區延伸至聖塔克魯茲山脈山腳。根據2010年的人口普查，庫帕提諾住有58,302人</string>
+		<key>lat</key>
+		<real>37.3092448</real>
+		<key>long</key>
+		<real>-122.0786638</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/庫比蒂諾_(加利福尼亞州)</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>愛丁堡</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>United Kingdom</string>
+		<key>Image</key>
+		<string>Edinburgh.jpg</string>
+		<key>Local</key>
+		<string>愛丁堡（英語：Edinburgh，聆聽i/ˈɛdɪnbərə/[4]、蘇格蘭蓋爾語：Dùn Èideann），是英國蘇格蘭首府，也是繼格拉斯哥後蘇格蘭的第二大城市，位於蘇格蘭東海岸福斯灣南岸。截止到2013年，全市人口為487,500</string>
+		<key>lat</key>
+		<real>55.9411885</real>
+		<key>long</key>
+		<real>-3.2753779</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/爱丁堡</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>佛羅倫斯</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>Italy</string>
+		<key>Image</key>
+		<string>Florence.jpg</string>
+		<key>Local</key>
+		<string>佛羅倫斯（義大利語：Firenze，拉丁語：Florentia，義大利詩歌：Fiorenza），又譯佛羅倫薩，在19世紀的中國或者現代文學、藝術、餐飲的場合也經常翻譯成翡冷翠</string>
+		<key>lat</key>
+		<real>43.7799368</real>
+		<key>long</key>
+		<real>11.1709284</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/佛罗伦萨</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>美茵河畔法蘭克福</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>Germany</string>
+		<key>Image</key>
+		<string>Frankfurt.jpg</string>
+		<key>Local</key>
+		<string>法蘭克福（德語：Frankfurt），正式全名為美茵河畔法蘭克福[1]（Frankfurt am Main），是德國中西部黑森邦的第一大城市，也是德國第五大城。城區擁有73萬2688人[2]，含周邊城鎮約有230萬人，而整個法蘭克福萊茵-美茵大都會區則約有五百萬人口，是德國僅次於萊茵-魯爾的第二大都會區</string>
+		<key>lat</key>
+		<real>50.114182</real>
+		<key>long</key>
+		<real>8.5028036</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/美因河畔法兰克福</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>銀座</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Ginza.jpg</string>
+		<key>Local</key>
+		<string>銀座（日語：銀座／ぎんざ Ginza */?）是日本東京中央區的一個主要商業區，以高級購物商店聞名，是東京其中一個代表性地區</string>
+		<key>lat</key>
+		<real>35.6695585</real>
+		<key>long</key>
+		<real>139.7611172</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/銀座</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>廣州市</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>China</string>
+		<key>Image</key>
+		<string>Guangzhou.jpg</string>
+		<key>Local</key>
+		<string>廣州（英語：Canton，拼音：Guǎngzhōu，注音：ㄍㄨㄤˇ ㄓㄡ，粵拼：gwong2 zau1），簡稱廣或穗，別稱羊城，為廣東省省會。廣州於1921年正式設市，開創中國市政建制，現在是副省級市。廣州是國家中心城市、華南地區的經濟、文化、科技和教育中心及交通樞紐，也是中國人民解放軍南部戰區聯合作戰指揮部所在地[9]。2010年亞洲運動會在廣州舉行</string>
+		<key>lat</key>
+		<real>23.1253503</real>
+		<key>long</key>
+		<real>112.9476585</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/广州市</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>漢堡</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>Germany</string>
+		<key>Image</key>
+		<string>Hamburg.jpg</string>
+		<key>Local</key>
+		<string>漢堡（/ˈhæmbɜːrɡ/; 德語發音：[ˈhambʊʁk]（Speaker Icon.svg 發音）, 當地發音：[ˈhambʊɪ̯ç]  聆聽; 低地德語/低地撒克遜語：Hamborg -[ˈhambɔːx]  聆聽)），全稱為漢堡漢薩自由市（德語：Freie und Hansestadt Hamburg）[3]，位於德國北部的一個港口城市。漢堡擁有近180萬人口，是僅次於柏林的德國第二大城市，歐盟第八大城市。作為一個城邦，其行政級別有其邦議會和邦立法委員會。漢堡及其周圍城鎮共有274萬人口，而漢堡大城市群則有500萬人口</string>
+		<key>lat</key>
+		<real>23.1248554</real>
+		<key>long</key>
+		<real>112.947657</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/汉堡</string>
+	</dict>
+
+
+<dict>
+		<key>City</key>
+		<string>香港</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>China</string>
+		<key>Image</key>
+		<string>Akihabara.jpg</string>
+		<key>Local</key>
+		<string>香港（簡稱港，雅稱香江；英語：Hong Kong，縮寫作 HK、HKG、HKSAR）是中華人民共和國兩個特別行政區之一，位於南海北岸、珠江口東側，北接廣東省深圳市，西面與鄰近的澳門特別行政區相距63公里，其餘兩面與南海鄰接。</string>
+		<key>lat</key>
+		<real>22.280556</real>
+		<key>long</key>
+		<real>114.165278</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E9%A6%99%E6%B8%AF</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>休士頓</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Image</key>
+		<string>Houston.jpg</string>
+		<key>Local</key>
+		<string>休士頓（英語：Houston，中國大陸通譯休斯敦/休斯頓，港澳通譯侯斯頓，台灣通譯休士頓）是美國德克薩斯州的第一大城，全美國第四大城，墨西哥灣沿岸最大的經濟中心。面積達1,440平方公里，市名是以當年德克薩斯共和國總統山姆·休士頓（Sam Houston）命名的。</string>
+		<key>lat</key>
+		<real>29.7628</real>
+		<key>long</key>
+		<real>-95.3831</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E4%BC%91%E6%96%AF%E6%95%A6</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>花蓮市</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Taiwan</string>
+		<key>Image</key>
+		<string>Hualien.jpg</string>
+		<key>Local</key>
+		<string>花蓮市（（臺灣話：Hua-lian-chhī、撒奇萊雅語：Nabakuwan；阿美語：Kalinko），位於臺灣花蓮縣東部北段，北接新城鄉，南連吉安鄉，西鄰秀林鄉，東臨太平洋（菲律賓海），為全國人口第二密集的縣轄市（次於新竹縣竹北市）[1]。值得一提的是，花蓮市和新城鄉面積經四捨五入取小數點後四位後仍完全一樣(29.4095km2)，兩者同列為全花蓮縣最小的鄉鎮，與宜蘭市之面積四捨五入取第2位亦同。</string>
+		<key>lat</key>
+		<real>23.972222</real>
+		<key>long</key>
+		<real>121.606389</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E8%8A%B1%E8%93%AE%E5%B8%82</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>池袋</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Ikebukuro.jpg</string>
+		<key>Local</key>
+		<string>池袋（日語：池袋／いけぶくろ Ikebukuro */?）是日本東京都豐島區的一個區域，也是東京市區中一個主要的商業及娛樂地區。池袋有多家大型百貨公司據點及東京主要車站之一的池袋站，亦是豐島區役所（區政府）所在地。</string>
+		<key>lat</key>
+		<real>35.73</real>
+		<key>long</key>
+		<real>139.711111</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/池袋</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>高雄市</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Taiwan</string>
+		<key>Image</key>
+		<string>Kaohsiung.jpg</string>
+		<key>Local</key>
+		<string>高雄市（台灣話: Ko-hiông-tshī） 是中華民國的直轄市，臺灣六都之一，其轄域東北至中央山脈及玉山主峰，西南至南海上之南沙太平島、中洲島、東沙群島。順時針方向與臺南市及嘉義縣、南投縣、花蓮縣、臺東縣、屏東縣、澎湖縣（隔海鄰接）等縣市相鄰。面積達2,952平方公里；設籍人口277.3萬人，為臺灣行政區總人口數排名第三的城市。高雄市自19世紀末開港，舊稱「打狗」，發音來自於「竹林」的馬卡道語 Takau，音譯近似於閩南語的「打狗」，於是漢人便以「打狗」稱之。日治時代發展為重工業林立的港埠城市與軍事要地，素有「港都」之稱，並在20世紀中葉後成為臺灣南部政治和經濟及交通中樞，台灣第二大的國際機場高雄國際機場、台灣最大港口高雄港及中央政府機關中華民國海洋委員會即位於本市。2018年GaWC所公布之世界級城市名單中，高雄市列為「高度自足」等級之城市。</string>
+		<key>lat</key>
+		<real>22.633333</real>
+		<key>long</key>
+		<real>120.266667</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/高雄市</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>神戶市</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Kobe.jpg</string>
+		<key>Local</key>
+		<string>神戶市（日語：神戸市／こうべし Kōbe shi */?）是位於日本兵庫縣東南部的都市，為兵庫縣首府，也是政令指定都市之一[1]，下轄有9個區。神戶市的面積為552.83平方公里。2016年6月，神戶市有人口1,538,053人[2]，是日本人口第七多的都市。神戶市與大阪市、京都市並為京阪神都會區的核心都市[3]，同時也和其附近的衛星都市組成神戶都市圈[4]。</string>
+		<key>lat</key>
+		<real>34.69</real>
+		<key>long</key>
+		<real>135.195556</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/神户市</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>吉隆坡</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Malaysia</string>
+		<key>Image</key>
+		<string>KualaLumpur.jpg</string>
+		<key>Local</key>
+		<string>吉隆坡（英語和馬來語：Kuala Lumpur，簡稱「隆市」或「KL」，全稱「吉隆坡聯邦直轄區」）是馬來西亞的首都[註 1]兼最大城市[6]，一座對東南亞的文化、教育、體育、財政、經濟、商業、金融都具有極大影響力的國際大都會。因許多在東南亞召開的國際級外交會議都會在吉隆坡和新加坡舉行，因此吉隆坡也被視為是東南亞外交的兩大中心之一。依照GaWC所公布之世界級城市名單中，吉隆坡被列為與芝加哥、洛杉磯、莫斯科、多倫多、首爾等同屬於ALPHA級（Grade A）的國際都市，《外交政策》公布的2014年全球城市指數中吉隆坡位居第53名[7]，經濟與社會改革相關的2016年2thinknow改革城市指數則位居第92名。 [8]吉隆坡也被聯合國教育、科學及文化組織命名為「2020年世界圖書之都」（World Book Capital）[9]。</string>
+		<key>lat</key>
+		<real>3.133333</real>
+		<key>long</key>
+		<real>101.683333</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/吉隆坡</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>京都市</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Kyoto.jpg</string>
+		<key>Local</key>
+		<string>京都市（日語：京都市／きょうとし Kyōto shi */?關於這個音頻文件 日語發音 說明·資訊）是位於日本京都府南部的城市，為京都府府治，也是政令指定都市之一[1]。京都市的面積為827.83平方公里，下轄11個區。2017年10月，京都市有人口1,472,027人[2]，是日本人口第八多的都市。京都市還和京都府南部、滋賀縣西部及大阪府的部份地區共同組成了「京都都市圈」，其人口數約有379萬[3]。京都市也是「京阪神都會區」的一部份[4]。</string>
+		<key>lat</key>
+		<real>35.011667</real>
+		<key>long</key>
+		<real>135.768333</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/zh-tw/京都市</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>里茲</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>United Kingdom</string>
+		<key>Image</key>
+		<string>Leeds.jpg</string>
+		<key>Local</key>
+		<string>里茲（英語：Leeds 聆聽i/ˈliːdz/），中國大陸、港澳譯利茲，英國英格蘭西約克郡的大城市。依傍艾爾河（River Aire）旁的利茲，利茲市（City of Leeds）是行政中樞所在地。2011年預計有757,700人[4][5]，使其成為英國第三大城市。</string>
+		<key>lat</key>
+		<real>53.799722</real>
+		<key>long</key>
+		<real>-1.549167</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/利兹</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>利物浦</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>United Kingdom</string>
+		<key>Image</key>
+		<string>Liverpool.jpg</string>
+		<key>Local</key>
+		<string>利物浦（英語：Liverpool /ˈlɪvərpuːl/），是英格蘭西北部著名港口城市，是默西賽德都市郡的5個自治市之一，由利物浦市議會治理。1207年時以自治市鎮的身份成立，1880年獲得城市地位。2011年人口約為466,415[4]，是利物浦都會區的中心[5]。利物浦市區的人口約為2,200,000，英國第四大城市。[6]</string>
+		<key>lat</key>
+		<real>53.4</real>
+		<key>long</key>
+		<integer>-3</integer>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/利物浦</string>
+	</dict>
+
+<dict>
+		<key>City</key>
+		<string>倫敦</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>United Kingdom</string>
+		<key>Image</key>
+		<string>London.jpg</string>
+		<key>Local</key>
+		<string>倫敦（英語：London；聆聽i/ˈlʌndən/）[3]是英國的首都，也是英國和歐洲最大的城市[4]。位於泰晤士河流域，於公元50年由羅馬人建立，取名為倫蒂尼恩，在此後兩個世紀內為這一地區最重要的定居點之一[5]。倫敦的歷史核心區倫敦城仍舊維持其中世紀的界限，面積1.12平方英里（2.9平方公里），2011年人口為8,072，為全英格蘭最小的城市。自19世紀起，「倫敦」一稱亦用於指稱圍繞這一核心區開發的周圍地帶[6]。這一城區集合構成大倫敦行政區（與倫敦區覆蓋區域相同）[7][8]，由倫敦市長及倫敦議會管轄。</string>
+		<key>lat</key>
+		<real>51.5072</real>
+		<key>long</key>
+		<real>-0.1275</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/伦敦</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>洛杉磯</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Image</key>
+		<string>LosAngeles.jpg</string>
+		<key>Local</key>
+		<string>洛杉磯（英語：City of Los Angeles，縮寫為L.A.），簡稱洛城，是位於美國加利福尼亞州南部的都市，也是洛杉磯郡的郡治，人口約397萬[8]，為加州第一大城，同時也是美國人口第二大都市，僅次於紐約市。全市面積為469.1平方英里（1214.9平方公里）。由洛杉磯、長灘、安那翰3市組成的洛杉磯都會區擁有約1331萬的人口[9]，涵蓋範圍更廣的大洛杉磯地區則達到1870萬[10]，兩者在統計上均次於紐約都會區，為全美國第二大都會區。</string>
+		<key>lat</key>
+		<real>34.05</real>
+		<key>long</key>
+		<real>-118.25</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/洛杉矶</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>里昂</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>France</string>
+		<key>Image</key>
+		<string>Lyon.jpg</string>
+		<key>Local</key>
+		<string>里昂（法語：Lyon，讀音：/ljɔ̃/），法國第三大城市，法國東南部羅訥-阿爾卑斯大區和羅訥省的首府。位於羅納河和索恩河交匯處。包括郊區和衛星城，里昂是僅次於巴黎的法國第二大都市區。里昂是著名的國際都市，歷史悠久，部分歷史和建築地標被聯合國教科文組織列為世界遺產，名稱為：「里昂歷史遺蹟」。</string>
+		<key>lat</key>
+		<real>45.7589</real>
+		<key>long</key>
+		<real>4.8414</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/里昂</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>馬德里</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>Spain</string>
+		<key>Image</key>
+		<string>Madrid.jpg</string>
+		<key>Local</key>
+		<string>馬德里（西班牙語：Madrid；/məˈdrɪd/；西班牙語：[maˈðɾið]）是西班牙首都及最大都市，也是馬德里自治區首府，其位置處於西班牙國土中部，曼薩納雷斯河貫穿市區。市內人口約340萬，都會區人口則約627.1萬（2010年），均佔西班牙首位。其建城於9世紀，是在摩爾人邊貿站「馬格立特」舊址上發展起來的城市；1561年，西班牙國王腓力二世將首都從托雷多遷入於此[註 1]，由於其特殊的地位而得到迅速的發展，成為往後西班牙殖民帝國的運籌中心[6]，現今則與巴塞隆納並列為西班牙的兩大對外文化窗口。</string>
+		<key>lat</key>
+		<real>40.383333</real>
+		<key>long</key>
+		<real>-3.716667</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/马德里</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>曼徹斯特</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>United Kingdom</string>
+		<key>Image</key>
+		<string>Manchester.jpg</string>
+		<key>Local</key>
+		<string>曼徹斯特（英語：Manchester），英國英格蘭西北區域大曼徹斯特郡的都市自治市、城市、單一管理區，人口510,746.
+大曼徹斯特成立於1974年，主要來自於蘭開郡和柴郡，有人仍認為曼徹斯特是蘭開郡的一部分。「曼徹斯特」此名經常用來指整個都市區（甚至擴展到大曼徹斯特以外），其市區總人口在英國排名第二，僅次於倫敦。曼徹斯特以倉庫眾多聞名於世，別名「倉庫城市」。</string>
+		<key>lat</key>
+		<real>53.47</real>
+		<key>long</key>
+		<real>-2.23</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/曼彻斯特</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>馬賽</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>France</string>
+		<key>Image</key>
+		<string>Marseille.jpg</string>
+		<key>Local</key>
+		<string>馬賽（法語：Marseille； 加斯科：Marselha）是法國第二大城市和第三大都會區（aire urbaine）。在2011年的人口普查中，有1,720,941名居民。它位於地中海沿岸，原屬於普羅旺斯省（Provence）。它是法國最大的商業港口，也是地中海最大的商業港口。</string>
+		<key>lat</key>
+		<real>43.2967</real>
+		<key>long</key>
+		<real>5.3764</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/马赛</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>目黑區</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Meguro.jpg</string>
+		<key>Local</key>
+		<string>目黑區（日語：目黒区／めぐろく Meguro ku */?）是東京都下轄的特別區其中之一。</string>
+		<key>lat</key>
+		<real>35.640841</real>
+		<key>long</key>
+		<real>139.689214</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/目黑區</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>邁阿密</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Image</key>
+		<string>Miami.jpg</string>
+		<key>Local</key>
+		<string>邁阿密（英語：Miami）位於美國佛羅里達州東南角比斯坎灣、佛羅里達大沼澤地和大西洋之間，是該州僅次於傑克遜維爾的第二大城市，也是邁阿密-戴德縣最大的城市和縣治所在。邁阿密還是邁阿密都會區中最大的城市，這個都市圈由邁阿密-戴德縣、布勞沃德縣和棕櫚灘縣組成，人口超過559萬人，是美國東南部最大的都市圈，也是全美第四大都市圈[1]。</string>
+		<key>lat</key>
+		<real>25.78</real>
+		<key>long</key>
+		<real>-80.22</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/迈阿密</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>米蘭</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>Italy</string>
+		<key>Image</key>
+		<string>Milan.jpg</string>
+		<key>Local</key>
+		<string>米蘭（義大利語：Milano）是歐洲國家義大利的西北方大城，也是米蘭省的省會和倫巴第大區的首府，位於義大利人口最密集和發展程度最高的倫巴第平原上。它是歐洲南方的重要交通要點，歷史相當悠久，以觀光、時尚與建築景觀聞名於世。米蘭市區目前有182萬居民，其都會區超過800萬人是歐洲三大都會區之一。總面積約有1,982平方公里，每平方公里超過2,000人居住[2]。目前米蘭市長為Giuseppe Sala。</string>
+		<key>lat</key>
+		<real>45.464161</real>
+		<key>long</key>
+		<real>9.190336</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/米蘭</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>蒙特婁</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>Canada</string>
+		<key>Image</key>
+		<string>Montreal.jpg</string>
+		<key>Local</key>
+		<string>蒙特婁（法語：Montréal，[mɔ̃ʁeal]  聆聽；英語：Montreal，/ˌmʌntriːˈɒl/  (Speaker Icon.svg 聆聽)），蒙特婁[5][6]、蒙特利爾[6]，中國大陸稱為蒙特利爾，港澳稱為滿地可，是一座位於加拿大魁北克省西南部的城市，主要位於聖羅倫斯河和渥太華河匯合處的蒙特婁島及周邊小島上。根據2011年人口普查，蒙特婁人口約為342萬[9]，是魁北克省內最大城市、加拿大第二大城市及北美第十五大城市。「蒙特婁」一詞來源於中古法語「Mont Royal」，意思為「皇家山」，至今蒙特婁城中心的地標皇家山仍以此命名。法語是蒙特婁的官方語言，也是城市裡最常用的語言，使用人口占城市總人口的60.5%，使得蒙特婁成為世界上僅次於巴黎的第二大法語城市。</string>
+		<key>lat</key>
+		<real>45.5089</real>
+		<key>long</key>
+		<real>-73.5617</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/蒙特利尔</string>
+	</dict>
+
+<dict>
+		<key>City</key>
+		<string>倫敦</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>United Kingdom</string>
+		<key>Image</key>
+		<string>London.jpg</string>
+		<key>Local</key>
+		<string>倫敦（英語：London；聆聽i/ˈlʌndən/）[3]是英國的首都，也是英國和歐洲最大的城市[4]。位於泰晤士河流域，於公元50年由羅馬人建立，取名為倫蒂尼恩，在此後兩個世紀內為這一地區最重要的定居點之一[5]。倫敦的歷史核心區倫敦城仍舊維持其中世紀的界限，面積1.12平方英里（2.9平方公里），2011年人口為8,072，為全英格蘭最小的城市。自19世紀起，「倫敦」一稱亦用於指稱圍繞這一核心區開發的周圍地帶[6]。這一城區集合構成大倫敦行政區（與倫敦區覆蓋區域相同）[7][8]，由倫敦市長及倫敦議會管轄。</string>
+		<key>lat</key>
+		<real>51.5072</real>
+		<key>long</key>
+		<real>-0.1275</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/伦敦</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>洛杉磯</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Image</key>
+		<string>LosAngeles.jpg</string>
+		<key>Local</key>
+		<string>洛杉磯（英語：City of Los Angeles，縮寫為L.A.），簡稱洛城，是位於美國加利福尼亞州南部的都市，也是洛杉磯郡的郡治，人口約397萬[8]，為加州第一大城，同時也是美國人口第二大都市，僅次於紐約市。全市面積為469.1平方英里（1214.9平方公里）。由洛杉磯、長灘、安那翰3市組成的洛杉磯都會區擁有約1331萬的人口[9]，涵蓋範圍更廣的大洛杉磯地區則達到1870萬[10]，兩者在統計上均次於紐約都會區，為全美國第二大都會區。</string>
+		<key>lat</key>
+		<real>34.05</real>
+		<key>long</key>
+		<real>-118.25</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/洛杉矶</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>里昂</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>France</string>
+		<key>Image</key>
+		<string>Lyon.jpg</string>
+		<key>Local</key>
+		<string>里昂（法語：Lyon，讀音：/ljɔ̃/），法國第三大城市，法國東南部羅訥-阿爾卑斯大區和羅訥省的首府。位於羅納河和索恩河交匯處。包括郊區和衛星城，里昂是僅次於巴黎的法國第二大都市區。里昂是著名的國際都市，歷史悠久，部分歷史和建築地標被聯合國教科文組織列為世界遺產，名稱為：「里昂歷史遺蹟」。</string>
+		<key>lat</key>
+		<real>45.7589</real>
+		<key>long</key>
+		<real>4.8414</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/里昂</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>馬德里</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>Spain</string>
+		<key>Image</key>
+		<string>Madrid.jpg</string>
+		<key>Local</key>
+		<string>馬德里（西班牙語：Madrid；/məˈdrɪd/；西班牙語：[maˈðɾið]）是西班牙首都及最大都市，也是馬德里自治區首府，其位置處於西班牙國土中部，曼薩納雷斯河貫穿市區。市內人口約340萬，都會區人口則約627.1萬（2010年），均佔西班牙首位。其建城於9世紀，是在摩爾人邊貿站「馬格立特」舊址上發展起來的城市；1561年，西班牙國王腓力二世將首都從托雷多遷入於此[註 1]，由於其特殊的地位而得到迅速的發展，成為往後西班牙殖民帝國的運籌中心[6]，現今則與巴塞隆納並列為西班牙的兩大對外文化窗口。</string>
+		<key>lat</key>
+		<real>40.23</real>
+		<key>long</key>
+		<real>3.43</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/马德里</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>曼徹斯特</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>United Kingdom</string>
+		<key>Image</key>
+		<string>Manchester.jpg</string>
+		<key>Local</key>
+		<string>曼徹斯特（英語：Manchester），英國英格蘭西北區域大曼徹斯特郡的都市自治市、城市、單一管理區，人口510,746.</string>
+		<key>lat</key>
+		<real>53.47</real>
+		<key>long</key>
+		<real>-2.23</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/曼彻斯特</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>馬賽</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>France</string>
+		<key>Image</key>
+		<string>Marseille.jpg</string>
+		<key>Local</key>
+		<string>馬賽（法語：Marseille； 加斯科：Marselha）是法國第二大城市和第三大都會區（aire urbaine）。在2011年的人口普查中，有1,720,941名居民。它位於地中海沿岸，原屬於普羅旺斯省（Provence）。它是法國最大的商業港口，也是地中海最大的商業港口。</string>
+		<key>lat</key>
+		<real>43.2967</real>
+		<key>long</key>
+		<real>5.3764</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/马赛</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>目黑區</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Meguro.jpg</string>
+		<key>Local</key>
+		<string>目黑區（日語：目黒区／めぐろく Meguro ku */?）是東京都下轄的特別區其中之一。</string>
+		<key>lat</key>
+		<real>35.6415</real>
+		<key>long</key>
+		<real>139.6982</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/目黑區</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>邁阿密</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Image</key>
+		<string>Miami.jpg</string>
+		<key>Local</key>
+		<string>邁阿密（英語：Miami）位於美國佛羅里達州東南角比斯坎灣、佛羅里達大沼澤地和大西洋之間，是該州僅次於傑克遜維爾的第二大城市，也是邁阿密-戴德縣最大的城市和縣治所在。邁阿密還是邁阿密都會區中最大的城市，這個都市圈由邁阿密-戴德縣、布勞沃德縣和棕櫚灘縣組成，人口超過559萬人，是美國東南部最大的都市圈，也是全美第四大都市圈[1]。</string>
+		<key>lat</key>
+		<real>25.78</real>
+		<key>long</key>
+		<real>-80.22</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/迈阿密</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>米蘭</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>Italy</string>
+		<key>Image</key>
+		<string>Milan.jpg</string>
+		<key>Local</key>
+		<string>米蘭（義大利語：Milano）是歐洲國家義大利的西北方大城，也是米蘭省的省會和倫巴第大區的首府，位於義大利人口最密集和發展程度最高的倫巴第平原上。它是歐洲南方的重要交通要點，歷史相當悠久，以觀光、時尚與建築景觀聞名於世。米蘭市區目前有182萬居民，其都會區超過800萬人是歐洲三大都會區之一。總面積約有1,982平方公里，每平方公里超過2,000人居住[2]。目前米蘭市長為Giuseppe Sala。</string>
+		<key>lat</key>
+		<real>45.464161</real>
+		<key>long</key>
+		<real>9.190336</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/米蘭</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>蒙特婁</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>Canada</string>
+		<key>Image</key>
+		<string>Montreal.jpg</string>
+		<key>Local</key>
+		<string>蒙特婁（法語：Montréal，[mɔ̃ʁeal]  聆聽；英語：Montreal，/ˌmʌntriːˈɒl/  (Speaker Icon.svg 聆聽)），蒙特婁[5][6]、蒙特利爾[6]，中國大陸稱為蒙特利爾，港澳稱為滿地可，是一座位於加拿大魁北克省西南部的城市，主要位於聖羅倫斯河和渥太華河匯合處的蒙特婁島及周邊小島上。根據2011年人口普查，蒙特婁人口約為342萬[9]，是魁北克省內最大城市、加拿大第二大城市及北美第十五大城市。「蒙特婁」一詞來源於中古法語「Mont Royal」，意思為「皇家山」，至今蒙特婁城中心的地標皇家山仍以此命名。法語是蒙特婁的官方語言，也是城市裡最常用的語言，使用人口占城市總人口的60.5%，使得蒙特婁成為世界上僅次於巴黎的第二大法語城市。
+蒙特婁
+市
+Ville de Montréal
+City of Montreal
+VuedeMontreal.jpg
+蒙特婁旗幟
+旗幟	蒙特婁徽章
+徽章
+格言：協和的救贖
+（拉丁語：Concordia Salus）
+（法語：Le salut par la concorde）[1]
+（英語：Salvation through harmony）[2]
+蒙特婁市以及周邊城鎮
+蒙特婁市以及周邊城鎮
+蒙特婁在魁北克省的位置蒙特婁蒙特婁
+坐標：45°30′32″N 73°33′42″W
+國家	 加拿大
+省	 魁北克
+地區	蒙特婁（06）
+魁北克省的城市群	蒙特婁城市群
+發現	1642
+建城	1832
+政府
+ • 市長	瓦萊莉·普蘭特
+面積[3]
+ • 市	365.13 平方公里 (140.98 平方英里)
+ • 市區	1,677 平方公里（647 平方英里）
+ • 都會區	4,259 平方公里（1,644 平方英里）
+最高海拔	233 米（764 英尺）
+最低海拔	6 米（20 英尺）
+人口（2006）
+ • 市	1,620,693 (2nd)
+ • 密度	4,439/平方公里（11,496/平方英里）
+ • 市區	3,316,615
+ • 都會區	3,635,571 (2nd)
+ • 都會區密度	854/平方公里（2,210/平方英里）
+ • 區域居民稱謂詞	Montrealer（英文）
+Montréalais / Montréalaise（法文）
+時區	EST （UTC-5）
+ • 夏時制	EDT（UTC-4）
+Postal code span	H
+電話區號	514, 438, and 450, 579 (metro)
+網站	Ville de Montréal（法文）
+City of Montreal（英文）
+「蒙特婁」的各地常用別名
+中國大陸	蒙特利爾[4]
+臺灣	蒙特婁[5][6]、蒙特利爾[6]
+港澳	滿地可[7]、蒙特利爾[8]
+蒙特婁（法語：Montréal，[mɔ̃ʁeal]  聆聽；英語：Montreal，/ˌmʌntriːˈɒl/  (Speaker Icon.svg 聆聽)），蒙特婁[5][6]、蒙特利爾[6]，中國大陸稱為蒙特利爾，港澳稱為滿地可，是一座位於加拿大魁北克省西南部的城市，主要位於聖羅倫斯河和渥太華河匯合處的蒙特婁島及周邊小島上。根據2011年人口普查，蒙特婁人口約為342萬[9]，是魁北克省內最大城市、加拿大第二大城市及北美第十五大城市。「蒙特婁」一詞來源於中古法語「Mont Royal」，意思為「皇家山」，至今蒙特婁城中心的地標皇家山仍以此命名。法語是蒙特婁的官方語言，也是城市裡最常用的語言，使用人口占城市總人口的60.5%，使得蒙特婁成為世界上僅次於巴黎的第二大法語城市。</string>
+		<key>lat</key>
+		<real>45.5089</real>
+		<key>long</key>
+		<real>-73.5617</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/蒙特利尔</string>
+	</dict>
+
+<dict>
+		<key>City</key>
+		<string>里約熱內盧</string>
+		<key>Continent</key>
+		<string>South America</string>
+		<key>Country</key>
+		<string>Brazil</string>
+		<key>Image</key>
+		<string>RioDeJaneiro.jpg</string>
+		<key>Local</key>
+		<string>里約熱內盧（葡萄牙語：Rio de Janeiro，葡萄牙語發音：[ˈʁi.u dʒi ʒɐˈnejɾu]，意即「一月的河」），有時僅簡稱為里約（Rio），是位於巴西東南部的城市，為里約熱內盧州首府，同時是巴西第二大城，僅次於聖保羅。面積1,256平方公里，人口6,094,183人（2005年）。其自1822年巴西建國以來一直為首都，至1960年4月21日遷都巴西利亞為止，更曾經成為前宗主國葡萄牙在本土被拿破崙入侵時（1808年–1821年）的流亡首都[3]。風景優美，每年吸引大量遊客到此觀光，市內的里約熱內盧港是世界三大天然良港之一，而里約熱內盧基督像也是世界新七大奇跡之一。其亦為第31屆夏季奧運的主辦地，是第一座舉辦夏季奧運的南美洲城市。</string>
+		<key>lat</key>
+		<real>-22.9083</real>
+		<key>long</key>
+		<real>-43.1964</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/里约热内卢</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>費城</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Image</key>
+		<string>Philadelphia.jpg</string>
+		<key>Local</key>
+		<string>費城（英語：Philadelphia），即費利德菲亞，也常被簡稱為費利（或菲利，英語：Philly） ，中文又音譯為非拉鐵非和菲拉德爾斐亞，是美國賓夕法尼亞州人口最多、面積最大的都市，同時是美國第五大城。根據2010年人口普查數據，費城人口為1,526,006人。費城市中心的人口在全美國排名第五，僅次於紐約、洛杉磯、芝加哥和休斯頓。以現在美國官方的定義而言，費城都會區的面積大小排名全美第四，共約620萬人居住其中，但若以其他定義來衡量，費城排名第六，次於舊金山灣區與華盛頓-巴爾的摩都會區。費城是德拉瓦河谷都會區的中心城市。</string>
+		<key>lat</key>
+		<real>39.9528</real>
+		<key>long</key>
+		<real>-75.1636</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/費城</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>羅馬</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>Italy</string>
+		<key>Image</key>
+		<string>Rome.jpg</string>
+		<key>Local</key>
+		<string>羅馬（義大利語：Roma）是義大利首都及全國政治、經濟、文化和交通中心，是世界著名的歷史文化名城，古羅馬文明的發祥地，因建城歷史悠久並保存大量古蹟而被暱稱為「永恆之城」[1][2]。其位於義大利半島中西部，台伯河下游平原地的七座小山丘上，市中心面積有1200多平方公里。羅馬同時是全世界天主教會的中樞，擁有700多座教堂與修道院、7所天主教大學，市內的梵蒂岡城是羅馬主教即天主教會教宗及聖座的駐地。羅馬與佛羅倫斯同為義大利文藝復興中心[3]，現今仍保存有相當豐富的文藝復興與巴洛克風貌；1980年，羅馬的歷史城區被列為世界文化遺產[4]。</string>
+		<key>lat</key>
+		<real>41.9</real>
+		<key>long</key>
+		<real>12.5</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/罗马</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>薩爾瓦多</string>
+		<key>Continent</key>
+		<string>South America</string>
+		<key>Country</key>
+		<string>Brazil</string>
+		<key>Image</key>
+		<string>Salvador.jpg</string>
+		<key>Local</key>
+		<string>薩爾瓦多（Salvador，全名São Salvador da Baía de Todos os Santos，意為「萬聖灣邊的聖薩爾瓦多」）是巴西東北的一座濱海城市，巴伊亞州的首府。薩爾瓦多很長時間裡直接被稱為巴伊亞，20世紀中前的許多書和地圖中它就被標為巴伊亞（比如在丹尼爾·笛福著的《魯賓遜漂流記》中）。今天當地許多人依然將巴伊亞作為薩爾瓦多的稱呼，而巴西其他許多人則將該州稱為巴伊亞。</string>
+		<key>lat</key>
+		<real>-12.9708</real>
+		<key>long</key>
+		<real>-38.5108</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/萨尔瓦多_(巴西)</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>舊金山</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Image</key>
+		<string>SanFrancisco.jpg</string>
+		<key>Local</key>
+		<string>舊金山（英語：San Francisco），正式名稱為舊金山市郡（City and County of San Francisco），是位於美國加利福尼亞州北部的都市，為加州唯一市郡合一的行政區，中文又音譯為三藩市和聖弗朗西斯科，亦別名「金門城市」、「灣邊之城」、「霧城」等。位於舊金山半島的北端，東臨舊金山灣、西臨太平洋，人口約86萬，為加州第四大城；其與灣邊各都市組成的舊金山灣區，人口總數達768萬，是僅次於大洛杉磯地區的美國西岸第二大都會區[4]。</string>
+		<key>lat</key>
+		<real>37.766667</real>
+		<key>long</key>
+		<real>-122.433333</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/旧金山</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>聖保羅</string>
+		<key>Continent</key>
+		<string>South America</string>
+		<key>Country</key>
+		<string>Brazil</string>
+		<key>Image</key>
+		<string>SaoPaulo.jpg</string>
+		<key>Local</key>
+		<string>聖保羅（葡萄牙語：São Paulo，葡萄牙語發音：[sɐ̃w̃ ˈpawlu]  聆聽），巴西東南部州分聖保羅州首府，也是巴西乃至南半球最大的都市，市內人口超過1,100萬。據2011年數據，全城人口包含近郊達2,039萬，在世界都會區人口上居第8位、南半球第1位[3]。2012年，美國的SinkTank公開發表按照產業・人才・文化・政治等對象來綜合的世界都市排名，聖保羅是居世界33位的都市，特別是另有機構更是給予世界12位高評價。而同國的里約熱內盧則僅次之[4]。</string>
+		<key>lat</key>
+		<real>-23.550394</real>
+		<key>long</key>
+		<real>-46.633947</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/聖保羅_(巴西)</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>札幌市</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Sapporo.jpg</string>
+		<key>Local</key>
+		<string>札幌市（日語：札幌市／さっぽろし Sapporo shi */?）是位於日本北海道道央地區的都市，為北海道首府、以及石狩振興局本部所在地，也是政令指定都市之一[1]。其擁有超過190萬人口，是北海道最大都市、以及日本人口第五大都市，集中了北海道35%的人口，而札幌都市圈更集中了北海道約半數的人口。雖然地理位置位於北海道西部，但卻是北海道鐵路、高速公路、航空路線的放射點，因此在交通上也是北海道的中心。</string>
+		<key>lat</key>
+		<real>43.066667</real>
+		<key>long</key>
+		<real>141.35</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/札幌市</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>西雅圖</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Image</key>
+		<string>Seattle.jpg</string>
+		<key>Local</key>
+		<string>西雅圖（英語：Seattle，華文早期或譯作舍路），是美國華盛頓州的一座港口城市，位於華盛頓州金郡，普吉特海灣和華盛頓湖之間，距離美加邊境約174公里，是該州最大的城市，也是美國太平洋西北區最大的城市。在2013年截止2012年，全市人口約634,535人，都會區人口400萬左右，為美國第15大都會區[5]。西雅圖也是景郡的郡政府所在地。</string>
+		<key>lat</key>
+		<real>47.6</real>
+		<key>long</key>
+		<real>-122.32</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/西雅圖</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>上海</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>China</string>
+		<key>Image</key>
+		<string>Shanghai.jpg</string>
+		<key>Local</key>
+		<string>上海，簡稱滬，別稱申，是中華人民共和國直轄市，也是中國經濟最發達的城市之一，國際金融、貿易和航運中心之一[參 1]，其港口為全球最繁忙的港口；主要產業包括商貿流通、金融、資訊、製造等。上海位於中國東部弧形海岸線的正中間，長江三角洲最東部，東臨東海，南瀕杭州灣，西與江蘇、浙江兩省相接，北端的崇明島處於長江入海口中，佔地面積6,340平方公里。上海市是世界最大的城市之一，截至2016年，人口2419.70萬，其中本地戶籍人口占59%，達1439.50萬[參 2]；近年來，上海市也與周圍的江蘇、浙江兩省高速發展的多個城市共同構成了長江三角洲城市群，是世界幾大城市群之一[參 3]。2017年生產總值為30,632.99億元人民幣，按同年國際匯率折合4,537.01億美元，為世界一大經濟區域；人均生產總值則為126,634元人民幣，按同年國際匯率折合18,756美元。2017年上海居民全年人均可支配收入為58,988元人民幣，位居中國大陸首位。《2016年中國城市可持續發展報告：衡量生態投入與人類發展》中，人類發展指數達到0.848，位列中國主要城市第6位。</string>
+		<key>lat</key>
+		<real>31.166667</real>
+		<key>long</key>
+		<real>121.483333</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/上海市</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>瀋陽市</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>China</string>
+		<key>Image</key>
+		<string>Shenyang.jpg</string>
+		<key>Local</key>
+		<string>瀋陽市，簡稱瀋，舊稱奉天，是中華人民共和國遼寧省省會及最大城市，中國東北地區區域中心城市[10][11]以及經濟、金融、文化、交通、信息和商貿中心[1][12]，副省級城市，國家新型工業化綜合配套改革試驗區瀋陽經濟區核心城市[13]。瀋陽位於東北平原南緣，南連遼東半島，北依長白山麓，位處環渤海經濟圈之內，是中國環渤海地區、東北地區連接朝鮮半島的重要樞紐。瀋陽市現轄十區一市兩縣，總面積約1.3萬平方公里，市區面積3,495平方公里，截至2016年末，常住人口829.2萬，按城鎮人口計算，是東北地區的最大城市[14][9]。2017年7月14日，根據國務院批覆的《瀋陽市城市總體規劃（2011—2020年）》，瀋陽由原來的「東北地區中心城市」調整為「東北地區重要的中心城市」[15]。聯合國的2016中國人類發展報告，瀋陽市教育指數得分達到了中國大陸最高分，是唯一超過0.8的城市。瀋陽市的人類發展指數在全國排名第四位。</string>
+		<key>lat</key>
+		<real>41.795556</real>
+		<key>long</key>
+		<real>123.448056</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/沈阳市</string>
+	</dict>
+
+<dict>
+		<key>City</key>
+		<string>澀谷</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Shibuya.jpg</string>
+		<key>Local</key>
+		<string>澀谷區（日語：渋谷区／しぶやく Shibuya ku */?）[1]，是日本東京都的特別區之一，其名稱源自於位於該行政區中央、以澀谷車站為中心的澀谷地區。
+
+與新宿、池袋等因為位處於交通要衝上而發展出的商業街相同，澀谷也是因為位居山手線重要轉運站的地位而發展成今日的盛況。</string>
+		<key>lat</key>
+		<real>35.667739</real>
+		<key>long</key>
+		<real>139.697256</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E6%BE%80%E8%B0%B7%E5%8D%80</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>品川</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Shinagawa.jpg</string>
+		<key>Local</key>
+		<string>品川區（日語：品川区／しながわく Shinagawa ku */?）是日本東京都的特別區之一，位於東京都的南部，東瀕東京灣，為東京市區聚集較多港口及工業設施的地帶。名稱是由境內河川目黑川的別名「品川」而來。</string>
+		<key>lat</key>
+		<real>35.608855</real>
+		<key>long</key>
+		<real>139.733217</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E5%93%81%E5%B7%9D%E5%8D%80</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>新宿</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Shinjuku.jpg</string>
+		<key>Local</key>
+		<string>新宿區（日語：新宿区／しんじゅくく Shinjuku ku */?）是日本東京都內23個特別區之一，為東京都廳（都政府）所在地。區內的新宿站為東京主要的交通樞紐之一，而以新宿站為中心的商圈（包括新宿副都心），為東京乃至於整個日本首要的中心商業區。</string>
+		<key>lat</key>
+		<real>35.702323</real>
+		<key>long</key>
+		<real>139.707489</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E6%96%B0%E5%AE%BF%E5%8D%80</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>新加坡</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Singapore</string>
+		<key>Image</key>
+		<string>Singapore.jpg</string>
+		<key>Local</key>
+		<string>新加坡共和國（英語：Republic of Singapore；馬來語：Republik Singapura；坦米爾語：சிங்கப்பூர் குடியரச），通稱新加坡，又稱為新嘉坡、星架坡、星加坡、星洲、星島、星國、獅城、石叻、叻埠[註 3]、昭南等，是東南亞中南半島南端的一個城邦島國，它不只是一個城市，同時也是一個國家。該國位於馬來半島南端，扼守馬六甲海峽最南端出口，其南面有新加坡海峽與印尼相隔，北面有柔佛海峽與西馬來西亞相隔，並以新柔長堤與第二通道等這兩座橋梁相連於新馬兩岸之間。新加坡的國土除了新加坡本島之外，還包括周圍數島，新加坡最大的外島為德光島。自新加坡獨立以來，大規模的填海已經為新加坡增加了23%的面積，相等於130平方公里。</string>
+		<key>lat</key>
+		<real>1.363421</real>
+		<key>long</key>
+		<real>103.862111</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E6%96%B0%E5%8A%A0%E5%9D%A1</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>墨田</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Sumida.jpg</string>
+		<key>Local</key>
+		<string>墨田區（日語：墨田区／すみだく Sumida ku */?）是日本東京都內23個特別區之一。其特點是一個夾於河川之間的城區。西邊以隅田川為區的區境，而荒川及中川合致而成為東邊的區境。2012年啟用，成為東京都新地標的東京晴空塔（東京スカイツリー）位於此區。
+
+郵遞區號前三碼為130、131。</string>
+		<key>lat</key>
+		<real>35.712761</real>
+		<key>long</key>
+		<real>139.810556</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E5%A2%A8%E7%94%B0%E5%8D%80</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>雪梨</string>
+		<key>Continent</key>
+		<string>Oceania</string>
+		<key>Country</key>
+		<string>Australia</string>
+		<key>Image</key>
+		<string>Sydney.jpg</string>
+		<key>Local</key>
+		<string>雪梨（英語：Sydney），又稱悉尼，位於澳洲東南沿海地帶，是新南威爾斯州的首府，是澳洲人口最多也是人口最稠密的城市。都會區人口5,005,400人（2016年）。在英語裏，市民俗稱雪梨人為「Sydneysider」。
+
+雪梨是歐洲首個澳洲殖民聚落以及充當罪犯的流放地，1788年由英國第一艦隊的船長阿瑟·菲利普於雪梨灣建立[4][5]。雪梨環傑克遜港（包括雪梨港）而建，曾被稱為「海港城市」。它是澳洲最大的金融中心，也是國際主要旅遊勝地，以海灘、歌劇院和港灣大橋等聞名。</string>
+		<key>lat</key>
+		<real>-33.885393</real>
+		<key>long</key>
+		<real>151.224984</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E6%82%89%E5%B0%BC</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>臺中</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Taiwan</string>
+		<key>Image</key>
+		<string>Taichung.jpg</string>
+		<key>Local</key>
+		<string>臺中市 (台灣話: Tâi-tiong-tshī) 是中華民國的直轄市 ，臺灣六都之一，是臺灣中部唯一的直轄市。臺中市的地形，中央為佔最大面積的臺中盆地，是臺中市的人口稠密區，在地理位置上，台中市的周邊與臺灣省的六個縣相鄰，北方為苗栗縣、新竹縣，南方有彰化縣、南投縣，東隔中央山脈與花蓮縣相望，東北有中央山脈和雪山山脈之分水嶺毗鄰宜蘭縣，西望面臨臺灣海峽。常與彰化縣、南投縣合稱「中彰投地區」。台中市總面積約2,215平方公里，設籍人口280.4萬人，為臺灣人口排名第二的城市，也是「臺中都會區」的核心都市，臺中都會區為臺灣第二大都會區，在世界人口普查組織裡為世界排名第132大都會區[a]。國際媒體CNN曾於2016年專文介紹台中市為台灣最宜居城市[5]。2018年由GaWC所公布之世界級城市名單中，臺中市為「自足」級城市 [6]。</string>
+		<key>lat</key>
+		<real>24.153468</real>
+		<key>long</key>
+		<real>120.681177</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E8%87%BA%E4%B8%AD%E5%B8%82</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>臺南</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Taiwan</string>
+		<key>Image</key>
+		<string>Tainan.jpg</string>
+		<key>Local</key>
+		<string>臺南市是中華民國的直轄市，臺灣六都之一，位於臺灣西南部，其西面臨臺灣海峽、東面臨阿里山山脈、北面與嘉義縣鄰接 、南面與高雄市鄰接。面積約2,191.65平方公里，為台灣各縣市中，平原區比例最大，地形最平緩的城市，設籍人口約188.3萬人。其政府所在地位於安平區及新營區，採雙行政中心模式。臺南市區的建城歷史可上推至1620年代，為臺灣最早建立的城市。爾後從荷治時期到清治末期將巡撫衙門遷至臺北為止，臺南一直都是臺灣的首府[4]，遂有「古都」之稱；清代設臺灣府治於此得名「府城」，臺南市在19世紀時為臺灣的政治、經濟、金融中心。現今則為南臺灣學術、教育之中心，包括國家圖書館、中央研究院、工業技術研究院、科學園區南部分址均位在臺南。依據平面媒體民調，台灣縣市競爭力排名，臺南市已連續3年高居六都第二名[5]，減債能力也排名第二[6]。現以小吃、夜市商圈、旅遊度假、古蹟文化、娛樂流行吸引觀光人潮，並以宜居樂活城市著稱。</string>
+		<key>lat</key>
+		<real>22.996978</real>
+		<key>long</key>
+		<real>120.221173</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8D%97%E5%B8%82</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>臺北</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Taiwan</string>
+		<key>Image</key>
+		<string>Taipei.jpg</string>
+		<key>Local</key>
+		<string>臺北市是中華民國的直轄市及首都[1]，亦是中央政府所在地，位於臺灣北部的臺北盆地，四周均與新北市接壤，亦是臺北都會區、臺北生活圈、乃至於北臺灣的中心城市，為臺灣在政治、經濟、文化、教育、醫療、學術研究等領域的發展中樞。全市下轄12個區，總面積271.8平方公里。人口總數約266.8萬，在臺灣各都市排名第四、人口密度則位居第一。</string>
+		<key>lat</key>
+		<real>25.030094</real>
+		<key>long</key>
+		<real>121.566841</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>天津</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>China</string>
+		<key>Image</key>
+		<string>Tianjin.jpg</string>
+		<key>Local</key>
+		<string>天津市，簡稱津，是中華人民共和國直轄市、國家中心城市和中國北方最大沿海開放城市。天津位於華北平原的海河各支流交匯處，東臨渤海，北依燕山；有海河在城中蜿蜒而過，跨越海河的各式橋樑形成了「一橋一景」的景致。
+
+天津因漕運而興起，1404年12月23日正式築城[1]。自1860年天津開放為通商口岸後，西方多國在天津設立租界，洋務派亦在天津興辦實業，使天津成為中國北方開放的前沿和近代中國洋務運動的基地。在領風氣之先的同時，天津近代工業、商業、金融業等發展迅速。由天津開始的軍事、教育、司法、交通、通訊、工業等方面的近代化建設，均開中國之先河。天津成為當時中國第二大的工商業城市和北方最大的金融商貿中心。</string>
+		<key>lat</key>
+		<real>39.369376</real>
+		<key>long</key>
+		<real>117.382754</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E5%A4%A9%E6%B4%A5%E5%B8%82</string>
+	</dict>
+
+<dict>
+		<key>City</key>
+		<string>東京都</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Tokyo.jpg</string>
+		<key>Local</key>
+		<string>京都（日語：東京都／とうきょうと Tōkyō to */?）是位於日本關東地方的地方行政區，與道、府、縣同屬日本第一級行政區劃（廣域地方公共團體），為事實上的日本首都[註 1]。</string>
+		<key>lat</key>
+		<real>35.68</real>
+		<key>long</key>
+		<real>139.77</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E9%83%BD</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>多倫多</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>Canada</string>
+		<key>Image</key>
+		<string>Toronto.jpg</string>
+		<key>Local</key>
+		<string>多倫多（英語/法語：Toronto），是北美洲國家加拿大安大略省首府，加拿大的最大城市。
+
+多倫多坐落在安大略湖西北岸的南安大略地區。根據2012年七月的加拿大人口普查，多倫市人口達2,790,060，為加拿大最大城市。多倫多市是大多倫多地區的心臟地區，也是安大略省南部人口稠密區（稱作「金馬蹄地區」）的一部分。</string>
+		<key>lat</key>
+		<real>43.7</real>
+		<key>long</key>
+		<real>-79.40000000000001</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E5%A4%9A%E4%BC%A6%E5%A4%9A</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>上野</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Ueno.jpg</string>
+		<key>Local</key>
+		<string>上野（日語：上野／うえの Ueno */?）是東京都台東區的町名。郵遞區號110-0005。現行行政地名為上野一丁目至上野七丁目。2013年8月1日為止的人口為3,537人[1]。</string>
+		<key>lat</key>
+		<real>35.7155</real>
+		<key>long</key>
+		<real>139.774</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E4%B8%8A%E9%87%8E</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>溫哥華</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>Canada</string>
+		<key>Image</key>
+		<string>Vancouver.jpg</string>
+		<key>Local</key>
+		<string>溫哥華市（City of Vancouver）是加拿大英屬哥倫比亞省低陸平原地區一沿岸城市。根據2016年加拿大統計局人口普查，溫哥華市人口有631,486人，而大溫哥華地區的人口為246萬，[1]是英屬哥倫比亞省以至加拿大西部最大的都會區，以及全國第三大都會區；市內人口則在全國排行第八。</string>
+		<key>lat</key>
+		<real>49.15</real>
+		<key>long</key>
+		<real>123.06</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E6%BA%AB%E5%93%A5%E8%8F%AF</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>維多利亞 (不列顛哥倫比亞)</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>Canada</string>
+		<key>Image</key>
+		<string>Victoria.jpg</string>
+		<key>Local</key>
+		<string>維多利亞（英語：Victoria），當地華人過往一直稱呼作域多利，是加拿大不列顛哥倫比亞省的一個城市，為該省首府以及首府地區的行政中心。</string>
+		<key>lat</key>
+		<real>48.25</real>
+		<key>long</key>
+		<real>123.21</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E7%B6%AD%E5%A4%9A%E5%88%A9%E4%BA%9E_(%E4%B8%8D%E5%88%97%E9%A1%9B%E5%93%A5%E5%80%AB%E6%AF%94%E4%BA%9E)</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>華盛頓哥倫比亞特區</string>
+		<key>Continent</key>
+		<string>North America</string>
+		<key>Country</key>
+		<string>United States</string>
+		<key>Image</key>
+		<string>Washington.jpg</string>
+		<key>Local</key>
+		<string>華盛頓哥倫比亞特區（英語：Washington, D.C.），是美國的首都，又稱哥倫比亞特區[3][註 1]（District of Columbia，縮寫為 D.C.），以及簡稱華盛頓（Washington）、特區（the District）等。中文通常簡稱華府。華盛頓哥倫比亞特區是大多數美國聯邦政府機關、與各國駐美大使館的所在地，也是世界銀行、國際貨幣基金、美洲國家組織等國際組織總部的所在地，並擁有為數眾多的博物館與文化史蹟。哥倫比亞特區是美國最富裕、財富高度集中的地區；該地區2015年的人均生產總值爲181,185美元，冠絕全美。</string>
+		<key>lat</key>
+		<real>38.895</real>
+		<key>long</key>
+		<real>-77.0367</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E5%8D%8E%E7%9B%9B%E9%A1%BF%E5%93%A5%E4%BC%A6%E6%AF%94%E4%BA%9A%E7%89%B9%E5%8C%BA</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>威靈頓</string>
+		<key>Continent</key>
+		<string>Oceania</string>
+		<key>Country</key>
+		<string>New Zealand</string>
+		<key>Image</key>
+		<string>Wellington.jpg</string>
+		<key>Local</key>
+		<string>威靈頓（英語：Wellington、毛利語：Te Whanganui-a-Tara 或 Poneke）是紐西蘭的首都，位於紐西蘭北島南端，人口約四十萬。它是紐西蘭的第二大城市，與雪梨和墨爾本一起成為大洋洲的文化中心。</string>
+		<key>lat</key>
+		<real>41.17</real>
+		<key>long</key>
+		<real>174.46</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E6%83%A0%E7%81%B5%E9%A1%BF</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>韋爾斯 (薩默塞特郡)</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>United Kingdom</string>
+		<key>Image</key>
+		<string>Wells.jpg</string>
+		<key>Local</key>
+		<string>韋爾斯是一座位於英國薩默塞特郡，門迪普山以南的城市。雖然根據2001年的統計，本市的人口只有10,406人，但自1205年起已具有市級地位。現在，它是全英格蘭第二小的城市。</string>
+		<key>lat</key>
+		<real>51.2073</real>
+		<key>long</key>
+		<real>-2.6519</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E9%9F%8B%E7%88%BE%E6%96%AF_(%E8%96%A9%E9%BB%98%E5%A1%9E%E7%89%B9%E9%83%A1)</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>西敏 (倫敦地區)</string>
+		<key>Continent</key>
+		<string>Europe</string>
+		<key>Country</key>
+		<string>United Kingdom</string>
+		<key>Image</key>
+		<string>Westminster.jpg</string>
+		<key>Local</key>
+		<string>西敏（Westminster /ˈwɛstmɪnstər/，又譯威斯敏斯特）是英國首都倫敦中心區內的一區，位於西敏市。[1] 西敏宮、白金漢宮、西敏寺和西敏大教堂都位於該區。在政治上，西敏一詞常指位於西敏宮中的英國國會。</string>
+		<key>lat</key>
+		<real>51.4995</real>
+		<key>long</key>
+		<real>-0.1333</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E8%A5%BF%E6%95%8F_(%E5%80%AB%E6%95%A6%E5%9C%B0%E5%8D%80)</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>武漢市</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Wuhan.jpg</string>
+		<key>Local</key>
+		<string>武漢市（普通話拼音：Wǔhàn Shì；武漢話拼音：Wǔhán Sì），簡稱「漢」，別稱「江城、東方芝加哥」，中國超大城市[5]和國家中心城市[6]之一，湖北省省會、副省級城市[7]，中國中部暨長江中游地區第一大城市</string>
+		<key>lat</key>
+		<real>30.583333</real>
+		<key>long</key>
+		<real>114.316667</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E6%AD%A6%E6%B1%89%E5%B8%82</string>
+	</dict>
+	<dict>
+		<key>City</key>
+		<string>橫濱市</string>
+		<key>Continent</key>
+		<string>Asia</string>
+		<key>Country</key>
+		<string>Japan</string>
+		<key>Image</key>
+		<string>Yokohama.jpg</string>
+		<key>Local</key>
+		<string>橫濱市（日語：横浜市／よこはまし Yokohama shi */?）是位於日本神奈川縣東部的港口都市，為神奈川縣縣治及最大都市，也是政令指定都市之一，轄有18個區。全市人口達373萬，是日本人口最多的市，若以人口集中地區評比則次於東京23區。</string>
+		<key>lat</key>
+		<real>35.444167</real>
+		<key>long</key>
+		<real>139.638056</real>
+		<key>url</key>
+		<string>https://zh.wikipedia.org/wiki/%E6%A8%AA%E6%BB%A8%E5%B8%82</string>
+	</dict>
+
+</array>
+</plist>

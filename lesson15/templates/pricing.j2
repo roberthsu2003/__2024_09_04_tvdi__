@@ -30,13 +30,13 @@
     <nav aria-label="Page navigation example">
         <ul class="pagination">
             {% if page > 1%}
-            <li class="page-item"><a class="page-link" href="{{ url_for('product',page=page-1) }}">上一頁</a></li>
+            <li class="page-item"><a class="page-link" href="{{ url_for('pricing',page=page-1) }}">上一頁</a></li>
             {% endif %}
 
             <li class="page-item"><a class="page-link" href="#">{{page}} / {{total_pages}}</a></li>
 
             {% if page < total_pages %} <li class="page-item"><a class="page-link"
-                    href="{{ url_for('product', page=page+1) }}">下一頁</a></li>
+                    href="{{ url_for('pricing', page=page+1) }}">下一頁</a></li>
                 {% endif %}
         </ul>
     </nav>
