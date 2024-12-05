@@ -12,10 +12,9 @@
             <div class="card" style="width: 18rem;">
                 <img src="{{url_for('static',filename='images/cityImage/'+item['image'])}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h4 class="card-title">{{item['city_name']}}</h5>
+                    <h6 class="card-title">國家:{{item['country']}}</h6>
+                    <h6 class="card-title">{{item['continent']}}</h6>    
                 </div>
             </div>
         </div>
