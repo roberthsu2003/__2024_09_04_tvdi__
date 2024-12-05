@@ -25,7 +25,7 @@ def product():
 def pricing():
     cities:list[dict] = datasource.get_cities()
     page = request.args.get('page',1, type=int)
-    per_page = 10
+    per_page = 6
     start = (page-1) * per_page
     end = start + per_page
     total_pages = (len(cities) + per_page - 1 ) // per_page
