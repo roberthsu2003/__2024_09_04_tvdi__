@@ -10,8 +10,8 @@ def index():
 @app.route("/product")
 def product():
     cities:list[dict] = datasource.get_cities()
-    print(cities)
-    return render_template('product.j2')
+    #print(cities)
+    return render_template('product.j2',citys=cities)
 
 @app.route("/pricing")
 def pricing():
