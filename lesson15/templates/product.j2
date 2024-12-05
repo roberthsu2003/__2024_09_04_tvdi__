@@ -4,10 +4,12 @@
 {% block head %} {{super()}} {% endblock%}
 
 {% block main %}
-    <h1>{{citys[0]['city_name']}}</h1>
-    <ul>
-    {% for key in citys[0] %}        
-        <li>{{citys[0][key]}}</li>
+    {% for item in citys%}
+        <h1>{{item['city_name']}}</h1>
+        <ul>
+        {% for key in item %}        
+            <li>{{item[key]}}</li>
+        {% endfor %}
+        </ul>
     {% endfor %}
-    </ul>
 {% endblock %}
