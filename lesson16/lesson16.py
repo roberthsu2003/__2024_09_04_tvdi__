@@ -37,14 +37,17 @@ def pricing():
 
 @app.route("/faqs",methods=['POST','GET'])
 def faqs():
+    error = None
     if request.method == 'POST':
         username = request.form['email']
         password = request.form['password']
         #checked = request.form['checked']
         if username=="roberthsu2003@gmail.com" and password == "12345":
             return redirect(url_for('success'))
+        else:
+            error = "密碼錯誤"
 
-    return render_template('faqs.j2')
+    return render_template('faqs.j2',error=error)
 
 @app.route("/about")
 def about():
