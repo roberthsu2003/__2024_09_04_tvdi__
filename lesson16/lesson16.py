@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,redirect,url_for
 import datasource
 
 app = Flask(__name__)
@@ -35,10 +35,21 @@ def pricing():
                             total_pages=total_pages,
                             page = page) 
 
-@app.route("/faqs")
+@app.route("/faqs",methods=['POST','GET'])
 def faqs():
+    if request.method == 'POST':
+        username = request.form['email']
+        password = request.form['password']
+        #checked = request.form['checked']
+        if username=="roberthsu2003@gmail.com" and password == "12345":
+            return redirect(url_for('success'))
+
     return render_template('faqs.j2')
 
 @app.route("/about")
 def about():
     return render_template('about.j2')
+
+@app.route("/success")
+def success():
+    return "<h1>登入成功</h1>"
