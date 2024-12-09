@@ -34,7 +34,8 @@ app.layout = dmc.MantineProvider(
                             value='pop',
                             size='sm',
                             mb=30
-                            ),
+                            )
+                        ,
                     #dcc.Dropdown(df.country.unique(),value='Taiwan',id='dropdown-selection'),
                             dmc.Select(
                                 label = '請選擇國家',
@@ -71,7 +72,8 @@ app.layout = dmc.MantineProvider(
             mb=50
         )
         
-    ])
+    ]
+)
 
 #圖表顯示的事件
 @callback(    
