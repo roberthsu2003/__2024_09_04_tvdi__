@@ -1,0 +1,10 @@
+requests
+python-dotenv
+Flask
+pydantic
+gunicorn
+psycopg2-binary
+Flask-WTF
+dash
+pandas
+plotly
