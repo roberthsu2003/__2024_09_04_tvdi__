@@ -8,3 +8,4 @@ Flask-WTF
 dash
 pandas
 plotly
+dash-mantine-components
