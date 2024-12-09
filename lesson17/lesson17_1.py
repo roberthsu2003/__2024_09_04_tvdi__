@@ -1,23 +1,82 @@
-from dash import Dash,html,dcc,callback,Input, Output,dash_table
+from dash import Dash,html,dcc,callback,Input, Output,dash_table,_dash_renderer
 import pandas as pd
 import plotly.express as px
+import dash_mantine_components as dmc
+
+_dash_renderer._set_react_version('18.2.0')
+
 
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder_unfiltered.csv')
 
-app = Dash(__name__)
+app = Dash(__name__,external_stylesheets=dmc.styles.ALL)
+radioData = [
+    ['pop','人口數'],
+    ['lifeExp','壽命'],
+    ['gdpPercap','人均GDP']
+]
 
-app.layout = html.Div(
+app.layout = dmc.MantineProvider(
     [
-    html.H1("Dash App的標題",style={"textAlign":'center'}),
-    dcc.RadioItems(['pop','lifeExp','gdpPercap'],value='pop',inline=True,id='radio_item'),
-    dcc.Dropdown(df.country.unique(),value='Taiwan',id='dropdown-selection'),
-    dash_table.DataTable(data=[],page_size=10,id='datatable',columns=[]),
-    dcc.Graph(id='graph-content')
+        dmc.Title("世界各國人口,壽命,GDP",style={"textAlign":'center'},mb=20,mt=20)
+    ,
+        #dcc.RadioItems(['pop','lifeExp','gdpPercap'],value='pop',inline=True,id='radio_item'),
+        dmc.Container(
+            dmc.Grid(
+                [
+                    dmc.GridCol(
+                        [
+                            dmc.RadioGroup(
+                            children = dmc.Group(
+                                [dmc.Radio(l,value=k) for k,l in radioData]
+                            ),
+                            label = '請選擇查詢種類:',
+                            id = 'radio_item',
+                            value='pop',
+                            size='sm',
+                            mb=30
+                            ),
+                    #dcc.Dropdown(df.country.unique(),value='Taiwan',id='dropdown-selection'),
+                            dmc.Select(
+                                label = '請選擇國家',
+                                placeholder='--選擇--',
+                                id = 'dropdown-selection',
+                                value='Taiwan',
+                                data=[{'label':name, 'value':name} for name in df.country.unique()],
+                                w=200,
+                                mb=10
+                            )
+                        ],
+                        span=4
+                    )
+                ,
+                    dmc.GridCol(
+                        dash_table.DataTable(data=[],page_size=10,id='datatable',columns=[]),                        
+                        span=8
+                    )                    
+                ],
+            ),
+            fluid=False
+        )
+    ,
+        #dcc.Graph(id='graph-content')
+        dmc.Container(
+            dmc.LineChart(
+                id='graph-content',
+                h = 300,
+                dataKey='year',
+                data=[],
+                series=[{"name":"pop","color":"indigo.6"}]     
+            ),
+            mt=50,
+            mb=50
+        )
+        
     ])
 
 #圖表顯示的事件
 @callback(    
-    Output('graph-content','figure'),
+    Output('graph-content','data'),
+    Output('graph-content','series'),
     Input('dropdown-selection','value'),
     Input('radio_item','value')
     
@@ -32,7 +91,7 @@ def update_graph(country_value,radio_value):
     elif radio_value == 'gdpPercap':
         title = f'{country_value}:人均GDP'
 
-    return px.line(dff,x='year',y=radio_value,title=title)
+    return dff[['year',radio_value]].to_dict('records'),[{"name":radio_value,"color":"indigo.6"}]
 
 #表格顯示的事件
 @callback(    
