@@ -54,7 +54,7 @@ app.layout = dmc.MantineProvider(
                         dash_table.DataTable(data=[],page_size=10,id='datatable',columns=[]),                        
                         span=8
                     )                    
-                ],
+                ]
             ),
             fluid=False
         )
