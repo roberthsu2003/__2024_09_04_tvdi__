@@ -92,10 +92,17 @@ app.layout = dmc.MantineProvider(
             ,
                 
                 #dash_table.DataTable(data=[],page_size=10,id='datatable',columns=[])
-                dmc.Table(
-                    [head, body, caption],
+                dmc.ScrollArea(
+                    dmc.Table(
+                        [head, body, caption],
+                        w='100%'
+                    ),
+                    h=300,
                     w='50%'
                 )
+
+                
+                
 
             ],
             direction={"base": "column", "sm": "row"},
