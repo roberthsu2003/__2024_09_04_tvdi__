@@ -10,10 +10,12 @@ app = Dash(__name__,external_stylesheets=dmc.styles.ALL)
 
 app.layout = dmc.MantineProvider(
     [
-    #html.H1("Dash App的標題",style={"textAlign":'center'})
-        dmc.Container(
-        html.H1("Dash App的標題",style={"textAlign":'center'}),
-        fluid=True  
+    
+        dmc.Container(        
+            dmc.Title(f"世界各國人口,壽命,gdp統計數字", order=2),
+            fluid=True,
+            ta='center',
+            my=30  
         )
     ,
     #dcc.RadioItems(['pop','lifeExp','gdpPercap'],value='pop',inline=True,id='radio_item')
@@ -29,10 +31,15 @@ app.layout = dmc.MantineProvider(
                     , 
                         dcc.Dropdown(df.country.unique(),value='Taiwan',id='dropdown-selection')
                     ],
-                    w = 200
+                    w = 300
                 )
             ,
-                dash_table.DataTable(data=[],page_size=10,id='datatable',columns=[]) 
+                
+                #dash_table.DataTable(data=[],page_size=10,id='datatable',columns=[])
+                dmc.Center(
+                    dash_table.DataTable(data=[],page_size=10,id='datatable',columns=[]),
+                    w = 500
+                )
 
             ],
             direction={"base": "column", "sm": "row"},
