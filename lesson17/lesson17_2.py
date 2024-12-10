@@ -8,30 +8,65 @@ df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapmi
 
 app = Dash(__name__,external_stylesheets=dmc.styles.ALL)
 
+#radio button要顯示的資料
 radio_data = [['pop','人口'],['lifeExp','平均壽命'],['gdpPercap','人均gdp']]
+
+#selected要的資料
 selected_data = [{'value':value,'label':value} for value in df.country.unique()]
-elements = [
-    {"position": 6, "mass": 12.011, "symbol": "C", "name": "Carbon"},
-    {"position": 7, "mass": 14.007, "symbol": "N", "name": "Nitrogen"},
-    {"position": 39, "mass": 88.906, "symbol": "Y", "name": "Yttrium"},
-    {"position": 56, "mass": 137.33, "symbol": "Ba", "name": "Barium"},
-    {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-    {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-    {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-    {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-    {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-    {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-    {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-    {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-]
+
+#table要顯示的資料
+# elements = [
+#     {"position": 6, "mass": 12.011, "symbol": "C", "name": "Carbon"},
+#     {"position": 7, "mass": 14.007, "symbol": "N", "name": "Nitrogen"},
+#     {"position": 39, "mass": 88.906, "symbol": "Y", "name": "Yttrium"},
+#     {"position": 56, "mass": 137.33, "symbol": "Ba", "name": "Barium"},
+#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
+#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
+#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
+#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
+#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
+#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
+#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
+#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
+# ]
+
+# rows = [
+#     dmc.TableTr(
+#         [
+#             dmc.TableTd(element["position"]),
+#             dmc.TableTd(element["name"]),
+#             dmc.TableTd(element["symbol"]),
+#             dmc.TableTd(element["mass"]),
+#         ]
+#     )
+#     for element in elements
+# ]
+
+# head = dmc.TableThead(
+#     dmc.TableTr(
+#         [
+#             dmc.TableTh("Element Position"),
+#             dmc.TableTh("Element Name"),
+#             dmc.TableTh("Symbol"),
+#             dmc.TableTh("Atomic Mass"),
+#         ]
+#     )
+# )
+
+#body = dmc.TableTbody(rows)
+#caption = dmc.TableCaption("Some elements from periodic table")
+
+#只顯示台灣的資料
+dff = df[df.country == 'Taiwan']
+pop_diff = dff[['country', 'year', 'pop']]
+elements = pop_diff.to_dict('records')
 
 rows = [
     dmc.TableTr(
         [
-            dmc.TableTd(element["position"]),
-            dmc.TableTd(element["name"]),
-            dmc.TableTd(element["symbol"]),
-            dmc.TableTd(element["mass"]),
+            dmc.TableTd(element["country"]),
+            dmc.TableTd(element["year"]),
+            dmc.TableTd(element["pop"]),
         ]
     )
     for element in elements
@@ -40,17 +75,16 @@ rows = [
 head = dmc.TableThead(
     dmc.TableTr(
         [
-            dmc.TableTh("Element Position"),
-            dmc.TableTh("Element Name"),
-            dmc.TableTh("Symbol"),
-            dmc.TableTh("Atomic Mass"),
+            dmc.TableTh("國家"),
+            dmc.TableTh("年份"),
+            dmc.TableTh("人口"),
         ]
     )
 )
 
 body = dmc.TableTbody(rows)
-caption = dmc.TableCaption("Some elements from periodic table")
 
+caption = dmc.TableCaption("Taiwan 年份,人口")
 app.layout = dmc.MantineProvider(
     [
     
