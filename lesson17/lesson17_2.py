@@ -8,6 +8,8 @@ df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapmi
 
 app = Dash(__name__,external_stylesheets=dmc.styles.ALL)
 
+radio_data = [['pop','人口'],['lifeExp','平均壽命'],['gdpPercap','人均gdp']]
+
 app.layout = dmc.MantineProvider(
     [
     
@@ -18,20 +20,24 @@ app.layout = dmc.MantineProvider(
             my=30  
         )
     ,
-    #dcc.RadioItems(['pop','lifeExp','gdpPercap'],value='pop',inline=True,id='radio_item')
-    #,
-    #dcc.Dropdown(df.country.unique(),value='Taiwan',id='dropdown-selection')
-    #,
-    #dash_table.DataTable(data=[],page_size=10,id='datatable',columns=[])
         dmc.Flex(
             [
                 dmc.Stack(
                     [
-                        dcc.RadioItems(['pop','lifeExp','gdpPercap'],value='pop',inline=True,id='radio_item')
+                        #dcc.RadioItems(['pop','lifeExp','gdpPercap'],value='pop',inline=True,id='radio_item')
+                        dmc.RadioGroup(
+                            children=dmc.Group([dmc.Radio(l, value=k) for k, l in radio_data], my=10),
+                            id="radio_item",
+                            value="pop",
+                            label="請選擇查詢的種類",
+                            size="md",
+                            mb=10,
+                        )
+        
                     , 
                         dcc.Dropdown(df.country.unique(),value='Taiwan',id='dropdown-selection')
                     ],
-                    w = 300
+                    
                 )
             ,
                 
