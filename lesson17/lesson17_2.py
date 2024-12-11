@@ -2,6 +2,7 @@ from dash import Dash,html,dcc,callback,Input, Output,dash_table,_dash_renderer
 import pandas as pd
 import plotly.express as px
 import dash_mantine_components as dmc
+from dash_iconify import DashIconify
 
 _dash_renderer._set_react_version("18.2.0")
 
@@ -20,7 +21,22 @@ selected_data = [{'value':value,'label':value} for value in df.country.unique()]
 caption = dmc.TableCaption("Taiwan 年份,人口")
 dash_app.layout = dmc.MantineProvider(
     [
-    
+        # dmc.Anchor(
+        #     "回首頁",
+        #     href='/',
+        #     refresh=True
+        # )
+        dmc.NavLink(
+            label="回職能發展學院",
+            leftSection=DashIconify(icon="tabler:gauge"),
+            active=True,
+            variant="filled",
+            color="blue",
+            id="navlink-interactive",
+            href="/",
+            refresh=True
+        )
+    ,
         dmc.Container(        
             dmc.Title(f"世界各國人口,壽命,gdp統計數字", order=2),
             fluid=True,

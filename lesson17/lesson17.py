@@ -55,15 +55,11 @@ class MyForm(FlaskForm):
     epaper_field = BooleanField("訂閱電子報")
     submit_field = SubmitField("確定送出")
 
-@app.route("/faqs",methods=['POST','GET'])
-def faqs():
+@app.route("/login",methods=['POST','GET'])
+def login():
     myForm = MyForm()
-
     return render_template('faqs.j2',myform = myForm)
 
-@app.route("/about")
-def about():
-    return render_template('about.j2')
 
 @app.route("/success")
 def success():
