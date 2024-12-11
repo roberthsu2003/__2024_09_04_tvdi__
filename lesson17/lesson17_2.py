@@ -2,11 +2,12 @@ from dash import Dash,html,dcc,callback,Input, Output,dash_table,_dash_renderer
 import pandas as pd
 import plotly.express as px
 import dash_mantine_components as dmc
+
 _dash_renderer._set_react_version("18.2.0")
 
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder_unfiltered.csv')
 
-app = Dash(__name__,external_stylesheets=dmc.styles.ALL)
+dash_app = Dash(external_stylesheets=dmc.styles.ALL,requests_pathname_prefix="/dash/")
 
 #radio button要顯示的資料
 radio_data = [['pop','人口'],['lifeExp','平均壽命'],['gdpPercap','人均gdp']]
@@ -17,7 +18,7 @@ selected_data = [{'value':value,'label':value} for value in df.country.unique()]
 
 
 caption = dmc.TableCaption("Taiwan 年份,人口")
-app.layout = dmc.MantineProvider(
+dash_app.layout = dmc.MantineProvider(
     [
     
         dmc.Container(        
