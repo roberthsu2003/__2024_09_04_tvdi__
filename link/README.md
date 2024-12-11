@@ -150,3 +150,13 @@ https://youtube.com/live/bfHXPmL1sD8
 ## 2024_12_06_上午
 
 https://youtube.com/live/aHuKL4AeOmo
+
+---
+
+## 2024_12_09_上午
+
+https://youtube.com/live/5tjNyU8aLbM
+
+## 2024_12_10_下午
+
+https://youtube.com/live/m-wKIMlAu_w
