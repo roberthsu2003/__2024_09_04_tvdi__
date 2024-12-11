@@ -14,75 +14,7 @@ radio_data = [['pop','人口'],['lifeExp','平均壽命'],['gdpPercap','人均gd
 #selected要的資料
 selected_data = [{'value':value,'label':value} for value in df.country.unique()]
 
-#table要顯示的資料
-# elements = [
-#     {"position": 6, "mass": 12.011, "symbol": "C", "name": "Carbon"},
-#     {"position": 7, "mass": 14.007, "symbol": "N", "name": "Nitrogen"},
-#     {"position": 39, "mass": 88.906, "symbol": "Y", "name": "Yttrium"},
-#     {"position": 56, "mass": 137.33, "symbol": "Ba", "name": "Barium"},
-#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-#     {"position": 58, "mass": 140.12, "symbol": "Ce", "name": "Cerium"},
-# ]
 
-# rows = [
-#     dmc.TableTr(
-#         [
-#             dmc.TableTd(element["position"]),
-#             dmc.TableTd(element["name"]),
-#             dmc.TableTd(element["symbol"]),
-#             dmc.TableTd(element["mass"]),
-#         ]
-#     )
-#     for element in elements
-# ]
-
-# head = dmc.TableThead(
-#     dmc.TableTr(
-#         [
-#             dmc.TableTh("Element Position"),
-#             dmc.TableTh("Element Name"),
-#             dmc.TableTh("Symbol"),
-#             dmc.TableTh("Atomic Mass"),
-#         ]
-#     )
-# )
-
-#body = dmc.TableTbody(rows)
-#caption = dmc.TableCaption("Some elements from periodic table")
-
-#只顯示台灣的資料
-dff = df[df.country == 'Taiwan']
-pop_diff = dff[['country', 'year', 'pop']]
-elements = pop_diff.to_dict('records')
-
-rows = [
-    dmc.TableTr(
-        [
-            dmc.TableTd(element["country"]),
-            dmc.TableTd(element["year"]),
-            dmc.TableTd(element["pop"]),
-        ]
-    )
-    for element in elements
-]
-
-head = dmc.TableThead(
-    dmc.TableTr(
-        [
-            dmc.TableTh("國家"),
-            dmc.TableTh("年份"),
-            dmc.TableTh("人口"),
-        ]
-    )
-)
-
-body = dmc.TableTbody(rows)
 
 caption = dmc.TableCaption("Taiwan 年份,人口")
 app.layout = dmc.MantineProvider(
@@ -127,20 +59,15 @@ app.layout = dmc.MantineProvider(
                 
                 #dash_table.DataTable(data=[],page_size=10,id='datatable',columns=[])
                 dmc.ScrollArea(
-                    dmc.Table(
-                        [head, body, caption],
-                        w='100%'
-                    ),
+                    children = [],
+                    id = 'table_scroll',
                     h=300,
-                    w='50%'
+                    w='300'
                 )
 
-                
-                
-
             ],
-            direction={"base": "column", "sm": "row"},
-            gap={"base": "sm", "sm": "lg"},
+            direction={"base": "row"},
+            gap={"base": "50"},
             justify={"base": "center"},
             
 
@@ -148,18 +75,27 @@ app.layout = dmc.MantineProvider(
     ,
     #dcc.Graph(id='graph-content')
         dmc.Container(
-           dcc.Graph(id='graph-content') 
+            dmc.LineChart(
+                id='graph-content',
+                h = 300,
+                dataKey='year',
+                data=[],
+                series=[{"name":"pop","color":"indigo.6"}]     
+            ),
+            mt=50,
+            mb=50
         )
     ]
 )
 
 #圖表顯示的事件
 @callback(    
-    Output('graph-content','figure'),
+    Output('graph-content','data'),
+    Output('graph-content','series'),
     Input('dropdown-selection','value'),
-    Input('radio_item','value')
-    
+    Input('radio_item','value')    
 )
+
 def update_graph(country_value,radio_value):
     dff = df[df.country == country_value]
     print(radio_value)
@@ -170,29 +106,51 @@ def update_graph(country_value,radio_value):
     elif radio_value == 'gdpPercap':
         title = f'{country_value}:人均GDP'
 
-    return px.line(dff,x='year',y=radio_value,title=title)
+    return dff[['year',radio_value]].to_dict('records'),[{"name":radio_value,"color":"indigo.6"}]
 
 #表格顯示的事件
-# @callback(    
-#     Output('datatable','data'),
-#     Output('datatable','columns'),    
-#     Input('dropdown-selection','value'),
-#     Input('radio_item','value') 
-# )
-# def update_table(country_value,radio_value):
-#     dff = df[df.country == country_value]
-#     columns = [
-#         {'id':'country','name':'country'},
-#         {'id':'year','name':'year'}        
-#     ]
-#     if radio_value == 'pop':
-#         columns.append({'id':'pop','name':'pop'})
-#     elif radio_value == 'lifeExp':
-#         columns.append({'id':'lifeExp','name':'lifeExp'})
-#     elif radio_value == 'gdpPercap':
-#         columns.append({'id':'gdpPercap','name':'gdpPercap'})
+@callback(    
+    Output('table_scroll','children'),    
+    Input('dropdown-selection','value'),
+    Input('radio_item','value') 
+)
+def update_table(country_value,radio_value):
+    #只顯示台灣的資料
+    dff = df[df.country == country_value]
+    pop_diff = dff[['country', 'year', radio_value]]
+    elements = pop_diff.to_dict('records')
 
-#     return dff.to_dict('records'),columns
+    rows = [
+        dmc.TableTr(
+            [
+                dmc.TableTd(element["country"]),
+                dmc.TableTd(element["year"]),
+                dmc.TableTd(element[radio_value]),
+            ]
+        )
+        for element in elements
+    ]
+    if radio_value == 'pop':
+        theme = '人口'
+    elif radio_value == "lifeExp":
+        theme = '人均壽命'
+    elif radio_value == 'gdpPercap':
+        theme = 'GDP' 
+
+    head = dmc.TableThead(
+        dmc.TableTr(
+            [
+                dmc.TableTh("國家"),
+                dmc.TableTh("年份"),
+                dmc.TableTh(theme),
+            ]
+        )
+    )
+
+    body = dmc.TableTbody(rows)
+
+
+    return dmc.Table([head, body, caption],w='300')
     
 
 if __name__ == '__main__':
