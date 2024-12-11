@@ -7,15 +7,15 @@ import matplotlib.dates as mdates
 
 # 設定中文字型
 plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei', 'Arial Unicode MS', 'SimHei']
-plt.rcParams['axes.unicode_minus'] = False  # 用來正常顯示負號
+plt.rcParams['axes.unicode_minus'] = False
 
 # 可調參數
 PARAMS = {
-    'train_size': 0.7,  # 訓練集比例
-    'order': (1, 1, 1),  # SARIMA參數 (p,d,q) - 可調整
-    'seasonal_order': (1, 1, 1, 12),  # 季節性參數 (P,D,Q,s) - 可調整
-    'enforce_stationarity': False,  # 是否強制平穩性 - 可調整
-    'enforce_invertibility': False  # 是否強制可逆性 - 可調整
+    'train_size': 0.7,
+    'order': (1, 1, 1),
+    'seasonal_order': (1, 1, 1, 12),
+    'enforce_stationarity': False,
+    'enforce_invertibility': False
 }
 
 def prepare_data():
@@ -40,26 +40,29 @@ def prepare_data():
         # 處理預算數據
         budget_df['預算'] = budget_df['台北市預算'].str.replace(',', '').astype(float)
         
-        # 轉換日期
+        # 轉換日期並設置為索引
         taipei_df['date'] = pd.to_datetime(taipei_df['年'].astype(str) + '-' + 
                                          taipei_df['月'].astype(str) + '-01')
-        
-        # 按日期排序
-        taipei_df = taipei_df.sort_values('date')
+        taipei_df.set_index('date', inplace=True)
+        taipei_df = taipei_df.sort_index()
         
         return taipei_df, budget_df
         
     except Exception as e:
         print(f"讀取檔案時發生錯誤: {str(e)}")
-        import traceback
-        print(traceback.format_exc())
         raise
 
-def train_model(data):
+def train_and_predict(data):
+    # 確保數據是按時間排序的
+    data = data.sort_index()
+    
     # 分割訓練集和測試集
     split_idx = int(len(data) * PARAMS['train_size'])
     train_data = data.iloc[:split_idx]
     test_data = data.iloc[split_idx:]
+    
+    print(f"訓練集大小: {len(train_data)}")
+    print(f"測試集大小: {len(test_data)}")
     
     # 訓練SARIMA模型
     model = SARIMAX(train_data['登記數'],
@@ -70,37 +73,51 @@ def train_model(data):
     
     results = model.fit()
     
-    # 預測測試集
-    forecast = results.get_forecast(steps=len(test_data))
-    predicted_mean = forecast.predicted_mean
+    # 對整個歷史期間進行預測
+    historical_pred = results.get_prediction(start=data.index[0], end=data.index[-1])
+    historical_mean = historical_pred.predicted_mean
     
-    # 計算準確度指標
-    mape = mean_absolute_percentage_error(test_data['登記數'], predicted_mean)
-    rmse = np.sqrt(mean_squared_error(test_data['登記數'], predicted_mean))
+    # 預測2024年11月到2025年12月的數據
+    forecast_dates = pd.date_range(start='2024-12-01', end='2025-12-31', freq='ME')
+    forecast = results.get_forecast(steps=len(forecast_dates))
+    forecast_mean = forecast.predicted_mean
     
-    return results, predicted_mean, test_data['登記數'], mape, rmse
+    # 確保預測值的索引正確
+    forecast_mean.index = forecast_dates
+    
+    # 計算測試集的準確度指標
+    test_predictions = historical_mean[test_data.index]
+    mape = mean_absolute_percentage_error(test_data['登記數'], test_predictions)
+    rmse = np.sqrt(mean_squared_error(test_data['登記數'], test_predictions))
+    
+    # 獲取最後一個實際值的日期
+    last_actual_date = data.index[-1]
+    
+    return historical_mean, forecast_mean, mape, rmse, last_actual_date
 
-def predict_2025(model):
-    # 預測2025年12個月
-    forecast_2025 = model.get_forecast(steps=12)
-    predictions = forecast_2025.predicted_mean
-    conf_int = forecast_2025.conf_int()
-    
-    return predictions, conf_int
-
-def plot_results(actual, predicted, title):
+def plot_results(data, historical_pred, future_pred, last_actual_date):
     plt.figure(figsize=(15, 7))
     
-    # 生成時間索引
-    dates = pd.date_range(start='2015-1-1', periods=len(actual), freq='M')
+    # 繪製實際值
+    plt.plot(data.index, data['登記數'], 
+            label='實際值', color='blue', linewidth=2)
     
-    # 繪製實際值和預測值
-    plt.plot(dates, actual, label='實際值', color='blue', linewidth=2)
-    plt.plot(dates, predicted, label='預測值', color='orange', linewidth=2)
+    # 繪製歷史預測值（到最後一個實際值）
+    plt.plot(historical_pred.loc[:last_actual_date].index, 
+            historical_pred.loc[:last_actual_date], 
+            label='預測值', color='orange', linewidth=2)
+    
+    # 繪製未來預測值（包括最後一個實際值，以確保連續性）
+    full_pred = pd.concat([
+        historical_pred[last_actual_date:last_actual_date],  # 包含最後一個實際值的預測
+        future_pred
+    ])
+    plt.plot(full_pred.index, full_pred, 
+            color='orange', linewidth=2)
     
     # 設置標題和標籤
-    plt.title(title, fontsize=14, pad=15)
-    plt.xlabel('年月', fontsize=12)
+    plt.title('台北市寵物登記數預測結果 (2015-2025)', fontsize=14, pad=15)
+    plt.xlabel('年份', fontsize=12)
     plt.ylabel('寵物登記數', fontsize=12)
     
     # 設置圖例
@@ -110,17 +127,17 @@ def plot_results(actual, predicted, title):
     plt.grid(True, linestyle='--', alpha=0.7)
     
     # 設置x軸刻度
-    plt.gcf().autofmt_xdate()  # 自動調整日期標籤的角度
-    plt.gca().xaxis.set_major_locator(mdates.YearLocator())  # 主刻度為年
-    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y'))  # 主刻度格式
-    plt.gca().xaxis.set_minor_locator(mdates.MonthLocator())  # 次刻度為月
+    plt.gca().xaxis.set_major_locator(mdates.YearLocator())
+    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+    plt.gcf().autofmt_xdate()
     
-    # 設置y軸範圍
-    plt.gca().yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: format(int(x), ',')))
+    # 設置y軸數值格式（千分位）
+    plt.gca().yaxis.set_major_formatter(
+        plt.FuncFormatter(lambda x, p: format(int(x), ','))
+    )
     
     # 調整邊距
     plt.tight_layout()
-    
     plt.show()
 
 def main():
@@ -128,11 +145,11 @@ def main():
     
     try:
         # 準備數據
-        taipei_df, budget_df = prepare_data()
+        taipei_df, _ = prepare_data()
         
-        # 訓練模型
-        print("\n訓練模型中...")
-        model, predictions, actual, mape, rmse = train_model(taipei_df)
+        # 訓練模型並進行預測
+        print("\n訓練模型並進行預測...")
+        historical_pred, future_pred, mape, rmse, last_actual_date = train_and_predict(taipei_df)
         
         # 顯示模型性能
         print("\n模型性能指標：")
@@ -140,21 +157,14 @@ def main():
         print(f"RMSE (均方根誤差): {rmse:.2f}")
         print(f"平均每月預測誤差範圍: ±{rmse:.0f}個登記數")
         
-        # 預測2025年數據
-        print("\n進行2025年預測...")
-        predictions_2025, conf_int = predict_2025(model)
-        
-        print("\n2025年預測結果：")
-        for month, pred in enumerate(predictions_2025, 1):
-            print(f"2025年{month}月預測登記數: {pred:.0f}")
+        # 顯示未來預測結果
+        print("\n未來預測結果：")
+        for date, pred in future_pred.items():
+            print(f"{date.strftime('%Y年%m月')}預測登記數: {int(pred):,}")
         
         # 繪製結果圖表
         print("\n繪製預測結果圖表...")
-        plot_results(actual, predictions, "台北市寵物登記數預測結果")
-        
-        # 顯示模型摘要
-        print("\n模型詳細資訊：")
-        print(model.summary())
+        plot_results(taipei_df, historical_pred, future_pred, last_actual_date)
         
     except Exception as e:
         print(f"執行過程中發生錯誤: {str(e)}")
