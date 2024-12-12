@@ -53,3 +53,21 @@ def add_user(name:str, email:str, password:str) -> bool:
             except Exception:
                 return False           
             return True
+
+def get_password(email:str) -> tuple[str,str]:
+    with psycopg2.connect(database=os.environ['Postgres_DB'],
+                      user=os.environ['Postgres_user'],
+                      host=os.environ['Postgres_HOST'],
+                      password=os.environ['Postgres_password']) as conn:
+        with conn.cursor() as cursor:
+            sql ='''
+                SELECT user_name,password
+                FROM public.USER
+                WHERE user_email=%s
+            '''
+            cursor.execute(sql,(email,))
+            userinfo = cursor.fetchone()
+            if userinfo is None:
+                raise Exception('帳號有問題')
+                        
+            return userinfo

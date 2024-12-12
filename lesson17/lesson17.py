@@ -52,5 +52,6 @@ def pricing():
 def success():
     return "<h1>登入成功</h1>"
 
+
 if __name__ == '__main__':
     run_simple("localhost", 8080, application,use_debugger=True,use_reloader=True)
