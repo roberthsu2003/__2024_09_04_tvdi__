@@ -1,0 +1,44 @@
+{% extends "_base.j2" %}
+{% block title %}價格{% endblock %}
+
+{% block head %} {{super()}} {% endblock%}
+
+{% block main %}
+<div class="container">
+    <div class="row g-5">
+
+        {% for item in items_on_page%}
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{{url_for('static',filename='images/cityImage/'+item['image'])}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title">{{item['city_name']}}</h5>
+                    <h6 class="card-title">國家:{{item['country']}}</h6>
+                    <h6 class="card-title">{{item['continent']}}</h6>    
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+</div>
+
+
+<div class="container d-flex justify-content-center">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            {% if page > 1%}
+            <li class="page-item"><a class="page-link" href="{{ url_for('pricing',page=page-1) }}">上一頁</a></li>
+            {% endif %}
+
+            <li class="page-item"><a class="page-link" href="#">{{page}} / {{total_pages}}</a></li>
+
+            {% if page < total_pages %} <li class="page-item"><a class="page-link"
+                    href="{{ url_for('pricing', page=page+1) }}">下一頁</a></li>
+                {% endif %}
+        </ul>
+    </nav>
+</div>
+
+{% endblock %}
