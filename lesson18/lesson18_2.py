@@ -30,7 +30,8 @@ app1.layout = dmc.MantineProvider(
                     color="blue",
                     id="school_icon",
                     h=70,
-                    href='/'                                     
+                    href='/',
+                    refresh=True                                    
                 ),
                 h=70                
             )
