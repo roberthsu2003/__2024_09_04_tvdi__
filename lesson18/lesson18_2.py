@@ -2,11 +2,12 @@ from dash import Dash,html,dcc,callback,Input, Output,dash_table,_dash_renderer
 import pandas as pd
 import plotly.express as px
 import dash_mantine_components as dmc
+from dash_iconify import DashIconify
 _dash_renderer._set_react_version("18.2.0")
 
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder_unfiltered.csv')
 
-app = Dash(__name__,external_stylesheets=dmc.styles.ALL)
+app1 = Dash(__name__,external_stylesheets=dmc.styles.ALL,requests_pathname_prefix="/dash/")
 
 #radio button要顯示的資料
 radio_data = [['pop','人口'],['lifeExp','平均壽命'],['gdpPercap','人均gdp']]
@@ -16,87 +17,107 @@ selected_data = [{'value':value,'label':value} for value in df.country.unique()]
 
 
 
-app.layout = dmc.MantineProvider(
-    [
-    
-        dmc.Container(        
-            dmc.Title(f"世界各國人口,壽命,gdp統計數字", order=2),
-            fluid=True,
-            ta='center',
-            my=30  
-        )
-    ,
-        dmc.Flex(
-            [
-                dmc.Stack(
-                    [
-                        #dcc.RadioItems(['pop','lifeExp','gdpPercap'],value='pop',inline=True,id='radio_item')
-                        dmc.RadioGroup(
-                            children=dmc.Group([dmc.Radio(l, value=k) for k, l in radio_data], my=10),
-                            id="radio_item",
-                            value="pop",
-                            label="請選擇查詢的種類",
-                            size="md",
-                            mb=10,
-                        )
-        
-                    , 
-                        #dcc.Dropdown(df.country.unique(),value='Taiwan',id='dropdown-selection')
-                        dmc.Select(
-                            label="請選擇國家",
-                            placeholder="請選擇1個",
-                            id="dropdown-selection",
-                            value="Taiwan",
-                            data=selected_data,
-                            w=200,
-                            mb=10,
-                        )
-                    ],
-                    
+app1.layout = dmc.MantineProvider(
+    dmc.AppShell(
+        children=
+        [
+            dmc.AppShellHeader(
+                dmc.NavLink(
+                    label="職能發展學院",
+                    leftSection=DashIconify(icon="tabler:gauge"),
+                    active=True,
+                    variant="filled",
+                    color="blue",
+                    id="school_icon",
+                    h=70,
+                    href='/',
+                    refresh=True                                    
+                ),
+                h=70                
+            )
+        ,
+            dmc.AppShellMain(
+            [  
+                dmc.Container(        
+                    dmc.Title(f"世界各國人口,壽命,gdp統計數字", order=2),
+                    fluid=True,
+                    ta='center',
+                    my=30  
                 )
             ,
+                dmc.Flex(
+                    [
+                        dmc.Stack(
+                            [
+                                #dcc.RadioItems(['pop','lifeExp','gdpPercap'],value='pop',inline=True,id='radio_item')
+                                dmc.RadioGroup(
+                                    children=dmc.Group([dmc.Radio(l, value=k) for k, l in radio_data], my=10),
+                                    id="radio_item",
+                                    value="pop",
+                                    label="請選擇查詢的種類",
+                                    size="md",
+                                    mb=10,
+                                )
                 
-                #dash_table.DataTable(data=[],page_size=10,id='datatable',columns=[])
-                dmc.ScrollArea(
-                    children=[],
-                    h=300,
-                    w='50%',
-                    id='scrollarea'
+                            , 
+                                #dcc.Dropdown(df.country.unique(),value='Taiwan',id='dropdown-selection')
+                                dmc.Select(
+                                    label="請選擇國家",
+                                    placeholder="請選擇1個",
+                                    id="dropdown-selection",
+                                    value="Taiwan",
+                                    data=selected_data,
+                                    w=200,
+                                    mb=10,
+                                )
+                            ],
+                            
+                        )
+                    ,
+                        
+                        
+                        dmc.ScrollArea(
+                            children=[],
+                            h=300,
+                            w='50%',
+                            id='scrollarea'
+                        )
+
+                        
+                        
+
+                    ],
+                    direction={"base": "column", "sm": "row"},
+                    gap={"base": "sm", "sm": "lg"},
+                    justify={"base": "center"},
                 )
-
+            ,
+                        
+                dmc.Container(
+                dmc.LineChart(
+                    id = 'lineChart',
+                    h=300,
+                    dataKey="year",
+                    data=None,
+                    series = [],
+                    curveType="bump",
+                    tickLine="xy",
+                    withXAxis=True,
+                    withDots=True,
+                    gridAxis='x',
+                    withLegend=True,
+                    xAxisLabel='year'
+                    ),
+                    my=50
+                )
                 
-                
-
-            ],
-            direction={"base": "column", "sm": "row"},
-            gap={"base": "sm", "sm": "lg"},
-            justify={"base": "center"},
-        )
-    ,
-        #dcc.Graph(id='graph-content')
-        # dmc.Container(
-        #    dcc.Graph(id='graph-content') 
-        # )
-     
-        dmc.Container(
-           dmc.LineChart(
-            id = 'lineChart',
-            h=300,
-            dataKey="year",
-            data=None,
-            series = [],
-            curveType="bump",
-            tickLine="xy",
-            withXAxis=True,
-            withDots=True,
-            gridAxis='x',
-            withLegend=True,
-            xAxisLabel='year'
+            ]
+            
             ),
-            my=50
-        )
-        
-    ]
+        ],
+        header={'height':70}
+    )
+    
 )
 
 #圖表顯示的事件
@@ -172,4 +193,4 @@ def update_table(country_value,radio_value):
     
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app1.run(debug=True)
