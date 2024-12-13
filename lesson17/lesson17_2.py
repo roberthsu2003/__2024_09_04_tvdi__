@@ -56,7 +56,7 @@ selected_data = [{'value':value,'label':value} for value in df.country.unique()]
 #body = dmc.TableTbody(rows)
 #caption = dmc.TableCaption("Some elements from periodic table")
 
-#只顯示台灣的資料
+#只顯示台灣的資料,table所需要的資料
 dff = df[df.country == 'Taiwan']
 pop_diff = dff[['country', 'year', 'pop']]
 elements = pop_diff.to_dict('records')
