@@ -19,13 +19,22 @@ selected_data = [{'value':value,'label':value} for value in df.country.unique()]
 
 app.layout = dmc.MantineProvider(
     dmc.AppShell(
-        children=[
+        children=
+        [
             dmc.AppShellHeader(
                 dmc.NavLink(
-                label="職能發展學院",
-                leftSection=DashIconify(icon="clarity:date-line", height=16),
-                )   
-            ),
+                    label="職能發展學院",
+                    leftSection=DashIconify(icon="tabler:gauge"),
+                    active=True,
+                    variant="filled",
+                    color="blue",
+                    id="school_icon",
+                    h=70,
+                    href='/'                                     
+                ),
+                h=70                
+            )
+        ,
             dmc.AppShellMain(
             [  
                 dmc.Container(        
@@ -65,7 +74,7 @@ app.layout = dmc.MantineProvider(
                         )
                     ,
                         
-                        #dash_table.DataTable(data=[],page_size=10,id='datatable',columns=[])
+                        
                         dmc.ScrollArea(
                             children=[],
                             h=300,
@@ -82,11 +91,7 @@ app.layout = dmc.MantineProvider(
                     justify={"base": "center"},
                 )
             ,
-                #dcc.Graph(id='graph-content')
-                # dmc.Container(
-                #    dcc.Graph(id='graph-content') 
-                # )
-            
+                        
                 dmc.Container(
                 dmc.LineChart(
                     id = 'lineChart',
@@ -109,7 +114,7 @@ app.layout = dmc.MantineProvider(
             
             ),
         ],
-        header={"height": 70,"backgroundColor":'blue'},
+        header={'height':70}
     )
     
 )
