@@ -85,10 +85,13 @@ app.layout = dmc.MantineProvider(
             dataKey="year",
             data=None,
             series = [],
-            curveType="linear",
+            curveType="bump",
             tickLine="xy",
-            withXAxis=False,
-            withDots=False,
+            withXAxis=True,
+            withDots=True,
+            gridAxis='x',
+            withLegend=True,
+            xAxisLabel='year'
             ),
             my=50
         )
@@ -107,9 +110,17 @@ def update_graph(country_value,radio_value):
     #linechart要的資料
     dff = df[df.country == country_value]
     pop_diff = dff[['country', 'year', radio_value]]
+
     line_chart_data = pop_diff.to_dict('records')
+    if radio_value == 'pop':
+        label = f'{country_value}:人口'
+    elif radio_value == 'lifeExp':
+        label = f'{country_value}:平均壽命'
+    elif radio_value == 'gdpPercap':
+        label = f'{country_value}人均GDP'
+
     series = [
-        {"name": radio_value, "color": "indigo.6"} 
+        {"name": radio_value,"label":label ,"color": "indigo.6"} 
     ]
 
     return line_chart_data,series
