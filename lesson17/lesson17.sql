@@ -17,9 +17,11 @@ DELETE FROM public.user;
 
 DROP TABLE public.user;
 
-SELECT password
+SELECT user_name,password
 FROM public.USER
 WHERE user_email='roberthsu2003@gmail.com'
+
+
 
 
 
