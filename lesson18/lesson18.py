@@ -3,10 +3,18 @@ import datasource
 from flask_wtf import FlaskForm
 from wtforms import EmailField,BooleanField,PasswordField,SubmitField
 from wtforms.validators import DataRequired,Length
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
+from werkzeug.serving import run_simple
 import secrets
+from lesson18_2 import app1
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secrets.token_hex(16)
+
+application = DispatcherMiddleware(
+    app,
+    {"/dash": app1.server},
+)
 
 @app.route("/")
 def index():
@@ -59,3 +67,6 @@ def about():
 @app.route("/success")
 def success():
     return "<h1>登入成功</h1>"
+
+if __name__ == "__main__":
+    run_simple("localhost", 8080, application,use_debugger=True,use_reloader=True)
