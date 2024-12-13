@@ -106,8 +106,8 @@ def update_graph(country_value,radio_value):
 )
 def update_table(country_value,radio_value):
     #只顯示台灣的資料,table所需要的資料
-    dff = df[df.country == 'Taiwan']
-    pop_diff = dff[['country', 'year', 'pop']]
+    dff = df[df.country == country_value]
+    pop_diff = dff[['country', 'year', radio_value]]
     elements = pop_diff.to_dict('records')
 
     rows = [
@@ -115,24 +115,31 @@ def update_table(country_value,radio_value):
             [
                 dmc.TableTd(element["country"]),
                 dmc.TableTd(element["year"]),
-                dmc.TableTd(element["pop"]),
+                dmc.TableTd(element[radio_value]),
             ]
         )
         for element in elements
     ]
+
+    if radio_value == 'pop':
+        head_name = '人口'
+    elif radio_value == 'lifeExp':
+        head_name = '平均壽命'
+    elif radio_value == 'gdpPercap':
+        head_name = '人均GDP'
 
     head = dmc.TableThead(
         dmc.TableTr(
             [
                 dmc.TableTh("國家"),
                 dmc.TableTh("年份"),
-                dmc.TableTh("人口"),
+                dmc.TableTh(head_name),
             ]
         )
     )
 
     body = dmc.TableTbody(rows)
-    caption = dmc.TableCaption("Taiwan 年份,人口")
+    caption = dmc.TableCaption(f"Taiwan 年份,{head_name}")
     return dmc.Table([head, body, caption])
 
     
