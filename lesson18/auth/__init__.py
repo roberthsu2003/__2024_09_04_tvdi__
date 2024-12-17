@@ -1,6 +1,4 @@
 from flask import Blueprint
 auth = Blueprint('auth',__name__)
+from . import login
 
-@auth.route('/login')
-def login():
-    return "<h1>Hello! World!</h1>"
