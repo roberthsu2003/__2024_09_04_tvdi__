@@ -1,0 +1,27 @@
+{%extends '_base.j2'%}
+
+{% block title%}
+FAQS
+{% endblock%}
+
+{% block head%} {{super()}} {% endblock%}
+
+{% block main%}
+<div class='container'>
+    <form method="POST">
+        {{myForm.csrf_token}}
+        <div class='mb-3'>
+            {{myForm.email_field.label(class='form-label')}} {{myForm.email_field(size=30,class='form-control')}}
+        </div>
+        <div class='mb-3'>
+            {{myForm.password_field.label(class='form-label')}} {{myForm.password_field(size=50,class='form-control')}}
+        </div>
+        <div class='form-check'>  
+            {{myForm.e_paper_field.label(class='form-check-label')}} {{myForm.e_paper_field(class='form-check-label')}}
+        </div>
+        <div class="mt-5">
+            {{myForm.submit_field.label(class="btn btn-primary")}} 
+        </div>
+    </form>
+</div>
+{% endblock%}
