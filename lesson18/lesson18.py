@@ -11,6 +11,7 @@ from lesson18_2 import app1
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secrets.token_hex(16)
 
+
 application = DispatcherMiddleware(
     app,
     {"/dash": app1.server},
