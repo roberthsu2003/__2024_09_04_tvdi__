@@ -1,5 +1,6 @@
 from . import auth
+from flask import render_template
 
 @auth.route('/success')
 def success():
-    return "<h1>註冊成功</h1>"
+    return render_template('auth/successful.j2')
