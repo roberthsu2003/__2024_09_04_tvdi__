@@ -36,3 +36,21 @@ def is_email_duplicate(email:str) -> bool:
             cursor.execute(sql,(email,))
             nums:tuple = cursor.fetchone()
             return False if nums[0]==0 else True
+        
+def add_user(name:str, email:str, password:str) -> bool:
+    with psycopg2.connect(database=os.environ['Postgres_DB'],
+                      user=os.environ['Postgres_user'],
+                      host=os.environ['Postgres_HOST'],
+                      password=os.environ['Postgres_password']) as conn:
+        with conn.cursor() as cursor:
+            sql = '''
+                INSERT INTO public.USER(user_name,user_email,password)
+                VALUES (%s,%s,%s); 
+            '''
+            try:
+                cursor.execute(sql,(name,email,password))
+            except Exception:
+                return False
+            return True
+            
+            
