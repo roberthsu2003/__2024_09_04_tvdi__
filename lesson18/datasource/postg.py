@@ -21,3 +21,18 @@ def get_cities()->list[dict]:
                                 'image':item[4]
                                 } for item in data]
     return convert_data
+
+def is_email_duplicate(email:str) -> bool:
+    with psycopg2.connect(database=os.environ['Postgres_DB'],
+                      user=os.environ['Postgres_user'],
+                      host=os.environ['Postgres_HOST'],
+                      password=os.environ['Postgres_password']) as conn:
+        with conn.cursor() as cursor:
+            sql = '''
+                SELECT count(*) 
+                FROM  public.user
+                WHERE user_email = %s;
+            '''
+            cursor.execute(sql,(email,))
+            nums:tuple = cursor.fetchone()
+            return False if nums[0]==0 else True
