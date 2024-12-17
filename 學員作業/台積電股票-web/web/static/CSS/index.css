@@ -1,0 +1,5 @@
+.fs-4 {
+    font-size: calc(1.05rem + .3vw)!important;
+    color: rgb(58, 242, 196);
+    background-color: #e6ebb7;
+}
