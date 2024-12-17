@@ -7,9 +7,11 @@ from werkzeug.middleware.dispatcher import DispatcherMiddleware
 from werkzeug.serving import run_simple
 import secrets
 from lesson18_2 import app1
+from auth import auth
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secrets.token_hex(16)
+app.register_blueprint(auth,url_prefix='/auth')
 
 
 application = DispatcherMiddleware(
