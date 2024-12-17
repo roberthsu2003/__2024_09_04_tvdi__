@@ -9,14 +9,29 @@
     {{ form.csrf_token }}
     <div class="mb-3">
         {{form.username.label(class='form-label')}} {{form.username(class='form-control',size=20)}}
+        {% if form.username.errors %}
+        <div class="alert alert-danger" role="alert">
+            使用者名稱有錯
+        </div>
+        {% endif %}
     </div>
 
     <div class="mb-3">
         {{form.email.label(class='form-label')}} {{form.email(class='form-control',size=20)}}
+        {% if form.email.errors %}
+        <div class="alert alert-danger" role="alert">
+            email有問題
+        </div>
+        {% endif %}
     </div>
 
     <div class="mb-3">
         {{form.password.label(class='form-label')}} {{form.password(class='form-control',size=20)}}
+        {% if form.password.errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ form.password.errors[0] }}
+        </div>
+        {% endif %}
     </div>
 
     <div class="mb-3">
