@@ -1,0 +1,13 @@
+{%extends '_base.j2'%}
+
+{% block title%}
+關於我們
+{% endblock%}
+
+{% block head%} {{super()}} {% endblock%}
+
+{% block main%}
+<h1>關於我們</h1>
+<h2>背景</h2>
+<h3>{{request.path}}</h3>
+{% endblock%}

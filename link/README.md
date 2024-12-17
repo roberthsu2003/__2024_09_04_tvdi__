@@ -137,3 +137,48 @@ https://youtube.com/live/omq9dINycgc
 
 https://youtube.com/live/tGznx9AFx-s
 
+---
+
+## 2024_12_05_上午
+
+https://youtube.com/live/d7N8yRspLbw
+
+## 2024_12_05_下午
+
+https://youtube.com/live/bfHXPmL1sD8
+
+## 2024_12_06_上午
+
+https://youtube.com/live/aHuKL4AeOmo
+
+---
+
+## 2024_12_09_上午
+
+https://youtube.com/live/5tjNyU8aLbM
+
+## 2024_12_10_下午
+
+https://youtube.com/live/m-wKIMlAu_w
+
+---
+
+## 2024_12_13_上午
+
+https://youtube.com/live/kbvzYOjtrog
+
+## 2024_12_13_下午
+
+https://youtube.com/live/Ix5NemN1A90
+
+---
+
+## 2024_12_17_早上
+
+https://youtube.com/live/G76UbbillX4
+
+## 2024_12_17_下午
+
+https://youtube.com/live/At1plFd38Yg
+
+---
