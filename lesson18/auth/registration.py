@@ -1,5 +1,6 @@
 from . import auth
+from flask import render_template
 
 @auth.route('/regist')
 def regist():
-    return "<h1>Regist</h1>"
+    return render_template('auth/registration.j2')
