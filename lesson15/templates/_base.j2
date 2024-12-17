@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-TW">
+
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}職能發展學院{% endblock %}</title>
+  <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/index.css')}}" rel="stylesheet">
+  {% endblock %}
+</head>
+
+
+<body>
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <span class="fs-4">職能發展學院</span>
+      </a>
+
+      {% include '_navigation_bar.j2' %}
+    </header>
+  </div>
+
+  <main>
+    {% block main %}
+    {% endblock %}
+  </main>
+
+  <div class="container">
+   {% import 'macros.j2' as macros %} 
+   {{ macros.get_footer(color='#333333')}}
+  </div>
+  <script src="{{url_for('static',filename='js/bootstrap.bundle.min.js')}}"></script>
+</body>
+
+</html>

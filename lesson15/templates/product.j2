@@ -1,0 +1,47 @@
+{% extends "_base.j2" %}
+{% block title %}產品{% endblock %}
+
+{% block head %} {{super()}} {% endblock%}
+
+{% block main %}
+<div class="container">
+    <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">編號</th>
+      <th scope="col">城市</th>
+      <th scope="col">洲名</th>
+      <th scope="col">國家</th>
+      <th scope="col">圖片名稱</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in items_on_page%}
+        <tr>
+            
+            {% for key in item %}        
+                <td>{{item[key]}}</td>
+            {% endfor %}
+            
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+    <div class="container d-flex justify-content-center">
+        <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            {% if page > 1%}
+            <li class="page-item"><a class="page-link" href="{{ url_for('product',page=page-1) }}">上一頁</a></li>
+            {% endif %}
+            
+            <li class="page-item"><a class="page-link" href="#">{{page}} / {{total_pages}}</a></li>
+
+            {% if page < total_pages %}
+            <li class="page-item"><a class="page-link" href="{{ url_for('product', page=page+1) }}">下一頁</a></li>
+            {% endif %}
+        </ul>
+        </nav>
+    </div>
+</div>
+{% endblock %}
