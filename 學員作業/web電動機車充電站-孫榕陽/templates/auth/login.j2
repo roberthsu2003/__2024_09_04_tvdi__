@@ -1,0 +1,25 @@
+{% extends "_base.j2" %}
+{% block title %}登入{% endblock %}
+
+{% block head %} {{super()}} {% endblock%}
+
+{% block main %}
+<div class="container">
+    <form method="POST">
+    {{ myform.csrf_token}}
+    <div class="mb-3">    
+    {{ myform.email_field.label(class='form-label') }}{{ myform.email_field(size=30,class='form-control') }}
+    </div>
+    <div class="mb-3"> 
+    {{ myform.password_field.label(class='form-label') }} {{ myform.password_field(size=50,class='form-control') }}
+    </div>
+    <div class="mt-5"> 
+    {{ myform.submit_field(class='btn btn-primary') }}
+    </div>   
+    
+    </form>
+    <p class="d-inline-flex gap-1 mt-5">
+    <a href="{{url_for('auth.regist')}}" class="btn active">註冊會員</a>
+    </p>
+</div>
+{% endblock %}
