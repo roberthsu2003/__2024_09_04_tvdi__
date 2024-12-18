@@ -18,6 +18,5 @@
 
     * 用戶可以選擇站點，會顯示出該站點的地圖
 
-[影片連結](https://youtu.be/EPfYvzc_lyQ?si=QPCFiIiEmNwqXFcE)
 
     

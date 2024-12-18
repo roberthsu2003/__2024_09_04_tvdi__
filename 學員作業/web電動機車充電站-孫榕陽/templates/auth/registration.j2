@@ -1,0 +1,48 @@
+{% extends "_base.j2" %}
+{% block title %}會員註冊{% endblock %}
+
+{% block head %} {{super()}} {% endblock%}
+
+{% block main %}
+<div class="container">
+    <form method="POST">
+    {{ form.csrf_token }}
+    <div class="mb-3">
+        {{form.username.label(class='form-label')}} {{form.username(class='form-control',size=20)}}
+        {% if form.username.errors %}
+        <div class="alert alert-danger" role="alert">
+            使用者名稱有錯
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        {{form.email.label(class='form-label')}} {{form.email(class='form-control',size=20)}}
+        {% if form.email.errors %}
+        <div class="alert alert-danger" role="alert">
+            email有問題
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        {{form.password.label(class='form-label')}} {{form.password(class='form-control',size=20)}}
+        {% if form.password.errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ form.password.errors[0] }}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="mb-3">
+        {{form.confirm.label(class='form-label')}} {{form.confirm(class='form-control',size=20)}}
+    </div>
+
+    <div>
+    <button type="submit" class="btn btn-primary">送出</button>
+  </div>
+       
+    
+    </form>    
+</div>
+{% endblock %}
