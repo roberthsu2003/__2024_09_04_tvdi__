@@ -1,0 +1,4 @@
+.fs-4 {
+    font-size: calc(3rem + .3vw) !important;
+    color: brown;
+}
