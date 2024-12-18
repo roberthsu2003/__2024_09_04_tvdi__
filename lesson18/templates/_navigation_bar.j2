@@ -1,0 +1,12 @@
+<ul class="nav nav-pills">
+    <li class="nav-item"><a href="{{url_for('index')}}" class="{{" nav-link active" if request.path=="/" else "nav-link"
+            }}" aria-current="page">Home</a></li>
+    <li class="nav-item"><a href="{{url_for('product')}}" class="{{" nav-link active" if request.path=="/product"
+            else "nav-link" }}">Product</a></li>
+    <li class="nav-item"><a href="{{url_for('pricing')}}" class="{{" nav-link active" if request.path=="/pricing"
+            else "nav-link" }}">Pricing</a></li>
+    <li class="nav-item"><a href="{{url_for('auth.login')}}" class="{{" nav-link active" if request.path=="/auth/login"
+            else "nav-link" }}">登入</a></li>
+    <li class="nav-item"><a href="/dash" class="{{" nav-link active" if request.path=="/dash"
+            else "nav-link" }}">Dash</a></li>
+</ul>
