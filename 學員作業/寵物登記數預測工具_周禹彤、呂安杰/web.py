@@ -23,7 +23,7 @@ app = Dash(__name__, external_stylesheets=dmc.styles.ALL)
 # radio button的資料改為下拉選單資料
 combobox_data = [
     {"value": "Registrations", "label": "登記數"},
-    {"value": "Deregistrations", "label": "除戶數"},
+    {"value": "Deregistrations", "label": "註銷數"},
     {"value": "Neutered", "label": "絕育數"}
 ]
 
@@ -52,7 +52,7 @@ head = dmc.TableThead(
             dmc.TableTh("年份"),
             dmc.TableTh("縣市"),
             dmc.TableTh("登記數"),
-            dmc.TableTh("除戶數"),
+            dmc.TableTh("註銷數"),
             dmc.TableTh("絕育數"),
         ]
     )
@@ -64,7 +64,7 @@ caption = dmc.TableCaption("Taiwan 年份,登記數量")
 app.layout = dmc.MantineProvider(
     [
         dmc.Container(
-            dmc.Title(f"各縣市 登記數、除戶數、絕育數 數據", order=2),
+            dmc.Title(f"各縣市 登記數、註銷數、絕育數 數據", order=2),
             fluid=True,
             ta='center',
             my=30
@@ -100,7 +100,7 @@ app.layout = dmc.MantineProvider(
                             {"name": "年份", "id": "Year"},
                             {"name": "縣市", "id": "County"},
                             {"name": "登記數", "id": "Registrations"},
-                            {"name": "除戶數", "id": "Deregistrations"},
+                            {"name": "註銷數", "id": "Deregistrations"},
                             {"name": "絕育數", "id": "Neutered"}
                         ],
                         style_table={'height': '300px', 'overflowY': 'auto'},
@@ -139,8 +139,8 @@ def update_content(county_value, combobox_value):
         legend_name = '登記數'
     elif combobox_value == "Deregistrations":
         y_column = 'Deregistrations'
-        title = f'{county_value}: 除戶數歷年趨勢'
-        legend_name = '除戶數'
+        title = f'{county_value}: 註銷數歷年趨勢'
+        legend_name = '註銷數'
     elif combobox_value == "Neutered":
         y_column = 'Neutered'
         title = f'{county_value}: 絕育數歷年趨勢'
