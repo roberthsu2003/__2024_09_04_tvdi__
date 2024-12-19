@@ -1,0 +1,36 @@
+{% extends "_base.j2" %}
+{% block title %}Ｗｅｂ專題{% endblock %}
+
+{% block head %} {{super()}} {% endblock%}
+
+{% block main %}
+<main style="background-image: url('{{ url_for('static', filename='images/gogoro.jpg') }}'); 
+             background-size: cover; 
+             background-position: center; 
+             padding: 20px;">
+    <div class="container col-xxl-8 px-1 py-5">
+        <div class="row align-items-center g-5 py-5">
+
+
+            <div class="col-lg-6" style="margin-left: -150px;" >
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" style="color:rgb(251, 252, 253) !important;">反思 都會能源</h1>
+                <p class="lead" style="color:rgb(247, 247, 248);">
+                    能源創造正向改變
+                    透過全然不同的分配、儲存和應用能源解決方案，我們接下今日城市面臨的嚴峻挑戰。消除電能補充使用上的障礙，提升每一次騎乘體驗，我們正加速轉型至智慧移動及永續的都會生活型態。
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">了解更多</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">離開網站</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+{% endblock %}

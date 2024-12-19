@@ -170,3 +170,15 @@ https://youtube.com/live/kbvzYOjtrog
 ## 2024_12_13_下午
 
 https://youtube.com/live/Ix5NemN1A90
+
+---
+
+## 2024_12_17_早上
+
+https://youtube.com/live/G76UbbillX4
+
+## 2024_12_17_下午
+
+https://youtube.com/live/At1plFd38Yg
+
+---

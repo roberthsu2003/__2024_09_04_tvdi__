@@ -1,0 +1,14 @@
+<ul class="nav nav-pills">
+    <li class="nav-item"><a href="{{url_for('index')}}" class="{{" nav-link active" if request.path=="/" else "nav-link"
+            }}" aria-current="page">首頁</a></li>
+    <li class="nav-item"><a href="/dash" class="{{" nav-link active" if request.path=="/dash"
+            else "nav-link" }}">尋找站點</a></li>
+    <li class="nav-item"><a href="{{url_for('auth.login')}}" class="{{" nav-link active" if request.path=="/auth/login"
+            else "nav-link" }}">登入</a></li>
+    <li class="nav-item"><a href="{{url_for('product')}}" class="{{" nav-link active" if request.path=="/product"
+            else "nav-link" }}">最新優惠</a></li>
+    <li class="nav-item"><a href="{{url_for('pricing')}}" class="{{" nav-link active" if request.path=="/pricing"
+            else "nav-link" }}">支援服務</a></li>
+
+
+</ul>
