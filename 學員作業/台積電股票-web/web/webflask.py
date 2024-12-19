@@ -6,6 +6,7 @@ from wtforms.validators import DataRequired,Length
 from werkzeug.middleware.dispatcher import DispatcherMiddleware
 from werkzeug.serving import run_simple
 import secrets
+
 from webmain import app1
 '''
 flask 就是一個支援 wsgi的應用程式
