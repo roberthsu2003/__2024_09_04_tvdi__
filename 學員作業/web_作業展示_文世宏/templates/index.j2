@@ -1,0 +1,53 @@
+{% extends "_base.j2" %}
+{% block title %}專題首頁{% endblock %}
+
+{% block head %} {{super()}} {% endblock%}
+
+{% block main %}
+<div class="bg-image">
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row align-items-center g-5 py-5  custom-offset-lg-4-5">
+            <div class="col-lg-9">
+                <h1 class="display-5 fw-bold text-white lh-1 mb-3">睡眠不足</h1>
+                <p class="lead ">台灣學生常因沉重的課業壓力讀書到深夜，形成惡性循環。長期睡眠不足不僅影響健康，還降低學習效率，亟需調整學習策略與生活節奏，才能在競爭中找到平衡，實現更好的成長與發展。</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 text-white">再睡一下</button>
+                    <button type="button" class="btn btn-outline-secondary btn-light btn-lg px-4 text-black">了解更多</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="container">
+    <p class="d-inline-flex gap-1">
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            Button with data-bs-target
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the
+            user activates the relevant trigger.
+        </div>
+    </div>
+</div> -->
+
+<style>
+    .bg-image {
+        background-image: url("{{ url_for('static', filename='images/thisisfine1.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+    }
+
+    .custom-offset-lg-4-5 {
+    margin-left: 37.5%; /* 4.5 栏等于 37.5%（每栏为 100% / 12） */
+    }
+
+</style>
+{% endblock %}
