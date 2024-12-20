@@ -8,7 +8,7 @@ _dash_renderer._set_react_version("18.2.0")
 
 # 載入數據
 try:
-    df = pd.read_csv(r'C:\Users\ASUS\Desktop\GItHub\TVDI_python\testing\readme_proj_2\student_lifestyle_dataset.csv')
+    df = pd.read_csv(r'C:\Users\user\Desktop\程式在這裡\GitHub\TVDI_python\testing\readme_proj_2\student_lifestyle_dataset.csv')
     print("數據加載成功")
     print(df.head())  # 檢查數據結構
 except Exception as e:
