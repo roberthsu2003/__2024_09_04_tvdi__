@@ -1,3 +1,9 @@
 requests
 ttkthemes
 Pillow
+tkintermapview
+python-dotenv
+pandas
+matplotlib
+psycopg2-binary
+Flask-WTF
