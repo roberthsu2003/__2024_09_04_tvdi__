@@ -1,5 +1,7 @@
 # 電影推薦系統
 * 組員:曾德容、邱育霖
+* Web 作業放在 Web_fin資料夾
+* [Web on Render](<https://dian-ying-tui-jian-xi-tong.onrender.com>)
 
 ## 專案目的
 * 建立個人化的媒體內容推薦系統
