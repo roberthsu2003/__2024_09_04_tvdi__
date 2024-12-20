@@ -6,6 +6,7 @@ from werkzeug.serving import run_simple
 from wtforms import EmailField,BooleanField,PasswordField,SubmitField
 from wtforms.validators import DataRequired,Length
 import secrets
+import csv
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secrets.token_hex(16)
@@ -25,7 +26,15 @@ def product():
 
 @app.route("/pricing")
 def pricing():
-    return render_template('pricing.j2') 
+    # 讀取CSV檔案
+    districts = []
+    with open(r'C:\Users\user\Desktop\程式在這裡\GitHub\TVDI_python\testing\readme_proj_2\TPEROADS.csv', newline='', encoding='utf-8') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            districts.append(row['行政區'])
+        districts = list(set(districts))
+        print(districts)
+    return render_template('pricing.j2', districts=districts) 
 
 class MyForm(FlaskForm):
     email_field = EmailField("Email address",validators=[DataRequired("必需要有資料")])
