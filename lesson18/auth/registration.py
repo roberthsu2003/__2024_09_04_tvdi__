@@ -1,5 +1,5 @@
 from . import auth
-from flask import render_template,request,redirect,url_for
+from flask import render_template,request,redirect,url_for,session
 from flask_wtf import FlaskForm
 from wtforms import StringField,PasswordField,EmailField,validators
 from werkzeug.security import generate_password_hash
@@ -35,10 +35,12 @@ def regist():
         if not is_email_duplicate(email):
             #email沒有重覆
             if add_user(name,email,password_hash):
+                session['username'] = name
                 return redirect(url_for('auth.success'))
             else:
-                print("加入失敗")
+                name.errors.append('註冊失敗')
         else:
-            print('email有重覆')
+            email.errors.append('電子郵件已存在')
+            
         
     return render_template('auth/registration.j2',form=form)
