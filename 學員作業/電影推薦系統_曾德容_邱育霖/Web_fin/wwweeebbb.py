@@ -4,6 +4,9 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import html, dcc
 from dash.dependencies import Input, Output
+from dotenv import load_dotenv
+load_dotenv()
+import os
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -67,7 +70,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
         # 這裡應該有登入驗證的邏輯
-        if username == '1234' and password == '5678':
+        if username == os.environ['user_id'] and password == os.environ['password']:
             session['logged_in'] = True
             return redirect(url_for('index'))
         else:
