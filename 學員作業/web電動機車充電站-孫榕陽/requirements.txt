@@ -1,0 +1,14 @@
+requests
+python-dotenv
+flask
+pydantic
+gunicorn
+psycopg2-binary
+Flask-WTF
+dash
+pandas
+plotly
+dash-mantine-components
+dash-iconify
+werkzeug
+chardet

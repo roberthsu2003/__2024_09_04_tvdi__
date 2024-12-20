@@ -1,0 +1,22 @@
+{% extends "base.j2" %}
+
+{% block title %}電影推薦系統 - 首頁{% endblock %}
+
+{% block styles %}
+{{ super() }}
+.custom-background {
+    background-color: #f4f4f4;
+}
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+<!-- 可以在這裡新增額外的內容 -->
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+    console.log('這是首頁的額外腳本');
+</script>
+{% endblock %}
