@@ -21,7 +21,7 @@ def login():
             username, password_hash = get_password(email)
             if check_password_hash(password_hash,password):
                 session['username'] = username
-                return redirect(url_for('auth.index'))
+                return redirect(url_for('index'))
             else:
                 myForm.password_field.errors.append("登入失敗")
         except:
