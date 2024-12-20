@@ -1,0 +1,15 @@
+{% extends "_base.j2" %}
+{% block title %}HTML/CSS{% endblock %}
+
+{% block head %} {{super()}} {% endblock%}
+
+{% block main %}
+<div class="container mx-100 p-0" style="max-width: 95%;">
+
+    <!-- 新增 iframe -->
+
+        <iframe class="embed-responsive-item" width="100%" height="1000px" src="{{ url_for('static', filename='index.html') }}" allowfullscreen style="border: groove 15px grey;"></iframe>
+
+
+</div>
+{% endblock %}
