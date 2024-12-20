@@ -20,7 +20,7 @@
         {{form.email.label(class='form-label')}} {{form.email(class='form-control',size=20)}}
         {% if form.email.errors %}
         <div class="alert alert-danger" role="alert">
-            email有問題
+            {{ form.email.errors[0] }}
         </div>
         {% endif %}
     </div>

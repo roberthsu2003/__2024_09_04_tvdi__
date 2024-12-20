@@ -39,6 +39,7 @@ def regist():
             else:
                 print("加入失敗")
         else:
-            print('email有重覆')
+            form.email.errors.append('電子郵件已存在')
+            
         
     return render_template('auth/registration.j2',form=form)
